@@ -1,0 +1,133 @@
+//
+//  core.c
+//  imagic
+//
+//  Created by itzseven on 01/02/2016.
+//  Copyright © 2016 itzseven. All rights reserved.
+//
+
+#include "core.h"
+
+gray8i_t *gray8ialloc(uint16_t width, uint16_t height)
+{
+    gray8i_t *gray8img = (gray8i_t *)malloc(sizeof(gray8i_t));
+    
+    gray8img->width = width;
+    gray8img->height = height;
+    gray8img->data = (uint8_t *)calloc(width * height, sizeof(uint8_t));
+    
+    return gray8img;
+}
+
+gray8i_t *gray8iallocwd(uint16_t width, uint16_t height, uint8_t *data)
+{
+    gray8i_t *gray8img = (gray8i_t *)malloc(sizeof(gray8i_t));
+    
+    gray8img->width = width;
+    gray8img->height = height;
+    gray8img->data = (uint8_t *)calloc(width * height, sizeof(uint8_t));
+    memcpy(gray8img->data, data, sizeof(uint8_t) * width * height);
+    
+    return gray8img;
+}
+
+rgb8i_t *rgb8ialloc(uint16_t width, uint16_t height)
+{
+    rgb8i_t *rgb8img = (rgb8i_t *)malloc(sizeof(rgb8i_t));
+    
+    rgb8img->width = width;
+    rgb8img->height = height;
+    rgb8img->data = (rgb8 *)calloc(width*height, sizeof(rgb8));
+    
+    return rgb8img;
+}
+
+rgb8i_t *rgb8iallocwd(uint16_t width, uint16_t height, rgb8 *data)
+{
+    rgb8i_t *rgb8img = (rgb8i_t *)malloc(sizeof(rgb8i_t));
+    
+    rgb8img->width = width;
+    rgb8img->height = height;
+    rgb8img->data = (rgb8 *)calloc(width*height, sizeof(rgb8));
+    memcpy(rgb8img->data, data, sizeof(rgb8) * width * height);
+    
+    return rgb8img;
+}
+
+rgb8i_t *rgb8iallocwd_bgra(uint16_t width, uint16_t height, uint8_t *data)
+{
+    rgb8i_t *rgb8img = rgb8ialloc(width, height);
+    
+    int i = 0, j = 0;
+    
+    for (i = 0; i < width * height * 4; i+=4)
+    {
+        rgb8img->data[j].r = data[i+2];
+        rgb8img->data[j].g = data[i+1];
+        rgb8img->data[j].b = data[i];
+        
+        j++;
+    }
+    
+    return rgb8img;
+}
+
+gray8i_t *gray8icpy(gray8i_t *src)
+{
+    gray8i_t *dst = gray8ialloc(src->width, src->height);
+    
+    dst->width = src->width;
+    dst->height = src->height;
+    memcpy(dst->data, src->data, sizeof(uint8_t) * src->width * src->height);
+    
+    return dst;
+}
+
+rgb8i_t *rgb8icpy(rgb8i_t *src)
+{
+    rgb8i_t *dst = rgb8ialloc(src->width, src->height);
+    
+    dst->width = src->width;
+    dst->height = src->height;
+    memcpy(dst->data, src->data, sizeof(rgb8) * src->width * src->height);
+    
+    return dst;
+}
+
+int gray8icmp(gray8i_t *img1, gray8i_t *img2)
+{
+    int res = 0, i = 0;
+    
+    if ((img1->width != img2->width) || (img1->height != img2->height))
+        return -1;
+    
+    for (i = 0; i < img1->width * img1->height; i++)
+        res += img1->data[i] != img2->data[i];
+    
+    return res;
+}
+
+int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2)
+{
+    int res = 0, i = 0;
+    
+    if ((img1->width != img2->width) || (img1->height != img2->height))
+        return -1;
+    
+    for (i = 0; i < img1->width * img1->height; i++)
+        res += (img1->data[i].r != img2->data[i].r) || (img1->data[i].g != img2->data[i].g) || (img1->data[i].b != img2->data[i].b);
+    
+    return res;
+}
+
+void gray8ifree(gray8i_t *img)
+{
+    free(img->data);
+    free(img);
+}
+
+void rgb8ifree(rgb8i_t *img)
+{
+    free(img->data);
+    free(img);
+}
