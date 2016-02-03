@@ -48,6 +48,15 @@ typedef struct _gray16i {
 }gray16i_t;
 
 /*!
+ *  Data type that represents a 8-bit binary image
+ */
+
+typedef struct _bini {
+    uint16_t width, height;
+    uint8_t *data;
+}bini_t;
+
+/*!
  *  Data type that represents a 8-bit RGB image
  */
 
@@ -76,6 +85,12 @@ gray8i_t *gray8ialloc(uint16_t width, uint16_t height);
  */
 
 gray8i_t *gray8iallocwd(uint16_t width, uint16_t height, uint8_t *data);
+
+/*!
+ *  Returns an initialized gray8i_t image (with dimension width x height) with allocated data set to 0
+ */
+
+bini_t *binialloc(uint16_t width, uint16_t height);
 
 /*!
  *  Returns an initialized rgb8i_t object with allocated data set to 0
@@ -132,6 +147,12 @@ int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2);
  */
 
 void gray8ifree(gray8i_t *img);
+
+/*!
+ *  Frees the memory of an binary image
+ */
+
+void binifree(bini_t *img);
 
 /*!
  *  Frees the memory of an 8-bit RGB image

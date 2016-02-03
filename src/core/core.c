@@ -31,6 +31,17 @@ gray8i_t *gray8iallocwd(uint16_t width, uint16_t height, uint8_t *data)
     return gray8img;
 }
 
+bini_t *binialloc(uint16_t width, uint16_t height)
+{
+    bini_t *binimg = (bini_t *)malloc(sizeof(bini_t));
+    
+    binimg->width = width;
+    binimg->height = height;
+    binimg->data = (uint8_t *)calloc(width * height, sizeof(uint8_t));
+    
+    return binimg;
+}
+
 rgb8i_t *rgb8ialloc(uint16_t width, uint16_t height)
 {
     rgb8i_t *rgb8img = (rgb8i_t *)malloc(sizeof(rgb8i_t));
@@ -121,6 +132,12 @@ int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2)
 }
 
 void gray8ifree(gray8i_t *img)
+{
+    free(img->data);
+    free(img);
+}
+
+void binifree(bini_t *img)
 {
     free(img->data);
     free(img);

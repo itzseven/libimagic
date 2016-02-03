@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>imagic.xcscheme</key>
+		<key>AllTargets.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>UnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>libimagic.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +22,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8A4537201C62085F00B9B19F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A45372D1C62086A00B9B19F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A7CBC691C62277B006FD3A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A7CBC6F1C622B8A006FD3A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8AB0E93E1C5FF74F00D325BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AB0E9581C600EF800D325BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
