@@ -14,6 +14,13 @@
 #include <string.h>
 
 /*!
+ *  As the pixels of every image handled are stored in a one dimensional array, you can use this macro to get the index of a 
+ *  pixel by specifying its 2D coordinates (x, y) and the width of the image
+ */
+
+#define PXL_IDX(width, x, y) (((y) * width) + (x))
+
+/*!
  *  Data type that stores a 8-bit RGB pixel
  */
 

@@ -11,29 +11,25 @@
 		8A4537381C6208EA00B9B19F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8A45373A1C62090E00B9B19F /* core.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB0E94A1C5FF79500D325BA /* core.h */; };
 		8A45373B1C62090E00B9B19F /* io.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C374B1C60D7D30027C832 /* io.h */; };
-		8A45373C1C62090E00B9B19F /* arithmetic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C374F1C611BFB0027C832 /* arithmetic.h */; };
 		8A45373D1C62090E00B9B19F /* edge.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AF1BE971C61F22D009621BB /* edge.h */; };
 		8A7C374D1C60D7FC0027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7C374E1C60E3A10027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7C37511C611C0C0027C832 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37501C611C0C0027C832 /* arithmetic.c */; };
 		8A7C37561C6155C20027C832 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C37551C6155A90027C832 /* resources */; };
 		8A7C37571C61576D0027C832 /* io_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37531C6132840027C832 /* io_tests.c */; };
 		8A7CBC6E1C622948006FD3A1 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8A7CBC731C622F84006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC741C622F84006FD3A1 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37501C611C0C0027C832 /* arithmetic.c */; };
 		8A7CBC751C622F84006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8A7CBC761C622F93006FD3A1 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37501C611C0C0027C832 /* arithmetic.c */; };
 		8A7CBC771C622F93006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 		8A7CBC781C622F9A006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC791C622F9A006FD3A1 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37501C611C0C0027C832 /* arithmetic.c */; };
 		8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 		8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC7C1C622FA0006FD3A1 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37501C611C0C0027C832 /* arithmetic.c */; };
 		8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 		8AB0E94C1C5FF85000D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9601C600F0D00D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
 		8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E9511C6008E000D325BA /* unit_tests.c */; };
+		8AB4A9F71C665DFF003E11A1 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
+		8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F91C6662EC003E11A1 /* edge_tests.c */; };
 		8AF1BE991C61F24E009621BB /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +42,6 @@
 			files = (
 				8A45373A1C62090E00B9B19F /* core.h in CopyFiles */,
 				8A45373B1C62090E00B9B19F /* io.h in CopyFiles */,
-				8A45373C1C62090E00B9B19F /* arithmetic.h in CopyFiles */,
 				8A45373D1C62090E00B9B19F /* edge.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +63,6 @@
 		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7C374B1C60D7D30027C832 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
 		8A7C374C1C60D7FC0027C832 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
-		8A7C374F1C611BFB0027C832 /* arithmetic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
-		8A7C37501C611C0C0027C832 /* arithmetic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arithmetic.c; sourceTree = "<group>"; };
 		8A7C37521C6132730027C832 /* io_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_tests.h; sourceTree = "<group>"; };
 		8A7C37531C6132840027C832 /* io_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_tests.c; sourceTree = "<group>"; };
 		8A7C37551C6155A90027C832 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
@@ -82,6 +75,10 @@
 		8AB0E94F1C6008D100D325BA /* core_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core_tests.c; sourceTree = "<group>"; };
 		8AB0E9511C6008E000D325BA /* unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unit_tests.c; sourceTree = "<group>"; };
 		8AB0E9591C600EF800D325BA /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB4A9F51C665DEC003E11A1 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
+		8AB4A9F61C665DFF003E11A1 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = debug.c; sourceTree = "<group>"; };
+		8AB4A9F81C6662DA003E11A1 /* edge_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edge_tests.h; sourceTree = "<group>"; };
+		8AB4A9F91C6662EC003E11A1 /* edge_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge_tests.c; sourceTree = "<group>"; };
 		8AF1BE971C61F22D009621BB /* edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edge.h; sourceTree = "<group>"; };
 		8AF1BE981C61F24E009621BB /* edge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +159,8 @@
 				8AB0E9481C5FF78600D325BA /* include */,
 				8AB0E94B1C5FF85000D325BA /* core.c */,
 				8A7C374C1C60D7FC0027C832 /* io.c */,
-				8A7C37501C611C0C0027C832 /* arithmetic.c */,
 				8AF1BE981C61F24E009621BB /* edge.c */,
+				8AB4A9F61C665DFF003E11A1 /* debug.c */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -173,8 +170,8 @@
 			children = (
 				8AB0E94A1C5FF79500D325BA /* core.h */,
 				8A7C374B1C60D7D30027C832 /* io.h */,
-				8A7C374F1C611BFB0027C832 /* arithmetic.h */,
 				8AF1BE971C61F22D009621BB /* edge.h */,
+				8AB4A9F51C665DEC003E11A1 /* debug.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -186,6 +183,7 @@
 				8AB0E94F1C6008D100D325BA /* core_tests.c */,
 				8AB0E9511C6008E000D325BA /* unit_tests.c */,
 				8A7C37531C6132840027C832 /* io_tests.c */,
+				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -195,6 +193,7 @@
 			children = (
 				8AB0E94E1C6008C300D325BA /* core_tests.h */,
 				8A7C37521C6132730027C832 /* io_tests.h */,
+				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -339,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
-				8A7CBC791C622F9A006FD3A1 /* arithmetic.c in Sources */,
 				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
 				8A4537371C6208E400B9B19F /* core.c in Sources */,
 			);
@@ -350,7 +348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
-				8A7CBC7C1C622FA0006FD3A1 /* arithmetic.c in Sources */,
 				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
 				8A4537381C6208EA00B9B19F /* core.c in Sources */,
 			);
@@ -361,7 +358,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
-				8A7CBC741C622F84006FD3A1 /* arithmetic.c in Sources */,
 				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
 				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
 			);
@@ -372,7 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
-				8A7C37511C611C0C0027C832 /* arithmetic.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
 			);
@@ -382,10 +377,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A7CBC761C622F93006FD3A1 /* arithmetic.c in Sources */,
 				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
+				8AB4A9F71C665DFF003E11A1 /* debug.c in Sources */,
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
+				8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */,
 				8AB0E9601C600F0D00D325BA /* core.c in Sources */,
 				8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */,
 				8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */,
@@ -614,6 +610,7 @@
 				8A7CBC6C1C62277B006FD3A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AB0E93A1C5FF74F00D325BA /* Build configuration list for PBXProject "imagic" */ = {
 			isa = XCConfigurationList;

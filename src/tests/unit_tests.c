@@ -10,9 +10,13 @@
 
 #include "core_tests.h"
 #include "io_tests.h"
+#include "edge_tests.h"
 
 int main(int argc, const char * argv[])
 {
+    (void)argc;
+    (void)argv;
+    
     puts("Starting libimagic unit tests\n");
     
     puts("Starting core component tests\n");
@@ -46,12 +50,27 @@ int main(int argc, const char * argv[])
     test_ppmopen_ascii();
     test_ppmopen_binary();
     test_pbmopen_ascii();
+//    test_pbmopen_binary();
     
     printf("Finished io component tests (%d passed, %d failed on %d tests)\n", io_tests_passed, io_tests_failed, IO_TEST_CASES_COUNT);
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
-    printf("Finished libimagic unit tests (%d passed, %d failed on %d tests)\n", core_tests_passed + io_tests_passed, core_tests_failed + io_tests_failed, CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT);
+    puts("Starting edge component tests\n");
+    
+    edge_tests_passed = 0;
+    edge_tests_failed = 0;
+    
+    test_grad_alloc();
+    test_grdsobel();
+    test_grdprewitt();
+    test_grdderiv();
+    
+    printf("Finished edge component tests (%d passed, %d failed on %d tests)\n", edge_tests_passed, edge_tests_failed, EDGE_TEST_CASES_COUNT);
+    
+    puts("\n-----------------------------------------------------------------------------------------------\n");
+    
+    printf("Finished libimagic unit tests (%d passed, %d failed on %d tests)\n", core_tests_passed + io_tests_passed + edge_tests_passed, core_tests_failed + io_tests_failed + edge_tests_failed, CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT);
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
