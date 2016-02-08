@@ -225,21 +225,48 @@ bini_t *pbmopen(const char *filename)
         
         img = binialloc(width, height);
         
-        char databuf[length];
-        
-        fgets(databuf, (int)sizeof(databuf) + 1, file);
-        
         unsigned int i = 0;
         
         if (ifmt == PBM_ASCII)
         {
+            char databuf[length];
+            
+            fgets(databuf, (int)sizeof(databuf) + 1, file);
+            
             for (i = 0; i < length; i += i < length)
                 img->data[i] = databuf[i] - '0';
         }
         
         else
         {
-            fread(img->data, sizeof(uint8_t), length, file);
+            int ss = (width * height + 7) / 8;
+            
+            uint8_t space = 0;
+            
+            char databuf[ss];
+            
+            //fread(&space, 1, 1, file);
+            printf("BINARYYYYYYY : %d\n", ss);
+            fread(databuf, sizeof(char), ss, file);
+            
+//            for (i = 0; i < (length / 8) + (length % 8); i += i < length)
+//                printf("%d\n", img->data[i] - '0');
+            
+            int j = 0, k = 0;;
+            
+            for (i = 0; i < ss; i++)
+            {
+                printf("%d\n", databuf[i] - '0');
+                for (j = 7; j >= 0; j--)
+                {
+                    k++;
+                    printf("%d", !!((databuf[i] - '0') & (1 << (j))));
+                }
+                
+                puts("\n");
+            }
+            
+            printf("\nk = %d\n", k);
         }
         
         fclose(file);

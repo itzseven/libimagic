@@ -190,5 +190,33 @@ void test_pbmopen_ascii()
 
 void test_pbmopen_binary()
 {
+    puts("Starts test_pbmopen_binary\n");
     
+    uint16_t width = 5, height = 5;
+    
+    bini_t *img = pbmopen("resources/stairs-bin.pbm");
+    
+    if ((img->width != width) || (img->height != height))
+    {
+        printf("test_pbmopen_binary failed : expected width %d and height %d but got %d and %d\n", width, height, img->width, img->height);
+    }
+    
+    uint8_t ref[] = {1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1};
+    
+    int i = 0;
+    
+    for (i = 0; i < img->width * img->height; i++)
+    {
+        if (img->data[i] != ref[i])
+        {
+            printf("test_pbmopen_binary failed : expected value %d but got %d on %d\n", ref[i], img->data[i], i);
+            io_tests_failed++;
+            binifree(img);
+            return;
+        }
+    }
+    
+    puts("test_pbmopen_binary passed\n");
+    io_tests_passed++;
+    binifree(img);
 }
