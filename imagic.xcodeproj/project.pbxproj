@@ -28,7 +28,6 @@
 		8AB0E9601C600F0D00D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
 		8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E9511C6008E000D325BA /* unit_tests.c */; };
-		8AB4A9F71C665DFF003E11A1 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
 		8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F91C6662EC003E11A1 /* edge_tests.c */; };
 		8AF1BE991C61F24E009621BB /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 /* End PBXBuildFile section */
@@ -378,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
-				8AB4A9F71C665DFF003E11A1 /* debug.c in Sources */,
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
 				8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */,
