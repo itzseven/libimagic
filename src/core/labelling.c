@@ -18,14 +18,12 @@ labels_t *laballoc(uint16_t width, uint16_t height)
     return labels;
 }
 
-
-
 labels_t *label(bini_t *src)
 {
     labels_t *labels = laballoc(src->width, src->height);
     
     uint16_t width = src->width;
-    uint32_t i = 0, j = 0, k = 0, eB = 0, eA = 0, eC = 0, pixcount = src->width * src->height, attA, attB, attC;
+    uint32_t i = 0, j = 0, k = 0, l = 1, m = 1, n = 0, eB = 0, eA = 0, eC = 0, labelCount = 0, pixcount = src->width * src->height, attA, attB, attC;
     unsigned int *T = (unsigned int *)calloc(src->width * src->height, sizeof(unsigned int));
     
     unsigned int TeB = 0;
@@ -53,23 +51,64 @@ labels_t *label(bini_t *src)
             eB = labels->data[j_im1];
             eC = labels->data[j_i];
             
-            //TeB = T[eB];
-            
             wpix = attC == 0;
             attA_eq_attB = attA == attB;
             attA_eq_attC = attA == attC;
             attB_eq_attC = attB == attC;
             eA_eq_eB = eA == eB;
             
-            // should optimize this as well..
+            TeB = T[eB];
             
-            // rewrite all the code (take a look to the document on image processing (ghiles cours)))
+            if (attA_eq_attC && attB_eq_attC && !eA_eq_eB)
+            {
+                uint8_t TeB_gt_eA = TeB > eA;
+                eC = labels->data[j_i];
+                T[j_i] = (TeB_gt_eA * eA) + (!TeB_gt_eA * TeB);
+                T[eC] = eC;
+                T[eA] = eC;
+                T[(!TeB_gt_eA * eA) + (TeB_gt_eA * TeB)] = eC;
+            }
+            
+            else
+            {
+                labelCount = labels->count;
+                labels->data[j_i] = wpix * ((attA_eq_attC && !attB_eq_attC) * eA) + ((!attA_eq_attC && attB_eq_attC) * TeB) + ((!attA_eq_attC && !attB_eq_attC) * (labels->count += (!attA_eq_attC && !attB_eq_attC))) + ((attA_eq_attC && attB_eq_attC && eA_eq_eB) * eA);
+            }
         }
     }
     
-    // not optimized
+    uint32_t Tl = 0;
+    uint8_t Tl_eq_l = 0;
     
-    // rewrite all the code..
+    for (l = 1; l < pixcount; l++)
+    {
+        Tl = T[l];
+        Tl_eq_l = Tl == l;
+        T[l] = (Tl_eq_l * (m++)) + (!Tl_eq_l * Tl);
+    }
+    
+    
+    i = 1;
+    j = 1;
+    
+    unsigned int maxLabel = 1;
+    uint32_t lab = 0;
+    
+    for (i = 1; i < src->height; i++)
+    {
+        for (j = 1; j < src->width; j++)
+        {
+            n = PXL_IDX(src->width, j, i);
+            lab = labels->data[n];
+            labels->data[n] = T[lab];
+            lab = labels->data[n];
+            
+            if (lab > maxLabel)
+                maxLabel = lab;
+        }
+    }
+    
+    labels->count = maxLabel;
     
     free(T);
     

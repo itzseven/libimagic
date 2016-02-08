@@ -79,9 +79,9 @@ gray8i_t *debug_labellingToGray8i(labels_t *labels, uint16_t width, uint16_t hei
 
     int i, j, k;
 
-    for (i = 1; i < built_image->height - 1; i++)
+    for (i = 0; i < built_image->height; i++)
     {
-        for (j = 1; j <= built_image->width - 1; j++)
+        for (j = 0; j <= built_image->width; j++)
         {
             k = PXL_IDX(built_image->width, j, i);
             built_image->data[k] = (uint8_t) (labels->data[k] * coef);
@@ -89,4 +89,32 @@ gray8i_t *debug_labellingToGray8i(labels_t *labels, uint16_t width, uint16_t hei
     }
 
     return built_image;
+}
+
+void debug_saveLabels(labels_t *labels, char *filename, uint16_t width, uint16_t height)
+{
+    FILE* outputFile;
+
+    outputFile = fopen(filename, "w");
+
+    if (outputFile != NULL)
+    {
+        int i, j;
+
+        for (i = 0; i <= height - 1; i++)
+        {
+            for (j = 0; j <= width - 1; j++)
+            {
+                fprintf(outputFile, "%d\t", labels->data[PXL_IDX(width, j, i)]);
+            }
+
+            fprintf(outputFile, "\n");
+        }
+    }
+
+    else
+    {
+        printf("ERROR : %s is NULL\n\n", filename);
+        return;
+    }
 }

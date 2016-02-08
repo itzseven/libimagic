@@ -12,6 +12,19 @@
 		8A45373A1C62090E00B9B19F /* core.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB0E94A1C5FF79500D325BA /* core.h */; };
 		8A45373B1C62090E00B9B19F /* io.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C374B1C60D7D30027C832 /* io.h */; };
 		8A45373D1C62090E00B9B19F /* edge.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AF1BE971C61F22D009621BB /* edge.h */; };
+		8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8A71D13B1C6902F70009F5A8 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
+		8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8A71D13F1C690D960009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8A71D1421C690DA60009F5A8 /* arithmetic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A71D1331C68E9CA0009F5A8 /* arithmetic.h */; };
+		8A71D1431C690DA60009F5A8 /* labelling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A71D1341C68E9CA0009F5A8 /* labelling.h */; };
 		8A7C374D1C60D7FC0027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7C374E1C60E3A10027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7C37561C6155C20027C832 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C37551C6155A90027C832 /* resources */; };
@@ -39,6 +52,8 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				8A71D1421C690DA60009F5A8 /* arithmetic.h in CopyFiles */,
+				8A71D1431C690DA60009F5A8 /* labelling.h in CopyFiles */,
 				8A45373A1C62090E00B9B19F /* core.h in CopyFiles */,
 				8A45373B1C62090E00B9B19F /* io.h in CopyFiles */,
 				8A45373D1C62090E00B9B19F /* edge.h in CopyFiles */,
@@ -60,6 +75,10 @@
 /* Begin PBXFileReference section */
 		8A4537211C62085F00B9B19F /* libiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A71D1331C68E9CA0009F5A8 /* arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
+		8A71D1341C68E9CA0009F5A8 /* labelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = labelling.h; sourceTree = "<group>"; };
+		8A71D1351C68E9D70009F5A8 /* arithmetic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arithmetic.c; sourceTree = "<group>"; };
+		8A71D1361C68E9D70009F5A8 /* labelling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = labelling.c; sourceTree = "<group>"; };
 		8A7C374B1C60D7D30027C832 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
 		8A7C374C1C60D7FC0027C832 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
 		8A7C37521C6132730027C832 /* io_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_tests.h; sourceTree = "<group>"; };
@@ -155,6 +174,8 @@
 		8AB0E9471C5FF78600D325BA /* core */ = {
 			isa = PBXGroup;
 			children = (
+				8A71D1351C68E9D70009F5A8 /* arithmetic.c */,
+				8A71D1361C68E9D70009F5A8 /* labelling.c */,
 				8AB0E9481C5FF78600D325BA /* include */,
 				8AB0E94B1C5FF85000D325BA /* core.c */,
 				8A7C374C1C60D7FC0027C832 /* io.c */,
@@ -167,6 +188,8 @@
 		8AB0E9481C5FF78600D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				8A71D1331C68E9CA0009F5A8 /* arithmetic.h */,
+				8A71D1341C68E9CA0009F5A8 /* labelling.h */,
 				8AB0E94A1C5FF79500D325BA /* core.h */,
 				8A7C374B1C60D7D30027C832 /* io.h */,
 				8AF1BE971C61F22D009621BB /* edge.h */,
@@ -336,6 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */,
+				8A71D13F1C690D960009F5A8 /* labelling.c in Sources */,
 				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
 				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
 				8A4537371C6208E400B9B19F /* core.c in Sources */,
@@ -346,6 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */,
+				8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */,
 				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
 				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
 				8A4537381C6208EA00B9B19F /* core.c in Sources */,
@@ -356,6 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */,
+				8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */,
 				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
 				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
 				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
@@ -369,6 +398,8 @@
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
+				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
+				8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +407,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A71D13B1C6902F70009F5A8 /* debug.c in Sources */,
+				8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */,
+				8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */,
 				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,

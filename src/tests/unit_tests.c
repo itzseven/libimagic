@@ -79,24 +79,5 @@ int main(int argc, const char * argv[])
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
-    gray8i_t *src = pgmopen("/Users/iSeven/shapes_bin.pgm");
-    
-    int i = 0;
-    
-//    for (i = 0; i < src->width * src->height; i++)
-//    {
-//        printf("%d\n", src->data[i]);
-//    }
-    
-    bini_t *bin = binarise(src, 50);
-    
-    labels_t *lab = label(bin);
-    
-    printf("Found etiq : %d\n", lab->count);
-    
-    gray8i_t *newImg = debug_labellingToGray8i(lab, src->width, src->height);
-    
-    pgmwrite(newImg, "/Users/iSeven/rice_bin_etiq.pgm", PGM_ASCII);
-    
     return 0;
 }

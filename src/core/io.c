@@ -241,7 +241,7 @@ bini_t *pbmopen(const char *filename)
         {
             int ss = (width * height + 7) / 8;
             
-            uint8_t space = 0;
+            //uint8_t space = 0;
             
             char databuf[ss];
             

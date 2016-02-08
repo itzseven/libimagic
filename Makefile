@@ -18,6 +18,7 @@ HEADFLAGS=-I$(CORE_SRC_DIR)/include -I$(TESTS_SRC_DIR)/include
 CORE_C_SRC=$(CORE_SRC_DIR)/core.c
 IO_C_SRC=$(CORE_SRC_DIR)/io.c
 EDGE_C_SRC=$(CORE_SRC_DIR)/edge.c
+LABELLING_C_SRC=$(CORE_SRC_DIR)/labelling.c
 
 # Library tests source files
 
@@ -31,6 +32,7 @@ EDGE_TESTS_C_SRC=$(TESTS_SRC_DIR)/edge_tests.c
 CORE_H_SRC=$(CORE_SRC_DIR)/include/core.h
 IO_H_SRC=$(CORE_SRC_DIR)/include/io.h
 EDGE_H_SRC=$(CORE_SRC_DIR)/include/edge.h
+LABELLING_H_SRC=$(CORE_SRC_DIR)/labelling.h
 
 # Library tests header files
 
@@ -40,7 +42,7 @@ EDGE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/edge_tests.h
 
 # Library object files
 
-LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o
+LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o
 
 all: libimagic.a libimagictests
 
@@ -56,7 +58,10 @@ io.o: obj $(IO_C_SRC) $(CORE_H_SRC)
 edge.o: obj $(EDGE_C_SRC) $(CORE_H_SRC)
 	$(CLANG) -c $(HEADFLAGS) $(EDGE_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
 
-libimagic.a: obj core.o io.o edge.o
+labelling.o: obj $(LABELLING_C_SRC) $(CORE_H_SRC)
+	$(CLANG) -c $(HEADFLAGS) $(LABELLING_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
+
+libimagic.a: obj core.o io.o edge.o labelling.o
 	ar rcs $(OBJ_DIR)/$@ $(LIBRARY_OBJ_FILES)
 
 core_tests.o: obj $(CORE_TESTS_C_SRC) $(CORE_H_SRC)

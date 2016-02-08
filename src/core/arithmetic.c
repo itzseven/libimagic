@@ -14,7 +14,9 @@ bini_t *binarise(gray8i_t *src, uint8_t threshold)
     
     int i = 0;
     
-    for (i = 0; i < src->width * src->height; i++)
+    uint32_t pixcount = src->width * src->height;
+    
+    for (i = 0; i < pixcount; i++)
         dst->data[i] = !(src->data[i] > threshold);
     
     return dst;
