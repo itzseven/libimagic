@@ -1,3 +1,6 @@
+# Makefile to compile libimagic
+
+
 # Required directories
 
 CORE_SRC_DIR=src/core
