@@ -19,6 +19,7 @@ CORE_C_SRC=$(CORE_SRC_DIR)/core.c
 IO_C_SRC=$(CORE_SRC_DIR)/io.c
 EDGE_C_SRC=$(CORE_SRC_DIR)/edge.c
 LABELLING_C_SRC=$(CORE_SRC_DIR)/labelling.c
+ARITHMETIC_C_SRC=$(CORE_SRC_DIR)/arithmetic.c
 
 # Library tests source files
 
@@ -26,23 +27,26 @@ UNIT_TESTS_C_SRC=$(TESTS_SRC_DIR)/unit_tests.c
 CORE_TESTS_C_SRC=$(TESTS_SRC_DIR)/core_tests.c
 IO_TESTS_C_SRC=$(TESTS_SRC_DIR)/io_tests.c
 EDGE_TESTS_C_SRC=$(TESTS_SRC_DIR)/edge_tests.c
+LABELLING_TESTS_C_SRC=$(TESTS_SRC_DIR)/labelling_tests.c
 
 # Library header files
 
 CORE_H_SRC=$(CORE_SRC_DIR)/include/core.h
 IO_H_SRC=$(CORE_SRC_DIR)/include/io.h
 EDGE_H_SRC=$(CORE_SRC_DIR)/include/edge.h
-LABELLING_H_SRC=$(CORE_SRC_DIR)/labelling.h
+LABELLING_H_SRC=$(CORE_SRC_DIR)/include/labelling.h
+ARITHMETIC_H_SRC=$(CORE_SRC_DIR)/include/arithmetic.h
 
 # Library tests header files
 
 CORE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/core_tests.h
 IO_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/io_tests.h
 EDGE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/edge_tests.h
+LABELLING_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/labelling_tests.h
 
 # Library object files
 
-LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o
+LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o
 
 all: libimagic.a libimagictests
 
@@ -61,7 +65,10 @@ edge.o: obj $(EDGE_C_SRC) $(CORE_H_SRC)
 labelling.o: obj $(LABELLING_C_SRC) $(CORE_H_SRC)
 	$(CLANG) -c $(HEADFLAGS) $(LABELLING_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
 
-libimagic.a: obj core.o io.o edge.o labelling.o
+arithmetic.o: obj $(ARITHMETIC_C_SRC) $(CORE_H_SRC)
+	$(CLANG) -c $(HEADFLAGS) $(ARITHMETIC_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
+
+libimagic.a: obj core.o io.o edge.o labelling.o arithmetic.o
 	ar rcs $(OBJ_DIR)/$@ $(LIBRARY_OBJ_FILES)
 
 core_tests.o: obj $(CORE_TESTS_C_SRC) $(CORE_H_SRC)
@@ -73,10 +80,13 @@ io_tests.o: obj $(IO_TESTS_C_SRC) $(IO_H_SRC)
 edge_tests.o: obj $(EDGE_TESTS_C_SRC) $(EDGE_H_SRC)
 	$(CLANG) -c $(HEADFLAGS) $(EDGE_TESTS_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
 
+labelling_tests.o: obj $(LABELLING_TESTS_C_SRC) $(LABELLING_H_SRC) $(ARITHMETIC_H_SRC)
+	$(CLANG) -c $(HEADFLAGS) $(LABELLING_TESTS_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
+
 unit_tests.o: obj $(UNIT_TESTS_C_SRC) $(CORE_TESTS_H_SRC) $(IO_TESTS_H_SRC) $(EDGE_TESTS_H_SRC)
 	$(CLANG) -c $(HEADFLAGS) $(UNIT_TESTS_C_SRC) -o $(OBJ_DIR)/$@ $(CFLAGS)
 
-libimagictests: obj core.o io.o edge.o core_tests.o io_tests.o edge_tests.o unit_tests.o
+libimagictests: obj core.o io.o edge.o labelling.o arithmetic.o core_tests.o io_tests.o edge_tests.o labelling_tests.o unit_tests.o
 	$(CLANG) -o $(OBJ_DIR)/$@ $(OBJ_DIR)/*.o
 
 runtests: libimagictests
