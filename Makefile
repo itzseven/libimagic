@@ -134,10 +134,11 @@ libosx-static.a: bin
 
 # iOS (iphoneos + iphonesimulator)
 
+IOS_ARCHS_SIM="i386 x86_64"
 IOS_ARCHS="armv7 armv7s arm64"
 
 libiossim.a:
-	$(XBUILD) -project $(PROJECT) -target iOS-Simulator -sdk iphonesimulator -configuration Release clean build > /dev/null
+	$(XBUILD) ARCHS=$(IOS_ARCHS_SIM) ONLY_ACTIVE_ARCH=NO -project $(PROJECT) -target iOS-Simulator -sdk iphonesimulator -configuration Release clean build > /dev/null
 
 libiosdev.a:
 	$(XBUILD) ARCHS=$(IOS_ARCHS) ONLY_ACTIVE_ARCH=NO -project $(PROJECT) -target iOS -sdk iphoneos -configuration Release clean build > /dev/null

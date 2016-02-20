@@ -43,6 +43,16 @@
 		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
 		8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E9511C6008E000D325BA /* unit_tests.c */; };
 		8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F91C6662EC003E11A1 /* edge_tests.c */; };
+		8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AC5A41A1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AC5A4201C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AC5A4211C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AC5A4221C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AC5A4231C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
 		8AF1BE991C61F24E009621BB /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +110,10 @@
 		8AB4A9F61C665DFF003E11A1 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = debug.c; sourceTree = "<group>"; };
 		8AB4A9F81C6662DA003E11A1 /* edge_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edge_tests.h; sourceTree = "<group>"; };
 		8AB4A9F91C6662EC003E11A1 /* edge_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge_tests.c; sourceTree = "<group>"; };
+		8AC5A4161C6A1B9A0056C111 /* characterization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = characterization.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		8AC5A4171C6A1BD80056C111 /* characterization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = characterization.c; sourceTree = "<group>"; };
+		8AC5A41D1C6A1D5E0056C111 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
+		8AC5A41E1C6A1E040056C111 /* geometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geometry.c; sourceTree = "<group>"; };
 		8AF1BE971C61F22D009621BB /* edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edge.h; sourceTree = "<group>"; };
 		8AF1BE981C61F24E009621BB /* edge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,13 +191,15 @@
 		8AB0E9471C5FF78600D325BA /* core */ = {
 			isa = PBXGroup;
 			children = (
-				8A71D1351C68E9D70009F5A8 /* arithmetic.c */,
-				8A71D1361C68E9D70009F5A8 /* labelling.c */,
 				8AB0E9481C5FF78600D325BA /* include */,
 				8AB0E94B1C5FF85000D325BA /* core.c */,
+				8A71D1351C68E9D70009F5A8 /* arithmetic.c */,
+				8A71D1361C68E9D70009F5A8 /* labelling.c */,
 				8A7C374C1C60D7FC0027C832 /* io.c */,
 				8AF1BE981C61F24E009621BB /* edge.c */,
 				8AB4A9F61C665DFF003E11A1 /* debug.c */,
+				8AC5A4171C6A1BD80056C111 /* characterization.c */,
+				8AC5A41E1C6A1E040056C111 /* geometry.c */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -197,6 +213,8 @@
 				8A7C374B1C60D7D30027C832 /* io.h */,
 				8AF1BE971C61F22D009621BB /* edge.h */,
 				8AB4A9F51C665DEC003E11A1 /* debug.h */,
+				8AC5A4161C6A1B9A0056C111 /* characterization.h */,
+				8AC5A41D1C6A1D5E0056C111 /* geometry.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -367,7 +385,9 @@
 				8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */,
 				8A71D13F1C690D960009F5A8 /* labelling.c in Sources */,
 				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
+				8AC5A4221C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
+				8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */,
 				8A4537371C6208E400B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +399,9 @@
 				8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */,
 				8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */,
 				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
+				8AC5A4231C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
+				8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */,
 				8A4537381C6208EA00B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +413,9 @@
 				8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */,
 				8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */,
 				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
+				8AC5A4201C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
+				8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */,
 				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +427,9 @@
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
+				8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */,
 				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
+				8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */,
 				8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +441,7 @@
 				8A71D13B1C6902F70009F5A8 /* debug.c in Sources */,
 				8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */,
 				8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */,
+				8AC5A4211C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
@@ -422,6 +449,7 @@
 				8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */,
 				8AB0E9601C600F0D00D325BA /* core.c in Sources */,
 				8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */,
+				8AC5A41A1C6A1BD80056C111 /* characterization.c in Sources */,
 				8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +489,7 @@
 		8A4537351C62086A00B9B19F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = x86_64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
@@ -470,14 +498,14 @@
 				SDKROOT = iphonesimulator;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
 		};
 		8A4537361C62086A00B9B19F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = x86_64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				ONLY_ACTIVE_ARCH = YES;
@@ -487,7 +515,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = x86_64;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
 		};
