@@ -166,6 +166,8 @@ headers:
 resources:
 	cp -R resources $(BIN_DIR)/
 
+# Run the unit tests
+
 runtests: libimagictests resources
 	cd $(BIN_DIR)/ && ./libimagictests
 
