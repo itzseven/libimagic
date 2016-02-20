@@ -129,7 +129,7 @@ PROJECT=$(PROJECT_ROOT)/imagic.xcodeproj
 # Mac OS X
 
 libosx-static.a: bin
-	$(XBUILD) -project $(PROJECT) -target OSX -sdk macosx -configuration Release clean build > /dev/null
+	$(XBUILD) -project $(PROJECT) -target OSX -sdk macosx -configuration Release clean build > /dev/null && cp build/Release/libOSX.a $(BIN_DIR)/$(STATIC_LIB_OSX_PNAME)
 
 
 # iOS (iphoneos + iphonesimulator)
@@ -137,7 +137,7 @@ libosx-static.a: bin
 IOS_ARCHS="armv7 armv7s arm64"
 
 libiossim.a:
-	$(XBUILD) -project $(PROJECT) -target iOS-Simulator -sdk iphonesimulator -configuration Release clean build > /dev/null && cp build/Release/libOSX.a $(BIN_DIR)/$(STATIC_LIB_OSX_PNAME)
+	$(XBUILD) -project $(PROJECT) -target iOS-Simulator -sdk iphonesimulator -configuration Release clean build > /dev/null
 
 libiosdev.a:
 	$(XBUILD) ARCHS=$(IOS_ARCHS) ONLY_ACTIVE_ARCH=NO -project $(PROJECT) -target iOS -sdk iphoneos -configuration Release clean build > /dev/null
