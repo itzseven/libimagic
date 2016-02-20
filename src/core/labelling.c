@@ -2,8 +2,8 @@
 //  labelling.c
 //  imagic
 //
-//  Created by Romain Dubreucq on 07/02/2016.
-//  Copyright © 2016 Romain Dubreucq. All rights reserved.
+//  Created by itzseven on 07/02/2016.
+//  Copyright © 2016 itzseven. All rights reserved.
 //
 
 #include "labelling.h"
@@ -30,7 +30,7 @@ labels_t *label(bini_t *src)
     
     unsigned int TeB = 0;
     
-    uint8_t attA_eq_attB = 0, attA_eq_attC = 0, attB_eq_attC = 0, eA_eq_eB = 0;
+    uint8_t attA_eq_attC = 0, attB_eq_attC = 0, eA_eq_eB = 0;
     
     uint32_t jm1_i = 0, j_im1 = 0, j_i = 0;
     
@@ -51,11 +51,9 @@ labels_t *label(bini_t *src)
             
             eA = labels->data[jm1_i];
             eB = labels->data[j_im1];
-            eC = labels->data[j_i];
             
             TeB = T[eB];
             
-            attA_eq_attB = attA == attB;
             attA_eq_attC = attA == attC;
             attB_eq_attC = attB == attC;
             eA_eq_eB = eA == eB;
@@ -96,9 +94,6 @@ labels_t *label(bini_t *src)
         Tl_eq_l = Tl == l;
         T[l] = Tl_eq_l ? m++ : T[Tl];
     }
-    
-    i = 1;
-    j = 1;
     
     unsigned int maxLabel = 1;
     uint32_t lab = 0;

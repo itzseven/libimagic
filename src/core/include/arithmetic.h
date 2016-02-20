@@ -11,6 +11,13 @@
 
 #include "core.h"
 
+/*!
+ *  Returns a binarised image (stored in bini_t object) from source image in grayscale
+ *
+ *  src : source image
+ *  threshold : binarization threshold
+ */
+
 bini_t *binarise(gray8i_t *src, uint8_t threshold);
 
 #endif /* arithmetic_h */

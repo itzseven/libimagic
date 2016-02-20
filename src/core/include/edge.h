@@ -15,13 +15,38 @@
 
 /*!
  *  Use the following macro to calculate a specific gradient using the value of the pixels at the neighborhood
+ *
+ *  Each parameter name correspond to the coordinates of the pixel in the neighborhood of (j, i), as specified below :
+ *
+ *  jp1_im1 => (j + 1, i - 1)
+ *  jp1_ip1 => (j + 1, i + 1)
+ *  jp1_i => (j + 1, i)
+ *  jm1_im1 => (j - 1, i - 1)
+ *  jm1_ip1 => (j - 1, i + 1)
+ *  jm1_i => (j - 1, i)
+ */
+
+/*!
+ *  Horizontal Sobel
  */
 
 #define H_SOBEL(jp1_im1, jp1_ip1, jp1_i, jm1_im1, jm1_ip1, jm1_i) (jp1_im1 + jp1_ip1 + (2 * jp1_i) - (jm1_im1 + jm1_ip1 + (2 * jm1_i)))
 
+/*!
+ *  Vertical Sobel
+ */
+
 #define V_SOBEL(jm1_ip1, jp1_ip1, j_ip1, jm1_im1, jp1_im1, j_im1) (jm1_ip1 + jp1_ip1 + (2 * j_ip1) - (jm1_im1 + jp1_im1 + (2 * j_im1)))
 
+/*!
+ *  Horizontal Prewitt
+ */
+
 #define H_PREWITT(jp1_im1, jp1_ip1, jp1_i, jm1_im1, jm1_ip1, jm1_i) (jp1_im1 + jp1_ip1 + jp1_i - (jm1_im1 + jm1_ip1 + jm1_i))
+
+/*!
+ *  Vertical Prewitt
+ */
 
 #define V_PREWITT(jm1_ip1, jp1_ip1, j_ip1, jm1_im1, jp1_im1, j_im1) (jm1_ip1 + jp1_ip1 + j_ip1 - (jm1_im1 + jp1_im1 + j_im1))
 
@@ -42,6 +67,9 @@ typedef struct _grad {
 
 /*!
  *  Returns an initialized grad_t object (with length width x height) with allocated data set to 0
+ *
+ *  width : horizontal distance of the image
+ *  height : vertical distance of the image
  */
 
 grad_t *gradalloc(uint16_t width, uint16_t height);
@@ -52,6 +80,8 @@ grad_t *gradalloc(uint16_t width, uint16_t height);
  *       -1  0  1                 -1  -2  -1
  *  Gx = -2  0  2  *  I      Gy =  0   0   0  * I       and G = √(Gx² + Gy²)
  *       -1  0  1                  1   2   1
+ *
+ *  src : source image
  */
 
 grad_t *grdsobel(gray8i_t *src);
@@ -62,6 +92,8 @@ grad_t *grdsobel(gray8i_t *src);
  *       -1  0  1                 -1  -1  -1
  *  Gx = -1  0  1  *  I      Gy =  0   0   0  * I       and G = √(Gx² + Gy²)
  *       -1  0  1                  1   1   1
+ *
+ *  src : source image
  */
 
 grad_t *grdprewitt(gray8i_t *src);
@@ -71,12 +103,15 @@ grad_t *grdprewitt(gray8i_t *src);
  *
  *  Ix'(x, y) = I(x, y) - I(x - 1, y)       and     Iy'(x, y) = I(x, y) - I(x, y - 1)
  *
+ *  src : source image
  */
 
 grad_t *grdderiv(gray8i_t *src);
 
 /*!
  *  Frees the memory of an grad object
+ *
+ *  grad : gradient to free
  */
 
 void gradfree(grad_t *grad);
