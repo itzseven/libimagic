@@ -12,7 +12,7 @@ BIN_DIR=bin
 
 GCC=gcc
 CLANG=clang
-CPL=$(GCC)
+CPL=$(CLANG)
 XBUILD=xcodebuild
 
 #	Compiler options
@@ -27,6 +27,8 @@ IO_C_SRC=$(CORE_SRC_DIR)/io.c
 EDGE_C_SRC=$(CORE_SRC_DIR)/edge.c
 LABELLING_C_SRC=$(CORE_SRC_DIR)/labelling.c
 ARITHMETIC_C_SRC=$(CORE_SRC_DIR)/arithmetic.c
+GEOMETRY_C_SRC=$(CORE_SRC_DIR)/geometry.c
+CHARACTERIZATION_C_SRC=$(CORE_SRC_DIR)/characterization.c
 
 #	Library tests source files
 
@@ -35,6 +37,7 @@ CORE_TESTS_C_SRC=$(TESTS_SRC_DIR)/core_tests.c
 IO_TESTS_C_SRC=$(TESTS_SRC_DIR)/io_tests.c
 EDGE_TESTS_C_SRC=$(TESTS_SRC_DIR)/edge_tests.c
 LABELLING_TESTS_C_SRC=$(TESTS_SRC_DIR)/labelling_tests.c
+CHARACTERIZATION_TESTS_C_SRC=$(TESTS_SRC_DIR)/characterization_tests.c
 
 #	Library header files
 
@@ -43,6 +46,8 @@ IO_H_SRC=$(CORE_SRC_DIR)/include/io.h
 EDGE_H_SRC=$(CORE_SRC_DIR)/include/edge.h
 LABELLING_H_SRC=$(CORE_SRC_DIR)/include/labelling.h
 ARITHMETIC_H_SRC=$(CORE_SRC_DIR)/include/arithmetic.h
+GEOMETRY_H_SRC=$(CORE_SRC_DIR)/include/geometry.h
+CHARACTERIZATION_H_SRC=$(CORE_SRC_DIR)/include/characterization.h
 
 #	Library tests header files
 
@@ -50,10 +55,11 @@ CORE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/core_tests.h
 IO_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/io_tests.h
 EDGE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/edge_tests.h
 LABELLING_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/labelling_tests.h
+CHARACTERIZATION_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/characterization_tests.h
 
 #	Library object files
 
-LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o
+LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o $(OBJ_DIR)/geometry.o $(OBJ_DIR)/characterization.o
 
 #	Product names
 
@@ -94,7 +100,13 @@ labelling.o: obj $(LABELLING_C_SRC) $(CORE_H_SRC)
 arithmetic.o: obj $(ARITHMETIC_C_SRC) $(CORE_H_SRC)
 	$(CPL) -c $(ARITHMETIC_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o
+geometry.o: obj $(GEOMETRY_C_SRC)
+	$(CPL) -c $(GEOMETRY_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+characterization.o: obj $(CHARACTERIZATION_C_SRC) $(LABELLING_H_SRC) $(GEOMETRY_H_SRC)
+	$(CPL) -c $(CHARACTERIZATION_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o geometry.o characterization.o
 	ar rcs $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) $(LIBRARY_OBJ_FILES)
 
 #	Library tests rules
@@ -111,10 +123,13 @@ edge_tests.o: obj $(EDGE_TESTS_C_SRC) $(EDGE_H_SRC)
 labelling_tests.o: obj $(LABELLING_TESTS_C_SRC) $(LABELLING_H_SRC) $(ARITHMETIC_H_SRC)
 	$(CPL) -c $(LABELLING_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-unit_tests.o: obj $(UNIT_TESTS_C_SRC) $(CORE_TESTS_H_SRC) $(IO_TESTS_H_SRC) $(EDGE_TESTS_H_SRC)
+characterization_tests.o: obj $(CHARACTERIZATION_TESTS_C_SRC) $(CHARACTERIZATION_H_SRC) $(ARITHMETIC_H_SRC)
+	$(CPL) -c $(CHARACTERIZATION_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+unit_tests.o: obj $(UNIT_TESTS_C_SRC) $(CORE_TESTS_H_SRC) $(IO_TESTS_H_SRC) $(EDGE_TESTS_H_SRC) $(CHARACTERIZATION_TESTS_H_SRC)
 	$(CPL) -c $(UNIT_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-libimagictests: obj libimagic.a core_tests.o io_tests.o edge_tests.o labelling_tests.o unit_tests.o
+libimagictests: obj libimagic.a core_tests.o io_tests.o edge_tests.o labelling_tests.o characterization_tests.o unit_tests.o
 	$(CPL) $(OBJ_DIR)/*_tests.o $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) -o $(BIN_DIR)/$@
 
 # # #

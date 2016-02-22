@@ -38,6 +38,7 @@
 		8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 		8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
+		8AA436C71C7BB5D800000C4F /* characterization_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AA436C61C7BB5D800000C4F /* characterization_tests.c */; };
 		8AB0E94C1C5FF85000D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9601C600F0D00D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
@@ -99,6 +100,8 @@
 		8A7C37551C6155A90027C832 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		8A7CBC6A1C62277B006FD3A1 /* libOSX-dynamic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libOSX-dynamic.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7CBC7E1C6295C3006FD3A1 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8AA436C51C7BB4BB00000C4F /* characterization_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = characterization_tests.h; sourceTree = "<group>"; };
+		8AA436C61C7BB5D800000C4F /* characterization_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = characterization_tests.c; sourceTree = "<group>"; };
 		8AB0E93F1C5FF74F00D325BA /* libOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB0E94A1C5FF79500D325BA /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		8AB0E94B1C5FF85000D325BA /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 				8A7C37531C6132840027C832 /* io_tests.c */,
 				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
 				8A71D1451C6926640009F5A8 /* labelling_tests.c */,
+				8AA436C61C7BB5D800000C4F /* characterization_tests.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -239,6 +243,7 @@
 				8A7C37521C6132730027C832 /* io_tests.h */,
 				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
 				8A71D1441C6926520009F5A8 /* labelling_tests.h */,
+				8AA436C51C7BB4BB00000C4F /* characterization_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
 				8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */,
+				8AA436C71C7BB5D800000C4F /* characterization_tests.c in Sources */,
 				8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */,
 				8AB0E9601C600F0D00D325BA /* core.c in Sources */,
 				8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */,

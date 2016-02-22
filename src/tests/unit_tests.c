@@ -13,6 +13,7 @@
 #include "io_tests.h"
 #include "edge_tests.h"
 #include "labelling_tests.h"
+#include "characterization_tests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -86,8 +87,22 @@ int main(int argc, const char * argv[])
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
-    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed, test_failed =
-    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT;
+    puts("Starting characterization component tests\n");
+    
+    characterization_tests_passed = 0;
+    characterization_tests_failed = 0;
+    
+    test_charact_alloc();
+    test_charact_size();
+    test_charact_bounds();
+    test_charact_gravity();
+    
+    printf("Finished characterization component tests (%d passed, %d failed on %d tests)\n", characterization_tests_passed, characterization_tests_failed, CHARACTERIZATION_TEST_CASES_COUNT);
+    
+    puts("\n-----------------------------------------------------------------------------------------------\n");
+    
+    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed + characterization_tests_passed, test_failed =
+    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed + characterization_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT + CHARACTERIZATION_TEST_CASES_COUNT;
     
     printf("Finished libimagic unit tests (%d passed, %d failed on %d tests)\n", test_passed,  test_failed, total_tests);
     

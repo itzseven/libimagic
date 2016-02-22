@@ -126,7 +126,10 @@ int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2)
         return -1;
     
     for (i = 0; i < img1->width * img1->height; i++)
-        res += (img1->data[i].r != img2->data[i].r) || (img1->data[i].g != img2->data[i].g) || (img1->data[i].b != img2->data[i].b);
+    {
+        rgb8 p1 = img1->data[i], p2 = img2->data[i];
+        res += (p1.r != p2.r) || (p1.g != p2.g) || (p1.b != p2.b);
+    }
     
     return res;
 }

@@ -2,8 +2,8 @@
 //  labelling_tests.h
 //  imagic
 //
-//  Created by Romain Dubreucq on 08/02/2016.
-//  Copyright © 2016 Romain Dubreucq. All rights reserved.
+//  Created by itzseven on 08/02/2016.
+//  Copyright © 2016 itzseven. All rights reserved.
 //
 
 #ifndef labelling_tests_h

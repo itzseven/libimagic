@@ -2,8 +2,8 @@
 //  edge_tests.h
 //  imagic
 //
-//  Created by Romain Dubreucq on 06/02/2016.
-//  Copyright © 2016 Romain Dubreucq. All rights reserved.
+//  Created by itzseven on 06/02/2016.
+//  Copyright © 2016 itzseven. All rights reserved.
 //
 
 #ifndef edge_tests_h

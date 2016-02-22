@@ -26,8 +26,16 @@ charact_t *charactalloc(uint32_t count)
         regchar_t *reg = (regchar_t *)malloc(sizeof(regchar_t));
         reg->id = i + 1;
         
+        reg->size = 0;
+        
         reg->bounds.start.x = UINT16_MAX;
         reg->bounds.start.y = UINT16_MAX;
+        
+        reg->bounds.end.x = 0;
+        reg->bounds.end.y = 0;
+        
+        reg->gravity.x = 0;
+        reg->gravity.y = 0;
         
         charact->data[i] = reg;
     }
@@ -144,4 +152,16 @@ int32_t overlappingreg(regchar_t *ref, labels_t *reflabels, labels_t *labels, ui
     }
     
     return bestRegAcc == 0 ? -1 : (bestReg + 1);
+}
+
+void charactfree(charact_t *charact)
+{
+    int i = 0;
+    
+    for (i = 0; i < charact->count; i++)
+    {
+        free(charact->data[i]);
+    }
+    
+    free(charact);
 }
