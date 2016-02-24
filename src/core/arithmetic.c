@@ -10,7 +10,7 @@
 
 bini_t *binarise(gray8i_t *src, uint8_t threshold)
 {
-    bini_t *dst = (bini_t *)binialloc(src->width, src->height);
+    bini_t *dst = binialloc(src->width, src->height);
     
     int i = 0;
     
@@ -18,6 +18,20 @@ bini_t *binarise(gray8i_t *src, uint8_t threshold)
     
     for (i = 0; i < pixcount; i++)
         dst->data[i] = !(src->data[i] > threshold);
+    
+    return dst;
+}
+
+gray8i_t *unbinarise(bini_t *src)
+{
+    gray8i_t *dst = gray8ialloc(src->width, src->height);
+    
+    int i = 0;
+    
+    uint32_t pixcount = src->width * src->height;
+    
+    for (i = 0; i < pixcount; i++)
+        dst->data[i] = (1 - src->data[i]) * 255;
     
     return dst;
 }

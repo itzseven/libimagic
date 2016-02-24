@@ -19,5 +19,6 @@
  */
 
 bini_t *binarise(gray8i_t *src, uint8_t threshold);
+gray8i_t *unbinarise(bini_t *src);
 
 #endif /* arithmetic_h */
