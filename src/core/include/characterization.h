@@ -71,6 +71,24 @@ typedef struct _charact {
 }charact_t;
 
 /*!
+ *  Returns an initialized regchar_t object with data set to 0
+ *
+ *  id : region's identifier
+ *
+ */
+
+regchar_t *regcharalloc(uint32_t id);
+
+/*!
+ *  Returns a copy of the regchar_t object passed in parameter
+ *
+ *  src : source region to copy
+ *
+ */
+
+regchar_t *regcharcpy(regchar_t *src);
+
+/*!
  *  Returns an initialized charact_t object with initialized regions with datas set to 0
  *
  *  count : region count

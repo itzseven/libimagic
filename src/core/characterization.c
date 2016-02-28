@@ -12,6 +12,71 @@
 
 charact_t *characterizegray8i(gray8i_t *src, labels_t *labels);
 
+regchar_t *regcharalloc(uint32_t id)
+{
+    regchar_t *reg = (regchar_t *)malloc(sizeof(regchar_t));
+    reg->id = id;
+    
+    reg->size = 0;
+    
+    reg->sdx = 0;
+    reg->sdy = 0;
+    reg->sdxy = 0;
+    reg->mdir = 0;
+    
+    reg->redav = 0;
+    reg->greenav = 0;
+    reg->blueav = 0;
+    reg->grayav = 0;
+    
+    reg->redhist.count = 0;
+    reg->greenhist.count = 0;
+    reg->bluehist.count = 0;
+    reg->grayhist.count = 0;
+    
+    reg->bounds.start.x = UINT32_MAX;
+    reg->bounds.start.y = UINT32_MAX;
+    reg->bounds.end.x = 0;
+    reg->bounds.end.y = 0;
+    
+    reg->gravity.x = 0;
+    reg->gravity.y = 0;
+    
+    return reg;
+}
+
+regchar_t *regcharcpy(regchar_t *src)
+{
+    regchar_t *dst = regcharalloc(src->id);
+    
+    dst->size = src->size;
+    
+    dst->sdx = src->sdx;
+    dst->sdy = src->sdy;
+    dst->sdxy = src->sdxy;
+    dst->mdir = src->mdir;
+    
+    dst->redav = src->redav;
+    dst->greenav = src->greenav;
+    dst->blueav = src->blueav;
+    dst->grayav = src->grayav;
+    
+    dst->redhist.count = src->redhist.count;
+    dst->greenhist.count = src->greenhist.count;
+    dst->bluehist.count = src->bluehist.count;
+    dst->grayhist.count = src->grayhist.count;
+    
+    memcpy(dst->redhist.data, src->redhist.data, 256);
+    memcpy(dst->greenhist.data, src->greenhist.data, 256);
+    memcpy(dst->bluehist.data, src->bluehist.data, 256);
+    memcpy(dst->grayhist.data, src->grayhist.data, 256);
+    
+    dst->bounds = src->bounds;
+    dst->gravity = src->gravity;
+    
+    return dst;
+}
+
 charact_t *charactalloc(uint32_t count)
 {
     charact_t *charact = (charact_t *)malloc(sizeof(charact_t));
@@ -19,24 +84,11 @@ charact_t *charactalloc(uint32_t count)
     charact->count = count;
     charact->data = (regchar_t **)malloc(sizeof(regchar_t *) * count);
     
-    int i = 0;
+    uint32_t i = 0;
     
     for (i = 0; i < count; i++)
     {
-        regchar_t *reg = (regchar_t *)malloc(sizeof(regchar_t));
-        reg->id = i + 1;
-        
-        reg->size = 0;
-        
-        reg->bounds.start.x = UINT16_MAX;
-        reg->bounds.start.y = UINT16_MAX;
-        
-        reg->bounds.end.x = 0;
-        reg->bounds.end.y = 0;
-        
-        reg->gravity.x = 0;
-        reg->gravity.y = 0;
-        
+        regchar_t *reg = regcharalloc(i + 1);
         charact->data[i] = reg;
     }
     

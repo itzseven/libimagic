@@ -30,6 +30,7 @@ ARITHMETIC_C_SRC=$(CORE_SRC_DIR)/arithmetic.c
 GEOMETRY_C_SRC=$(CORE_SRC_DIR)/geometry.c
 CHARACTERIZATION_C_SRC=$(CORE_SRC_DIR)/characterization.c
 MORPHO_C_SRC=$(CORE_SRC_DIR)/morpho.c
+DRAWING_C_SRC=$(CORE_SRC_DIR)/drawing.c
 
 #	Library tests source files
 
@@ -51,6 +52,7 @@ ARITHMETIC_H_SRC=$(CORE_SRC_DIR)/include/arithmetic.h
 GEOMETRY_H_SRC=$(CORE_SRC_DIR)/include/geometry.h
 CHARACTERIZATION_H_SRC=$(CORE_SRC_DIR)/include/characterization.h
 MORPHO_H_SRC=$(CORE_SRC_DIR)/include/morpho.h
+DRAWING_H_SRC=$(CORE_SRC_DIR)/include/drawing.h
 
 #	Library tests header files
 
@@ -63,7 +65,7 @@ MORPHO_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/morpho_tests.h
 
 #	Library object files
 
-LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o $(OBJ_DIR)/geometry.o $(OBJ_DIR)/characterization.o $(OBJ_DIR)/morpho.o
+LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o $(OBJ_DIR)/geometry.o $(OBJ_DIR)/characterization.o $(OBJ_DIR)/morpho.o $(OBJ_DIR)/drawing.o
 
 #	Product names
 
@@ -113,7 +115,10 @@ characterization.o: obj $(CHARACTERIZATION_C_SRC) $(LABELLING_H_SRC) $(GEOMETRY_
 morpho.o: obj $(MORPHO_C_SRC) $(CORE_H_SRC)
 	$(CPL) -c $(MORPHO_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o geometry.o characterization.o morpho.o
+drawing.o: obj $(DRAWING_C_SRC) $(CORE_H_SRC) $(GEOMETRY_H_SRC)
+	$(CPL) -c $(DRAWING_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o geometry.o characterization.o morpho.o drawing.o
 	ar rcs $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) $(LIBRARY_OBJ_FILES)
 
 #	Library tests rules
@@ -191,6 +196,10 @@ headers:
 
 resources:
 	cp -R resources $(BIN_DIR)/
+
+install: libimagic.a
+	sudo mkdir -p /usr/local/include/imagic && sudo mkdir -p /usr/local/lib/imagic && sudo cp $(CORE_SRC_DIR)/include/*.h /usr/local/include/imagic/ && sudo cp $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) /usr/local/lib/imagic/
+
 
 # Run the unit tests
 
