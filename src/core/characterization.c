@@ -179,5 +179,6 @@ void charactfree(charact_t *charact)
         free(charact->data[i]);
     }
     
+    free(charact->data);
     free(charact);
 }

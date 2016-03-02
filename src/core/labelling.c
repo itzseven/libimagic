@@ -18,6 +18,17 @@ labels_t *laballoc(uint16_t width, uint16_t height)
     return labels;
 }
 
+labels_t *labcpy(labels_t *src)
+{
+    labels_t *dst = (labels_t *)malloc(sizeof(labels_t));
+    dst->len = src->len;
+    dst->count = src->count;
+    dst->data = (uint32_t *)calloc(src->len, sizeof(uint32_t));
+    memcpy(dst->data, src->data, src->len);
+    
+    return dst;
+}
+
 labels_t *label(bini_t *src)
 {
     labels_t *labels = laballoc(src->width, src->height);

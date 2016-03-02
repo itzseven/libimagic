@@ -36,6 +36,15 @@ typedef struct _labels {
 labels_t *laballoc(uint16_t width, uint16_t height);
 
 /*!
+ *  Returns a copy of the labels_t object passed in parameter
+ *
+ *  src : source labels to copy
+ *
+ */
+
+labels_t *labcpy(labels_t *src);
+
+/*!
  *  Returns a labels_t object, containing all the labels calculated from the source image
  *
  *  src : source image

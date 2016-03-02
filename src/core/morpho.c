@@ -76,10 +76,8 @@ bini_t *erosion(bini_t *src, uint16_t shift)
 
 bini_t *opening(bini_t *src, uint16_t shift)
 {
-    bini_t *dst = binialloc(src->width, src->height);
-    
     bini_t *eroded = erosion(src, shift);
-    dst = distension(eroded, shift);
+    bini_t *dst = distension(eroded, shift);
     
     binifree(eroded);
     
@@ -88,10 +86,8 @@ bini_t *opening(bini_t *src, uint16_t shift)
 
 bini_t *closing(bini_t *src, uint16_t shift)
 {
-    bini_t *dst = binialloc(src->width, src->height);
-    
     bini_t *distended = distension(src, shift);
-    dst = erosion(distended, shift);
+    bini_t *dst = erosion(distended, shift);
     
     binifree(distended);
     
