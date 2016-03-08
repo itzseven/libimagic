@@ -33,7 +33,7 @@ labels_t *label(bini_t *src)
 {
     labels_t *labels = laballoc(src->width, src->height);
     
-    uint32_t MAX_LABELS = 8192;
+    uint32_t MAX_LABELS = 16384;
     
     uint16_t width = src->width;
     uint32_t i = 0, j = 0, k = 0, l = 1, m = 1, n = 0, eB = 0, eA = 0, eC = 0, attA = 0, attB = 0, attC = 0;
