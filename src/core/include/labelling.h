@@ -22,6 +22,7 @@
  */
 
 typedef struct _labels {
+    uint16_t width, height;
     uint32_t len, count;
     uint32_t *data;
 }labels_t;

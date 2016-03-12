@@ -11,6 +11,8 @@
 labels_t *laballoc(uint16_t width, uint16_t height)
 {
     labels_t *labels = (labels_t *)malloc(sizeof(labels_t));
+    labels->width = width;
+    labels->height = height;
     labels->len = width * height;
     labels->count = 0;
     labels->data = (uint32_t *)calloc(width * height, sizeof(uint32_t));
@@ -21,6 +23,8 @@ labels_t *laballoc(uint16_t width, uint16_t height)
 labels_t *labcpy(labels_t *src)
 {
     labels_t *dst = (labels_t *)malloc(sizeof(labels_t));
+    dst->width = src->width;
+    dst->height = src->height;
     dst->len = src->len;
     dst->count = src->count;
     dst->data = (uint32_t *)calloc(src->len, sizeof(uint32_t));
