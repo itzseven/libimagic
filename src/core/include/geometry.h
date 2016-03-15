@@ -36,5 +36,12 @@ typedef struct _point2darray {
     pt2d_t *data;
 }pt2darray_t;
 
+/*!
+ * Data type that represents a 2D vector.
+ */
+typedef struct _vector2d {
+    double x;
+    double y;
+}vec2d_t;
 
 #endif /* geometry_h */
