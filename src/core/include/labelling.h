@@ -10,6 +10,7 @@
 #define labelling_h
 
 #include <stdlib.h>
+#include <math.h>
 
 #include "core.h"
 
