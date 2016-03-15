@@ -21,4 +21,6 @@ void test_morpho_erosion();
 void test_morpho_opening();
 void test_morpho_closing();
 
+void morpho_test_suite();
+
 #endif /* morpho_tests_h */

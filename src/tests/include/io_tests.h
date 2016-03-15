@@ -27,6 +27,6 @@ void test_ppmopen_binary();
 void test_pbmopen_ascii();
 void test_pbmopen_binary();
 
-
+void io_test_suite();
 
 #endif /* io_tests_h */

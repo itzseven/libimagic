@@ -220,3 +220,13 @@ void test_pbmopen_binary()
     io_tests_passed++;
     binifree(img);
 }
+
+void io_test_suite()
+{
+    test_pgmopen_ascii();
+    test_pgmopen_binary();
+    test_ppmopen_ascii();
+    test_ppmopen_binary();
+    test_pbmopen_ascii();
+    //test_pbmopen_binary();
+}

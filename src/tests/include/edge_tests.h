@@ -24,4 +24,6 @@ void test_grdsobel();
 void test_grdprewitt();
 void test_grdderiv();
 
+void edge_test_suite();
+
 #endif /* edge_tests_h */

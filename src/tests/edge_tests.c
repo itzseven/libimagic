@@ -161,3 +161,11 @@ void test_grdderiv()
     gradfree(deriv);
     gray8ifree(img);
 }
+
+void edge_test_suite()
+{
+    test_grad_alloc();
+    test_grdsobel();
+    test_grdprewitt();
+    test_grdderiv();
+}
