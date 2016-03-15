@@ -132,6 +132,16 @@ gray8i_t *gray8iallocwd(uint16_t width, uint16_t height, uint8_t *data);
 bini_t *binialloc(uint16_t width, uint16_t height);
 
 /*!
+ *  Returns an initialized bini_t object with a copy of the data passed in parameter
+ *
+ *  width : width of the image
+ *  height : height of the image
+ *  data : pointer to pixel data
+ */
+
+bini_t *biniallocwd(uint16_t width, uint16_t height, uint8_t *data);
+
+/*!
  *  Returns an initialized rgb8i_t object with allocated data set to 0
  *
  *  width : width of the image

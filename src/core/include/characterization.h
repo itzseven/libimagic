@@ -71,6 +71,24 @@ typedef struct _charact {
 }charact_t;
 
 /*!
+ *  Returns an initialized regchar_t object with data set to 0
+ *
+ *  id : region's identifier
+ *
+ */
+
+regchar_t *regcharalloc(uint32_t id);
+
+/*!
+ *  Returns a copy of the regchar_t object passed in parameter
+ *
+ *  src : source region to copy
+ *
+ */
+
+regchar_t *regcharcpy(regchar_t *src);
+
+/*!
  *  Returns an initialized charact_t object with initialized regions with datas set to 0
  *
  *  count : region count
@@ -84,7 +102,7 @@ charact_t *charactalloc(uint32_t count);
  *
  *  The function will extract the characteristics according to the value of the parameters :
  *  -  if rgbi is not NULL, the RGB characteristics will be extracted
- *  -  otherwise, only the grayscale characteristics will be
+ *  -  otherwise, only the grayscale characteristics will
  *
  *  rgbi : RGB 8-bit image
  *  grayi : grayscale image
@@ -93,8 +111,6 @@ charact_t *charactalloc(uint32_t count);
  */
 
 charact_t *characterize(rgb8i_t *rgbi, gray8i_t *grayi, labels_t *labels);
-
-int32_t overlappingreg(regchar_t *ref, labels_t *reflabels, labels_t *labels, uint16_t width);
 
 /*!
  *  Frees the memory of a charact_t object

@@ -8,9 +8,6 @@
 
 #include "edge.h"
 
-//debug
-#include <stdio.h>
-
 grad_t *gradalloc(uint16_t width, uint16_t height)
 {
     grad_t *g = (grad_t *)malloc(sizeof(grad_t));
@@ -29,7 +26,7 @@ grad_t *grdsobel(gray8i_t *src)
     
     grad_t *gsob = gradalloc(width, height);
     
-    unsigned int i = 0, j = 0;
+    unsigned int i = 0, j = 0, k = 0;
     
     uint8_t jm1_im1 = 0, j_im1 = 0, jp1_im1 = 0, jm1_i = 0, jp1_i = 0, jm1_ip1 = 0, j_ip1 = 0, jp1_ip1 = 0;
     
@@ -52,10 +49,12 @@ grad_t *grdsobel(gray8i_t *src)
             gradX = H_SOBEL(jp1_im1, jp1_ip1, jp1_i, jm1_im1, jm1_ip1, jm1_i);
             gradY = V_SOBEL(jm1_ip1, jp1_ip1, j_ip1, jm1_im1, jp1_im1, j_im1);
             
-            gsob->hor[PXL_IDX(width, j, i)] = gradX;
-            gsob->ver[PXL_IDX(width, j, i)] = gradY;
+            k = PXL_IDX(width, j, i);
             
-            gsob->mag[PXL_IDX(width, j, i)] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
+            gsob->hor[k] = gradX;
+            gsob->ver[k] = gradY;
+            
+            gsob->mag[k] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
         }
     }
     
@@ -68,7 +67,7 @@ grad_t *grdprewitt(gray8i_t *src)
     
     grad_t *gpre = gradalloc(width, height);
     
-    unsigned int i = 0, j = 0;
+    unsigned int i = 0, j = 0, k = 0;
     
     uint8_t jm1_im1 = 0, j_im1 = 0, jp1_im1 = 0, jm1_i = 0, jp1_i = 0, jm1_ip1 = 0, j_ip1 = 0, jp1_ip1 = 0;
     
@@ -91,10 +90,12 @@ grad_t *grdprewitt(gray8i_t *src)
             gradX = H_PREWITT(jp1_im1, jp1_ip1, jp1_i, jm1_im1, jm1_ip1, jm1_i);
             gradY = V_PREWITT(jm1_ip1, jp1_ip1, j_ip1, jm1_im1, jp1_im1, j_im1);
             
-            gpre->hor[PXL_IDX(width, j, i)] = gradX;
-            gpre->ver[PXL_IDX(width, j, i)] = gradY;
+            k = PXL_IDX(width, j, i);
             
-            gpre->mag[PXL_IDX(width, j, i)] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
+            gpre->hor[k] = gradX;
+            gpre->ver[k] = gradY;
+            
+            gpre->mag[k] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
         }
     }
     
@@ -107,7 +108,7 @@ grad_t *grdderiv(gray8i_t *src)
     
     grad_t *gder = gradalloc(width, height);
     
-    unsigned int i = 0, j = 0;
+    unsigned int i = 0, j = 0, k = 0;
     
     uint8_t p = 0;
     
@@ -117,15 +118,16 @@ grad_t *grdderiv(gray8i_t *src)
     {
         for (j = 1; j < width - 1; j++)
         {
-            p = src->data[PXL_IDX(width, j, i)];
+            k = PXL_IDX(width, j, i);
+            p = src->data[k];
             
             gradX = p - src->data[PXL_IDX(width, j-1, i)];
             gradY = p - src->data[PXL_IDX(width, j, i-1)];
             
-            gder->hor[PXL_IDX(width, j, i)] = gradX;
-            gder->ver[PXL_IDX(width, j, i)] = gradY;
+            gder->hor[k] = gradX;
+            gder->ver[k] = gradY;
             
-            gder->mag[PXL_IDX(width, j, i)] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
+            gder->mag[k] = sqrtf(powf(gradX, 2.0) + powf(gradY, 2.0));
         }
     }
     

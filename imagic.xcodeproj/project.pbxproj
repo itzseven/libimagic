@@ -27,6 +27,12 @@
 		8A71D1421C690DA60009F5A8 /* arithmetic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A71D1331C68E9CA0009F5A8 /* arithmetic.h */; };
 		8A71D1431C690DA60009F5A8 /* labelling.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A71D1341C68E9CA0009F5A8 /* labelling.h */; };
 		8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1451C6926640009F5A8 /* labelling_tests.c */; };
+		8A748DC61C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8A748DC71C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8A748DC81C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8A748DC91C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8A748DCA1C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8A748DCD1C7CCC37007AA850 /* morpho_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DCC1C7CCC37007AA850 /* morpho_tests.c */; };
 		8A7C374D1C60D7FC0027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7C374E1C60E3A10027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
 		8A7C37561C6155C20027C832 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C37551C6155A90027C832 /* resources */; };
@@ -96,6 +102,10 @@
 		8A71D1361C68E9D70009F5A8 /* labelling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = labelling.c; sourceTree = "<group>"; };
 		8A71D1441C6926520009F5A8 /* labelling_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelling_tests.h; sourceTree = "<group>"; };
 		8A71D1451C6926640009F5A8 /* labelling_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = labelling_tests.c; sourceTree = "<group>"; };
+		8A748DC41C7CC6B4007AA850 /* morpho.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = morpho.h; sourceTree = "<group>"; };
+		8A748DC51C7CC6D5007AA850 /* morpho.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = morpho.c; sourceTree = "<group>"; };
+		8A748DCB1C7CCC12007AA850 /* morpho_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = morpho_tests.h; sourceTree = "<group>"; };
+		8A748DCC1C7CCC37007AA850 /* morpho_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = morpho_tests.c; sourceTree = "<group>"; };
 		8A7C374B1C60D7D30027C832 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
 		8A7C374C1C60D7FC0027C832 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
 		8A7C37521C6132730027C832 /* io_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_tests.h; sourceTree = "<group>"; };
@@ -223,6 +233,7 @@
 				8AB4A9F51C665DEC003E11A1 /* debug.h */,
 				8AC5A4161C6A1B9A0056C111 /* characterization.h */,
 				8AC5A41D1C6A1D5E0056C111 /* geometry.h */,
+				8A748DC41C7CC6B4007AA850 /* morpho.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
 				8A71D1451C6926640009F5A8 /* labelling_tests.c */,
 				8AA436C61C7BB5D800000C4F /* characterization_tests.c */,
+				8A748DCC1C7CCC37007AA850 /* morpho_tests.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -249,6 +261,7 @@
 				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
 				8A71D1441C6926520009F5A8 /* labelling_tests.h */,
 				8AA436C51C7BB4BB00000C4F /* characterization_tests.h */,
+				8A748DCB1C7CCC12007AA850 /* morpho_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -398,6 +411,7 @@
 				8AC5A4221C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
 				8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */,
+				8A748DC91C7CC6D5007AA850 /* morpho.c in Sources */,
 				8A4537371C6208E400B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +426,7 @@
 				8AC5A4231C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
 				8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */,
+				8A748DCA1C7CC6D5007AA850 /* morpho.c in Sources */,
 				8A4537381C6208EA00B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +441,7 @@
 				8AC5A4201C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
 				8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */,
+				8A748DC71C7CC6D5007AA850 /* morpho.c in Sources */,
 				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +457,7 @@
 				8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */,
 				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
 				8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */,
+				8A748DC61C7CC6D5007AA850 /* morpho.c in Sources */,
 				8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +472,9 @@
 				8AC5A4211C6A1E040056C111 /* geometry.c in Sources */,
 				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
 				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
+				8A748DCD1C7CCC37007AA850 /* morpho_tests.c in Sources */,
 				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
+				8A748DC81C7CC6D5007AA850 /* morpho.c in Sources */,
 				8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */,
 				8AA436C71C7BB5D800000C4F /* characterization_tests.c in Sources */,
 				8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */,

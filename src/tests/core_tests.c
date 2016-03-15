@@ -68,6 +68,7 @@ void test_gray8i_alloc_with_data()
             {
                 printf("test_gray8i_alloc_with_data failed : expected value %d but got %d on %d\n", data[i], img->data[i], i);
                 core_tests_failed++;
+                gray8ifree(img);
                 return;
             }
         }
@@ -77,10 +78,88 @@ void test_gray8i_alloc_with_data()
     {
         printf("test_gray8i_alloc_with_data failed : expected width %d and got %d, height %d and got %d\n", width, img->width, height, img->height);
         core_tests_failed++;
+        gray8ifree(img);
         return;
     }
     
     puts("test_gray8i_alloc_with_data passed\n");
+    gray8ifree(img);
+    core_tests_passed++;
+}
+
+void test_bini_alloc()
+{
+    puts("Starts test_bini_alloc\n");
+    
+    uint16_t width = 20, height = 20;
+    
+    bini_t *img = binialloc(width, height);
+    
+    if ((img->width == width) && (img->height == height))
+    {
+        int i = 0;
+        
+        for (i = 0; i < img->width * img->height; i++)
+        {
+            if (img->data[i] != 1)
+            {
+                printf("test_bini_alloc failed : expected value %d but got %d on %d\n", 0, img->data[i], i);
+                core_tests_failed++;
+                binifree(img);
+                return;
+            }
+        }
+    }
+    
+    else
+    {
+        printf("test_bini_alloc failed : expected width %d and got %d, height %d and got %d\n", width, img->width, height, img->height);
+        core_tests_failed++;
+        binifree(img);
+        return;
+    }
+    
+    puts("test_bini_alloc passed\n");
+    core_tests_passed++;
+    binifree(img);
+}
+
+void test_bini_alloc_with_data()
+{
+    puts("Starts test_bini_alloc_with_data\n");
+    
+    uint16_t width = 8, height = 4;
+    
+    uint8_t data[] = {0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1};
+    
+    bini_t *img = biniallocwd(width, height, data);
+    
+    if ((img->width == width) && (img->height == height))
+    {
+        int i = 0;
+        
+        for (i = 0; i < img->width * img->height; i++)
+        {
+            if (img->data[i] != data[i])
+            {
+                printf("test_bini_alloc_with_data failed : expected value %d but got %d on %d\n", data[i], img->data[i], i);
+                core_tests_failed++;
+                binifree(img);
+                return;
+            }
+        }
+    }
+    
+    else
+    {
+        printf("test_bini_alloc_with_data failed : expected width %d and got %d, height %d and got %d\n", width, img->width, height, img->height);
+        core_tests_failed++;
+        binifree(img);
+        return;
+    }
+    
+    puts("test_bini_alloc_with_data passed\n");
+    binifree(img);
     core_tests_passed++;
 }
 
@@ -141,6 +220,7 @@ void test_rgb8i_alloc_with_data()
             {
                 printf("test_rgb8i_alloc_with_data failed : expected value (%d, %d, %d) but got (%d, %d, %d) on %d\n", data[i].r, data[i].g, data[i].b, img->data[i].r, img->data[i].g, img->data[i].b, i);
                 core_tests_failed++;
+                rgb8ifree(img);
                 return;
             }
         }
@@ -150,10 +230,12 @@ void test_rgb8i_alloc_with_data()
     {
         printf("test_gray8i_alloc_with_data failed : expected width %d and got %d, height %d and got %d\n", width, img->width, height, img->height);
         core_tests_failed++;
+        rgb8ifree(img);
         return;
     }
     
     puts("test_gray8i_alloc_with_data passed\n");
+    rgb8ifree(img);
     core_tests_passed++;
 }
 
@@ -177,6 +259,7 @@ void test_rgb8i_alloc_with_bgra_data()
             {
                 printf("test_rgb8i_alloc_with_bgra_data failed : expected value (%d, %d, %d) but got (%d, %d, %d) on %d\n", data[j+2], data[j+1], data[j], img->data[i].r, img->data[i].g, img->data[i].b, i);
                 core_tests_failed++;
+                rgb8ifree(img);
                 return;
             }
         }
@@ -186,11 +269,13 @@ void test_rgb8i_alloc_with_bgra_data()
     {
         printf("test_rgb8i_alloc_with_bgra_data failed : expected width %d and got %d, height %d and got %d\n", width, img->width, height, img->height);
         core_tests_failed++;
+        rgb8ifree(img);
         return;
     }
     
     puts("test_rgb8i_alloc_with_bgra_data passed\n");
     core_tests_passed++;
+    rgb8ifree(img);
 }
 
 void test_gray8i_cpy()

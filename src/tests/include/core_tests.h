@@ -13,13 +13,16 @@
 
 #include "core.h"
 
-#define CORE_TEST_CASES_COUNT 11
+#define CORE_TEST_CASES_COUNT 13
 
 extern int core_tests_passed;
 extern int core_tests_failed;
 
 void test_gray8i_alloc();
 void test_gray8i_alloc_with_data();
+
+void test_bini_alloc();
+void test_bini_alloc_with_data();
 
 void test_rgb8i_alloc();
 void test_rgb8i_alloc_with_data();

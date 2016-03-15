@@ -10,6 +10,7 @@
 #define geometry_h
 
 #include <stdint.h>
+#include <stdlib.h>
 
 /*!
  *  Data type to represent a point in 2D space with coordinates (x, y)
@@ -32,7 +33,7 @@ typedef struct _rect {
  */
 
 typedef struct _point2darray {
-    unsigned int len;
+    uint32_t len;
     pt2d_t *data;
 }pt2darray_t;
 

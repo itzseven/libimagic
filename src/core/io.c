@@ -17,7 +17,8 @@ gray8i_t *pgmopen(const char *filename)
     {
         char headbuf[128];
         pgmfmt ifmt;
-        uint16_t width = 0, height = 0, length = 0;
+        uint16_t width = 0, height = 0;
+        uint32_t length = 0;
         
         fgets(headbuf, sizeof(headbuf), file);
         
@@ -32,7 +33,7 @@ gray8i_t *pgmopen(const char *filename)
         
         fgets(headbuf, sizeof(headbuf), file);
         
-        if (headbuf[0] == '#')
+        while (headbuf[0] == '#')
             fgets(headbuf, sizeof(headbuf), file);
         
         char *sizetoken;
@@ -48,13 +49,17 @@ gray8i_t *pgmopen(const char *filename)
         
         fgets(headbuf, sizeof(headbuf), file);
         
-        int i = -1;
+        uint32_t i = 0;
         
         if (ifmt == PGM_ASCII)
         {
             unsigned int val;
             while((fscanf(file, "%u", &val) > 0))
-                img->data[i += i < length] = (uint8_t)val;
+            {
+                img->data[i] = (uint8_t)val;
+                i += (i < length);
+            }
+            
         }
         
         else
@@ -104,7 +109,8 @@ rgb8i_t *ppmopen(const char *filename)
     {
         char headbuf[128];
         ppmfmt ifmt;
-        uint16_t width = 0, height = 0, length = 0;
+        uint16_t width = 0, height = 0;
+        uint32_t length = 0;
         
         fgets(headbuf, sizeof(headbuf), file);
         
@@ -119,7 +125,7 @@ rgb8i_t *ppmopen(const char *filename)
         
         fgets(headbuf, sizeof(headbuf), file);
         
-        if (headbuf[0] == '#')
+        while (headbuf[0] == '#')
             fgets(headbuf, sizeof(headbuf), file);
         
         char *sizetoken;
@@ -135,7 +141,7 @@ rgb8i_t *ppmopen(const char *filename)
         
         fgets(headbuf, sizeof(headbuf), file);
         
-        if (ifmt == PGM_ASCII)
+        if (ifmt == PPM_ASCII)
         {
             unsigned int r, g, b, i = 0;
             
@@ -146,7 +152,6 @@ rgb8i_t *ppmopen(const char *filename)
                 img->data[i].b = b;
                 i += i < length;
             }
-            
         }
         
         else
@@ -175,7 +180,7 @@ void ppmwrite(rgb8i_t *img, const char *filename, ppmfmt fmt)
         {
             unsigned int i = 0;
             for (i = 0; i < img->width * img->height; i++)
-                fprintf(file, "%d\n%d\n%d\n", img->data[i].r, img->data[i].g, img->data[i].b);
+                fprintf(file, "%u\n%u\n%u\n", img->data[i].r, img->data[i].g, img->data[i].b);
         }
         
         else
