@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
 		8A4537371C6208E400B9B19F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8A4537381C6208EA00B9B19F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8A45373A1C62090E00B9B19F /* core.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB0E94A1C5FF79500D325BA /* core.h */; };
@@ -85,6 +86,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A6E13861C7CC77A0023FEDC /* opticalflow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow.c; sourceTree = "<group>"; };
+		7A6E13871C7CC77A0023FEDC /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opticalflow.h; path = ../opticalflow.h; sourceTree = "<group>"; };
 		8A4537211C62085F00B9B19F /* libiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A71D1331C68E9CA0009F5A8 /* arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 				8AB4A9F61C665DFF003E11A1 /* debug.c */,
 				8AC5A4171C6A1BD80056C111 /* characterization.c */,
 				8AC5A41E1C6A1E040056C111 /* geometry.c */,
+				7A6E13861C7CC77A0023FEDC /* opticalflow.c */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -210,6 +214,7 @@
 		8AB0E9481C5FF78600D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				7A6E13871C7CC77A0023FEDC /* opticalflow.h */,
 				8A71D1331C68E9CA0009F5A8 /* arithmetic.h */,
 				8A71D1341C68E9CA0009F5A8 /* labelling.h */,
 				8AB0E94A1C5FF79500D325BA /* core.h */,
@@ -431,6 +436,7 @@
 			files = (
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
+				7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
 				8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */,
 				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
