@@ -14,6 +14,7 @@
 #include "edge_tests.h"
 #include "labelling_tests.h"
 #include "characterization_tests.h"
+#include "morpho_tests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -29,6 +30,8 @@ int main(int argc, const char * argv[])
     
     test_gray8i_alloc();
     test_gray8i_alloc_with_data();
+    test_bini_alloc();
+    test_bini_alloc_with_data();
     test_rgb8i_alloc();
     test_rgb8i_alloc_with_data();
     test_rgb8i_alloc_with_bgra_data();
@@ -101,8 +104,22 @@ int main(int argc, const char * argv[])
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
-    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed + characterization_tests_passed, test_failed =
-    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed + characterization_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT + CHARACTERIZATION_TEST_CASES_COUNT;
+    puts("Starting morpho component tests\n");
+    
+    morpho_tests_passed = 0;
+    morpho_tests_failed = 0;
+    
+    test_morpho_distension();
+    test_morpho_erosion();
+    test_morpho_opening();
+    test_morpho_closing();
+    
+    printf("Finished morpho component tests (%d passed, %d failed on %d tests)\n", morpho_tests_passed, morpho_tests_failed, MORPHO_TEST_CASES_COUNT);
+    
+    puts("\n-----------------------------------------------------------------------------------------------\n");
+    
+    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed + characterization_tests_passed + morpho_tests_passed, test_failed =
+    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed + characterization_tests_failed + morpho_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT + CHARACTERIZATION_TEST_CASES_COUNT + MORPHO_TEST_CASES_COUNT;
     
     printf("Finished libimagic unit tests (%d passed, %d failed on %d tests)\n", test_passed,  test_failed, total_tests);
     

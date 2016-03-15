@@ -72,7 +72,7 @@ void test_pgmopen_binary()
         }
     }
     
-    puts("test_pgmopen_ascii passed\n");
+    puts("test_pgmopen_binary passed\n");
     io_tests_passed++;
     gray8ifree(img);
 }

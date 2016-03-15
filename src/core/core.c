@@ -39,6 +39,23 @@ bini_t *binialloc(uint16_t width, uint16_t height)
     binimg->height = height;
     binimg->data = (uint8_t *)calloc(width * height, sizeof(uint8_t));
     
+    unsigned int i = 0;
+    
+    for (i = 0; i < width * height; i++)
+        binimg->data[i] = 1;
+    
+    return binimg;
+}
+
+bini_t *biniallocwd(uint16_t width, uint16_t height, uint8_t *data)
+{
+    bini_t *binimg = (bini_t *)malloc(sizeof(bini_t));
+    
+    binimg->width = width;
+    binimg->height = height;
+    binimg->data = (uint8_t *)calloc(width * height, sizeof(uint8_t));
+    memcpy(binimg->data, data, sizeof(uint8_t) * width * height);
+    
     return binimg;
 }
 
@@ -69,7 +86,7 @@ rgb8i_t *rgb8iallocwd_bgra(uint16_t width, uint16_t height, uint8_t *data)
 {
     rgb8i_t *rgb8img = rgb8ialloc(width, height);
     
-    int i = 0, j = 0;
+    unsigned int i = 0, j = 0;
     
     for (i = 0; i < width * height * 4; i+=4)
     {
@@ -107,7 +124,8 @@ rgb8i_t *rgb8icpy(rgb8i_t *src)
 
 int gray8icmp(gray8i_t *img1, gray8i_t *img2)
 {
-    int res = 0, i = 0;
+    int res = 0;
+    unsigned int i = 0;
     
     if ((img1->width != img2->width) || (img1->height != img2->height))
         return -1;
@@ -120,7 +138,8 @@ int gray8icmp(gray8i_t *img1, gray8i_t *img2)
 
 int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2)
 {
-    int res = 0, i = 0;
+    int res = 0;
+    unsigned int i = 0;
     
     if ((img1->width != img2->width) || (img1->height != img2->height))
         return -1;

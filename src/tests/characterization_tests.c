@@ -39,7 +39,7 @@ void test_charact_alloc()
                 return;
             }
             
-            if ((bounds.start.x != UINT16_MAX) || (bounds.start.y != UINT16_MAX) || (bounds.end.x != 0) || (bounds.end.y != 0))
+            if ((bounds.start.x != UINT32_MAX) || (bounds.start.y != UINT32_MAX) || (bounds.end.x != 0) || (bounds.end.y != 0))
             {
                 printf("test_charact_alloc failed : expected start (%d, %d) but got (%d, %d), end (%d, %d) but got (%d, %d) on %d\n", UINT16_MAX, UINT16_MAX, bounds.start.x, bounds.start.y, 0, 0, bounds.end.x, bounds.end.y, i);
                 characterization_tests_failed++;
