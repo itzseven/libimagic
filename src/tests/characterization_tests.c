@@ -180,3 +180,11 @@ void test_charact_gravity()
     labfree(labels);
     charactfree(charact);
 }
+
+void characterization_test_suite()
+{
+    test_charact_alloc();
+    test_charact_size();
+    test_charact_bounds();
+    test_charact_gravity();
+}

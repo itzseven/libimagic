@@ -123,9 +123,9 @@ charact_t *characterizegray8i(gray8i_t *src, labels_t *labels)
         
         unsigned int i = 0, j = 0, k = 0;
         
-        for (i = 1; i < src->height - 1; i++)
+        for (i = 1; i < src->height; i++)
         {
-            for (j = 1; j < src->width - 1; j++)
+            for (j = 1; j < src->width; j++)
             {
                 labvalue = labels->data[PXL_IDX(width, j, i)];
                 

@@ -37,5 +37,7 @@ void test_rgb8i_cmp();
 void test_gray8i_cmp_invalid();
 void test_rgb8i_cmp_invalid();
 
+void core_test_suite();
+
 
 #endif /* core_tests_h */

@@ -29,19 +29,7 @@ int main(int argc, const char * argv[])
     core_tests_passed = 0;
     core_tests_failed = 0;
     
-    test_gray8i_alloc();
-    test_gray8i_alloc_with_data();
-    test_bini_alloc();
-    test_bini_alloc_with_data();
-    test_rgb8i_alloc();
-    test_rgb8i_alloc_with_data();
-    test_rgb8i_alloc_with_bgra_data();
-    test_gray8i_cpy();
-    test_rgb8i_cpy();
-    test_gray8i_cmp();
-    test_rgb8i_cmp();
-    test_gray8i_cmp_invalid();
-    test_rgb8i_cmp_invalid();
+    core_test_suite();
     
     printf("Finished core component tests (%d passed, %d failed on %d tests)\n", core_tests_passed, core_tests_failed, CORE_TEST_CASES_COUNT);
     
@@ -52,12 +40,7 @@ int main(int argc, const char * argv[])
     io_tests_passed = 0;
     io_tests_failed = 0;
     
-    test_pgmopen_ascii();
-    test_pgmopen_binary();
-    test_ppmopen_ascii();
-    test_ppmopen_binary();
-    test_pbmopen_ascii();
-    //test_pbmopen_binary();
+    io_test_suite();
     
     printf("Finished io component tests (%d passed, %d failed on %d tests)\n", io_tests_passed, io_tests_failed, IO_TEST_CASES_COUNT-1);
     
@@ -68,10 +51,7 @@ int main(int argc, const char * argv[])
     edge_tests_passed = 0;
     edge_tests_failed = 0;
     
-    test_grad_alloc();
-    test_grdsobel();
-    test_grdprewitt();
-    test_grdderiv();
+    edge_test_suite();
     
     printf("Finished edge component tests (%d passed, %d failed on %d tests)\n", edge_tests_passed, edge_tests_failed, EDGE_TEST_CASES_COUNT);
     
@@ -82,10 +62,7 @@ int main(int argc, const char * argv[])
     labelling_tests_passed = 0;
     labelling_tests_failed = 0;
     
-    test_labels_alloc();
-    test_labelling_one_label();
-    test_labelling_n_labels();
-    test_labelling_complex_labels();
+    labelling_test_suite();
     
     printf("Finished labelling component tests (%d passed, %d failed on %d tests)\n", labelling_tests_passed, labelling_tests_failed, LABELLING_TEST_CASES_COUNT);
     
@@ -96,10 +73,7 @@ int main(int argc, const char * argv[])
     characterization_tests_passed = 0;
     characterization_tests_failed = 0;
     
-    test_charact_alloc();
-    test_charact_size();
-    test_charact_bounds();
-    test_charact_gravity();
+    characterization_test_suite();
     
     printf("Finished characterization component tests (%d passed, %d failed on %d tests)\n", characterization_tests_passed, characterization_tests_failed, CHARACTERIZATION_TEST_CASES_COUNT);
     
@@ -110,10 +84,7 @@ int main(int argc, const char * argv[])
     morpho_tests_passed = 0;
     morpho_tests_failed = 0;
     
-    test_morpho_distension();
-    test_morpho_erosion();
-    test_morpho_opening();
-    test_morpho_closing();
+    morpho_test_suite();
     
     printf("Finished morpho component tests (%d passed, %d failed on %d tests)\n", morpho_tests_passed, morpho_tests_failed, MORPHO_TEST_CASES_COUNT);
     

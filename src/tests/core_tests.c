@@ -455,3 +455,20 @@ void test_rgb8i_cmp_invalid()
     rgb8ifree(firstImage);
     rgb8ifree(secondImage);
 }
+
+void core_test_suite()
+{
+    test_gray8i_alloc();
+    test_gray8i_alloc_with_data();
+    test_bini_alloc();
+    test_bini_alloc_with_data();
+    test_rgb8i_alloc();
+    test_rgb8i_alloc_with_data();
+    test_rgb8i_alloc_with_bgra_data();
+    test_gray8i_cpy();
+    test_rgb8i_cpy();
+    test_gray8i_cmp();
+    test_rgb8i_cmp();
+    test_gray8i_cmp_invalid();
+    test_rgb8i_cmp_invalid();
+}

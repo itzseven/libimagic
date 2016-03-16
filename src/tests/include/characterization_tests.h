@@ -23,4 +23,6 @@ void test_charact_size();
 void test_charact_bounds();
 void test_charact_gravity();
 
+void characterization_test_suite();
+
 #endif /* characterization_tests_h */
