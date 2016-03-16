@@ -14,7 +14,9 @@ gray8i_t *grayscale(rgb8i_t *src)
     
     int i = 0;
     
-    for (i = 0; i < src->width * src->height; i++)
+    uint32_t length = src->width * src->height;
+    
+    for (i = 0; i < length; i++)
         dst->data[i] = (uint8_t)((src->data[i].r + src->data[i].g + src->data[i].b) / 3);
     
     return dst;
@@ -26,9 +28,9 @@ bini_t *binarise(gray8i_t *src, uint8_t threshold)
     
     int i = 0;
     
-    uint32_t pixcount = src->width * src->height;
+    uint32_t length = src->width * src->height;
     
-    for (i = 0; i < pixcount; i++)
+    for (i = 0; i < length; i++)
         dst->data[i] = !(src->data[i] > threshold);
     
     return dst;
@@ -40,9 +42,9 @@ gray8i_t *unbinarise(bini_t *src)
     
     int i = 0;
     
-    uint32_t pixcount = src->width * src->height;
+    uint32_t length = src->width * src->height;
     
-    for (i = 0; i < pixcount; i++)
+    for (i = 0; i < length; i++)
         dst->data[i] = (1 - src->data[i]) * 255;
     
     return dst;
