@@ -15,6 +15,7 @@
 #include "labelling_tests.h"
 #include "characterization_tests.h"
 #include "morpho_tests.h"
+#include "opticalflow_tests.h"
 
 int main(int argc, const char * argv[])
 {
@@ -58,7 +59,7 @@ int main(int argc, const char * argv[])
     test_pbmopen_ascii();
     //test_pbmopen_binary();
     
-    printf("Finished io component tests (%d passed, %d failed on %d tests)\n", io_tests_passed, io_tests_failed, IO_TEST_CASES_COUNT);
+    printf("Finished io component tests (%d passed, %d failed on %d tests)\n", io_tests_passed, io_tests_failed, IO_TEST_CASES_COUNT-1);
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
@@ -118,8 +119,19 @@ int main(int argc, const char * argv[])
     
     puts("\n-----------------------------------------------------------------------------------------------\n");
     
-    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed + characterization_tests_passed + morpho_tests_passed, test_failed =
-    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed + characterization_tests_failed + morpho_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT + CHARACTERIZATION_TEST_CASES_COUNT + MORPHO_TEST_CASES_COUNT;
+    puts("Starting opticalflow component tests\n");
+    
+    opticalflow_tests_passed = 0;
+    opticalflow_tests_failed = 0;
+    
+    opticalflow_testsuite();
+    
+    printf("Finished opticalflow component tests (%d passed, %d failed on %d tests)\n", opticalflow_tests_passed, opticalflow_tests_failed, OPTICALFLOW_TEST_CASES_COUNT);
+    
+    puts("\n-----------------------------------------------------------------------------------------------\n");
+    
+    unsigned int test_passed = core_tests_passed + io_tests_passed + edge_tests_passed + labelling_tests_passed + characterization_tests_passed + morpho_tests_passed + opticalflow_tests_passed, test_failed =
+    core_tests_failed + io_tests_failed + edge_tests_failed + labelling_tests_failed + characterization_tests_failed + morpho_tests_failed + opticalflow_tests_failed, total_tests = CORE_TEST_CASES_COUNT + IO_TEST_CASES_COUNT-1 + EDGE_TEST_CASES_COUNT + LABELLING_TEST_CASES_COUNT + CHARACTERIZATION_TEST_CASES_COUNT + MORPHO_TEST_CASES_COUNT + OPTICALFLOW_TEST_CASES_COUNT;
     
     printf("Finished libimagic unit tests (%d passed, %d failed on %d tests)\n", test_passed,  test_failed, total_tests);
     

@@ -12,15 +12,15 @@
 #include "core.h"
 #include "geometry.h"
 
-#define ITERATION 6
+#define ITERATION 4
 
 /*!
- * Calculates the optical flow between two images.
+ * Calculates the optical flow between two images of same size.
  * Returns an array of the estimated speed vectors of each pixels.
  *
  * image1 : the first image.
  * image2 : the second image.
  */
-vec2d_t* optical_flow(gray8i_t* image1, gray8i_t* image2);
+vect2darray_t *opticalflow(gray8i_t *image1, gray8i_t *image2);
 
 #endif /* opticalflow_h */
