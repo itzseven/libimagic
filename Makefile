@@ -31,6 +31,7 @@ GEOMETRY_C_SRC=$(CORE_SRC_DIR)/geometry.c
 CHARACTERIZATION_C_SRC=$(CORE_SRC_DIR)/characterization.c
 MORPHO_C_SRC=$(CORE_SRC_DIR)/morpho.c
 DRAWING_C_SRC=$(CORE_SRC_DIR)/drawing.c
+OPTICALFLOW_C_SRC=$(CORE_SRC_DIR)/opticalflow.c
 
 #	Library tests source files
 
@@ -41,6 +42,7 @@ EDGE_TESTS_C_SRC=$(TESTS_SRC_DIR)/edge_tests.c
 LABELLING_TESTS_C_SRC=$(TESTS_SRC_DIR)/labelling_tests.c
 CHARACTERIZATION_TESTS_C_SRC=$(TESTS_SRC_DIR)/characterization_tests.c
 MORPHO_TESTS_C_SRC=$(TESTS_SRC_DIR)/morpho_tests.c
+OPTICALFLOW_TESTS_C_SRC=$(TESTS_SRC_DIR)/opticalflow_tests.c
 
 #	Library header files
 
@@ -53,6 +55,7 @@ GEOMETRY_H_SRC=$(CORE_SRC_DIR)/include/geometry.h
 CHARACTERIZATION_H_SRC=$(CORE_SRC_DIR)/include/characterization.h
 MORPHO_H_SRC=$(CORE_SRC_DIR)/include/morpho.h
 DRAWING_H_SRC=$(CORE_SRC_DIR)/include/drawing.h
+OPTICALFLOW_H_SRC=$(CORE_SRC_DIR)/include/opticalflow.h
 
 #	Library tests header files
 
@@ -62,10 +65,11 @@ EDGE_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/edge_tests.h
 LABELLING_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/labelling_tests.h
 CHARACTERIZATION_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/characterization_tests.h
 MORPHO_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/morpho_tests.h
+OPTICALFLOW_TESTS_H_SRC=$(TESTS_SRC_DIR)/include/opticalflow_tests.h
 
 #	Library object files
 
-LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o $(OBJ_DIR)/geometry.o $(OBJ_DIR)/characterization.o $(OBJ_DIR)/morpho.o $(OBJ_DIR)/drawing.o
+LIBRARY_OBJ_FILES=$(OBJ_DIR)/core.o $(OBJ_DIR)/io.o $(OBJ_DIR)/edge.o $(OBJ_DIR)/labelling.o $(OBJ_DIR)/arithmetic.o $(OBJ_DIR)/geometry.o $(OBJ_DIR)/characterization.o $(OBJ_DIR)/morpho.o $(OBJ_DIR)/drawing.o $(OBJ_DIR)/opticalflow.o
 
 #	Product names
 
@@ -118,7 +122,10 @@ morpho.o: obj $(MORPHO_C_SRC) $(CORE_H_SRC)
 drawing.o: obj $(DRAWING_C_SRC) $(CORE_H_SRC) $(GEOMETRY_H_SRC)
 	$(CPL) -c $(DRAWING_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o geometry.o characterization.o morpho.o drawing.o
+opticalflow.o: obj $(OPTICALFLOW_C_SRC) $(CORE_H_SRC) $(GEOMETRY_H_SRC)
+	$(CPL) -c $(OPTICALFLOW_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+libimagic.a: obj bin core.o io.o edge.o labelling.o arithmetic.o geometry.o characterization.o morpho.o drawing.o opticalflow.o
 	ar rcs $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) $(LIBRARY_OBJ_FILES)
 
 #	Library tests rules
@@ -141,10 +148,13 @@ characterization_tests.o: obj $(CHARACTERIZATION_TESTS_C_SRC) $(CHARACTERIZATION
 morpho_tests.o: obj $(MORPHO_TESTS_C_SRC) $(MORPHO_H_SRC) $(ARITHMETIC_H_SRC)
 	$(CPL) -c $(MORPHO_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-unit_tests.o: obj $(UNIT_TESTS_C_SRC) $(CORE_TESTS_H_SRC) $(IO_TESTS_H_SRC) $(EDGE_TESTS_H_SRC) $(CHARACTERIZATION_TESTS_H_SRC) $(MORPHO_TESTS_H_SRC)
+opticalflow_tests.o: obj $(OPTICALFLOW_TESTS_C_SRC)	$(OPTICALFLOW_H_SRC)
+	$(CPL) -c $(OPTICALFLOW_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
+
+unit_tests.o: obj $(UNIT_TESTS_C_SRC) $(CORE_TESTS_H_SRC) $(IO_TESTS_H_SRC) $(EDGE_TESTS_H_SRC) $(CHARACTERIZATION_TESTS_H_SRC) $(MORPHO_TESTS_H_SRC) $(OPTICALFLOW_TESTS_H_SRC)
 	$(CPL) -c $(UNIT_TESTS_C_SRC) $(CFLAGS) -o $(OBJ_DIR)/$@
 
-libimagictests: obj libimagic.a core_tests.o io_tests.o edge_tests.o labelling_tests.o characterization_tests.o morpho_tests.o unit_tests.o
+libimagictests: obj libimagic.a core_tests.o io_tests.o edge_tests.o labelling_tests.o characterization_tests.o morpho_tests.o opticalflow_tests.o unit_tests.o
 	$(CPL) $(OBJ_DIR)/*_tests.o $(BIN_DIR)/$(STATIC_LIB_STD_PNAME) -o $(BIN_DIR)/$@
 
 # # #
