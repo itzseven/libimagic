@@ -14,7 +14,7 @@
 #include "labelling.h"
 #include "arithmetic.h"
 
-#define LABELLING_TEST_CASES_COUNT 4
+#define LABELLING_TEST_CASES_COUNT 5
 
 extern int labelling_tests_passed;
 extern int labelling_tests_failed;
@@ -24,6 +24,9 @@ void test_labels_alloc();
 void test_labelling_one_label();
 void test_labelling_n_labels();
 void test_labelling_complex_labels();
+void test_labelling_chessboard();
+
+void labelling_test_suite();
 
 
 #endif /* labelling_tests_h */

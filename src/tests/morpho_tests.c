@@ -150,3 +150,11 @@ void test_morpho_closing()
     binifree(img);
     binifree(clos);
 }
+
+void morpho_test_suite()
+{
+    test_morpho_distension();
+    test_morpho_erosion();
+    test_morpho_opening();
+    test_morpho_closing();
+}
