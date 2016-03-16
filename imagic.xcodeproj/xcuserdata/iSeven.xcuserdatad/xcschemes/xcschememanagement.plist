@@ -9,7 +9,12 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>UnitTests.xcscheme</key>
+		<key>IntegrationTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>UnitTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -53,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>8AB0E9581C600EF800D325BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8AB1FA311C822E450014FC3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
