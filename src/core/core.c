@@ -88,7 +88,9 @@ rgb8i_t *rgb8iallocwd_bgra(uint16_t width, uint16_t height, uint8_t *data)
     
     unsigned int i = 0, j = 0;
     
-    for (i = 0; i < width * height * 4; i+=4)
+    uint32_t length = width * height * 4;
+    
+    for (i = 0; i < length; i+=4)
     {
         rgb8img->data[j].r = data[i+2];
         rgb8img->data[j].g = data[i+1];
@@ -127,10 +129,12 @@ int gray8icmp(gray8i_t *img1, gray8i_t *img2)
     int res = 0;
     unsigned int i = 0;
     
+    uint32_t length = img1->width * img1->height;
+    
     if ((img1->width != img2->width) || (img1->height != img2->height))
         return -1;
     
-    for (i = 0; i < img1->width * img1->height; i++)
+    for (i = 0; i < length; i++)
         res += img1->data[i] != img2->data[i];
     
     return res;
@@ -141,10 +145,12 @@ int rgb8icmp(rgb8i_t *img1, rgb8i_t *img2)
     int res = 0;
     unsigned int i = 0;
     
+    uint32_t length = img1->width * img1->height;
+    
     if ((img1->width != img2->width) || (img1->height != img2->height))
         return -1;
     
-    for (i = 0; i < img1->width * img1->height; i++)
+    for (i = 0; i < length; i++)
     {
         rgb8 p1 = img1->data[i], p2 = img2->data[i];
         res += (p1.r != p2.r) || (p1.g != p2.g) || (p1.b != p2.b);

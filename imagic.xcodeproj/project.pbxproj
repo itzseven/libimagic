@@ -50,6 +50,8 @@
 		8AB0E9601C600F0D00D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
 		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
 		8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E9511C6008E000D325BA /* unit_tests.c */; };
+		8AB1FA391C822E540014FC3A /* integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1FA2D1C822E250014FC3A /* integration_tests.c */; };
+		8AB1FA3B1C8231360014FC3A /* core_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1FA3A1C8231360014FC3A /* core_integration_tests.c */; };
 		8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F91C6662EC003E11A1 /* edge_tests.c */; };
 		8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
 		8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
@@ -61,6 +63,43 @@
 		8AC5A4211C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
 		8AC5A4221C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
 		8AC5A4231C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AD4348C1C997C2600A3C419 /* io_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4348A1C997BE700A3C419 /* io_integration_tests.c */; };
+		8AD4348D1C99805B00A3C419 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
+		8AD4348E1C99805B00A3C419 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
+		8AD4348F1C99805B00A3C419 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
+		8AD434901C99805B00A3C419 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
+		8AD434911C99805B00A3C419 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
+		8AD434921C99805B00A3C419 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
+		8AD434931C99805B00A3C419 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
+		8AD434941C99805B00A3C419 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
+		8AD434951C99805B00A3C419 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
+		8AD434961C99805B00A3C419 /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD434991C99825700A3C419 /* opticalflow_tests.c */; };
+		8AD4349B1C99829E00A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349C1C99829E00A3C419 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD434991C99825700A3C419 /* opticalflow_tests.c */; };
+		8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD434A01C9983C400A3C419 /* opticalflow.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD434971C99822C00A3C419 /* opticalflow.h */; };
+		8AD434A11C9983C400A3C419 /* debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB4A9F51C665DEC003E11A1 /* debug.h */; };
+		8AD434A21C9983C400A3C419 /* characterization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AC5A4161C6A1B9A0056C111 /* characterization.h */; };
+		8AD434A31C9983C400A3C419 /* geometry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AC5A41D1C6A1D5E0056C111 /* geometry.h */; };
+		8AD434A41C9983C400A3C419 /* morpho.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A748DC41C7CC6B4007AA850 /* morpho.h */; };
+		8AD434A51C9983C400A3C419 /* interests.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459CF1C7DFC0C005D51BC /* interests.h */; };
+		8AD434A61C9983C400A3C419 /* drawing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459D01C7DFC1A005D51BC /* drawing.h */; };
+		8AD434A71C9983C400A3C419 /* filter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459DB1C7DFE61005D51BC /* filter.h */; };
+		8AD459D21C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
+		8AD459D31C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
+		8AD459D41C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
+		8AD459D51C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
+		8AD459D71C7DFC4D005D51BC /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD459D81C7DFC4D005D51BC /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD459D91C7DFC4D005D51BC /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD459DA1C7DFC4D005D51BC /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD459DD1C7DFE6F005D51BC /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459DC1C7DFE6F005D51BC /* filter.c */; };
+		8AD459DE1C7DFE6F005D51BC /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459DC1C7DFE6F005D51BC /* filter.c */; };
+		8AD459DF1C7DFE6F005D51BC /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459DC1C7DFE6F005D51BC /* filter.c */; };
+		8AD459E01C7DFE6F005D51BC /* filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459DC1C7DFE6F005D51BC /* filter.c */; };
 		8AF1BE991C61F24E009621BB /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +110,14 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				8AD434A01C9983C400A3C419 /* opticalflow.h in CopyFiles */,
+				8AD434A11C9983C400A3C419 /* debug.h in CopyFiles */,
+				8AD434A21C9983C400A3C419 /* characterization.h in CopyFiles */,
+				8AD434A31C9983C400A3C419 /* geometry.h in CopyFiles */,
+				8AD434A41C9983C400A3C419 /* morpho.h in CopyFiles */,
+				8AD434A51C9983C400A3C419 /* interests.h in CopyFiles */,
+				8AD434A61C9983C400A3C419 /* drawing.h in CopyFiles */,
+				8AD434A71C9983C400A3C419 /* filter.h in CopyFiles */,
 				8A71D1421C690DA60009F5A8 /* arithmetic.h in CopyFiles */,
 				8A71D1431C690DA60009F5A8 /* labelling.h in CopyFiles */,
 				8A45373A1C62090E00B9B19F /* core.h in CopyFiles */,
@@ -89,11 +136,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AB1FA301C822E450014FC3A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A6E13861C7CC77A0023FEDC /* opticalflow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow.c; sourceTree = "<group>"; };
-		7A6E13871C7CC77A0023FEDC /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opticalflow.h; path = ../opticalflow.h; sourceTree = "<group>"; };
 		8A4537211C62085F00B9B19F /* libiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A71D1331C68E9CA0009F5A8 /* arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
@@ -122,6 +177,10 @@
 		8AB0E94F1C6008D100D325BA /* core_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core_tests.c; sourceTree = "<group>"; };
 		8AB0E9511C6008E000D325BA /* unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unit_tests.c; sourceTree = "<group>"; };
 		8AB0E9591C600EF800D325BA /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB1FA2C1C822DFE0014FC3A /* core_integration_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core_integration_tests.h; sourceTree = "<group>"; };
+		8AB1FA2D1C822E250014FC3A /* integration_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = integration_tests.c; sourceTree = "<group>"; };
+		8AB1FA321C822E450014FC3A /* IntegrationTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntegrationTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB1FA3A1C8231360014FC3A /* core_integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core_integration_tests.c; sourceTree = "<group>"; };
 		8AB4A9F51C665DEC003E11A1 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		8AB4A9F61C665DFF003E11A1 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = debug.c; sourceTree = "<group>"; };
 		8AB4A9F81C6662DA003E11A1 /* edge_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edge_tests.h; sourceTree = "<group>"; };
@@ -130,6 +189,17 @@
 		8AC5A4171C6A1BD80056C111 /* characterization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = characterization.c; sourceTree = "<group>"; };
 		8AC5A41D1C6A1D5E0056C111 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
 		8AC5A41E1C6A1E040056C111 /* geometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geometry.c; sourceTree = "<group>"; };
+		8AD434891C997B5100A3C419 /* io_integration_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_integration_tests.h; sourceTree = "<group>"; };
+		8AD4348A1C997BE700A3C419 /* io_integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_integration_tests.c; sourceTree = "<group>"; };
+		8AD434971C99822C00A3C419 /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow.h; sourceTree = "<group>"; };
+		8AD434981C99824F00A3C419 /* opticalflow_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow_tests.h; sourceTree = "<group>"; };
+		8AD434991C99825700A3C419 /* opticalflow_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow_tests.c; sourceTree = "<group>"; };
+		8AD459CF1C7DFC0C005D51BC /* interests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interests.h; sourceTree = "<group>"; };
+		8AD459D01C7DFC1A005D51BC /* drawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
+		8AD459D11C7DFC30005D51BC /* interests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interests.c; sourceTree = "<group>"; };
+		8AD459D61C7DFC4D005D51BC /* drawing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawing.c; sourceTree = "<group>"; };
+		8AD459DB1C7DFE61005D51BC /* filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filter.h; sourceTree = "<group>"; };
+		8AD459DC1C7DFE6F005D51BC /* filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filter.c; sourceTree = "<group>"; };
 		8AF1BE971C61F22D009621BB /* edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edge.h; sourceTree = "<group>"; };
 		8AF1BE981C61F24E009621BB /* edge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +240,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AB1FA2F1C822E450014FC3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -191,6 +268,7 @@
 				8A4537211C62085F00B9B19F /* libiOS.a */,
 				8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */,
 				8A7CBC6A1C62277B006FD3A1 /* libOSX-dynamic.dylib */,
+				8AB1FA321C822E450014FC3A /* IntegrationTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +294,10 @@
 				8AB4A9F61C665DFF003E11A1 /* debug.c */,
 				8AC5A4171C6A1BD80056C111 /* characterization.c */,
 				8AC5A41E1C6A1E040056C111 /* geometry.c */,
+				8A748DC51C7CC6D5007AA850 /* morpho.c */,
+				8AD459D11C7DFC30005D51BC /* interests.c */,
+				8AD459D61C7DFC4D005D51BC /* drawing.c */,
+				8AD459DC1C7DFE6F005D51BC /* filter.c */,
 				7A6E13861C7CC77A0023FEDC /* opticalflow.c */,
 			);
 			path = core;
@@ -224,7 +306,7 @@
 		8AB0E9481C5FF78600D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
-				7A6E13871C7CC77A0023FEDC /* opticalflow.h */,
+				8AD434971C99822C00A3C419 /* opticalflow.h */,
 				8A71D1331C68E9CA0009F5A8 /* arithmetic.h */,
 				8A71D1341C68E9CA0009F5A8 /* labelling.h */,
 				8AB0E94A1C5FF79500D325BA /* core.h */,
@@ -234,6 +316,9 @@
 				8AC5A4161C6A1B9A0056C111 /* characterization.h */,
 				8AC5A41D1C6A1D5E0056C111 /* geometry.h */,
 				8A748DC41C7CC6B4007AA850 /* morpho.h */,
+				8AD459CF1C7DFC0C005D51BC /* interests.h */,
+				8AD459D01C7DFC1A005D51BC /* drawing.h */,
+				8AD459DB1C7DFE61005D51BC /* filter.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -243,12 +328,16 @@
 			children = (
 				8AB0E94D1C6008B700D325BA /* include */,
 				8AB0E94F1C6008D100D325BA /* core_tests.c */,
+				8AD434991C99825700A3C419 /* opticalflow_tests.c */,
 				8AB0E9511C6008E000D325BA /* unit_tests.c */,
 				8A7C37531C6132840027C832 /* io_tests.c */,
 				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
 				8A71D1451C6926640009F5A8 /* labelling_tests.c */,
 				8AA436C61C7BB5D800000C4F /* characterization_tests.c */,
 				8A748DCC1C7CCC37007AA850 /* morpho_tests.c */,
+				8AB1FA2D1C822E250014FC3A /* integration_tests.c */,
+				8AB1FA3A1C8231360014FC3A /* core_integration_tests.c */,
+				8AD4348A1C997BE700A3C419 /* io_integration_tests.c */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -256,12 +345,15 @@
 		8AB0E94D1C6008B700D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				8AD434981C99824F00A3C419 /* opticalflow_tests.h */,
 				8AB0E94E1C6008C300D325BA /* core_tests.h */,
 				8A7C37521C6132730027C832 /* io_tests.h */,
 				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
 				8A71D1441C6926520009F5A8 /* labelling_tests.h */,
 				8AA436C51C7BB4BB00000C4F /* characterization_tests.h */,
 				8A748DCB1C7CCC12007AA850 /* morpho_tests.h */,
+				8AB1FA2C1C822DFE0014FC3A /* core_integration_tests.h */,
+				8AD434891C997B5100A3C419 /* io_integration_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -351,6 +443,23 @@
 			productReference = 8AB0E9591C600EF800D325BA /* UnitTests */;
 			productType = "com.apple.product-type.tool";
 		};
+		8AB1FA311C822E450014FC3A /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB1FA361C822E450014FC3A /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				8AB1FA2E1C822E450014FC3A /* Sources */,
+				8AB1FA2F1C822E450014FC3A /* Frameworks */,
+				8AB1FA301C822E450014FC3A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntegrationTests;
+			productName = IntegrationTests;
+			productReference = 8AB1FA321C822E450014FC3A /* IntegrationTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -377,6 +486,9 @@
 					8AB0E9581C600EF800D325BA = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					8AB1FA311C822E450014FC3A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 8AB0E93A1C5FF74F00D325BA /* Build configuration list for PBXProject "imagic" */;
@@ -396,6 +508,7 @@
 				8AB0E9581C600EF800D325BA /* UnitTests */,
 				8A4537201C62085F00B9B19F /* iOS */,
 				8A45372D1C62086A00B9B19F /* iOS-Simulator */,
+				8AB1FA311C822E450014FC3A /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,13 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */,
 				8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */,
 				8A71D13F1C690D960009F5A8 /* labelling.c in Sources */,
 				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
 				8AC5A4221C6A1E040056C111 /* geometry.c in Sources */,
+				8AD459D91C7DFC4D005D51BC /* drawing.c in Sources */,
 				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
 				8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */,
 				8A748DC91C7CC6D5007AA850 /* morpho.c in Sources */,
+				8AD459DF1C7DFE6F005D51BC /* filter.c in Sources */,
+				8AD459D41C7DFC30005D51BC /* interests.c in Sources */,
 				8A4537371C6208E400B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,13 +537,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */,
 				8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */,
 				8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */,
 				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
 				8AC5A4231C6A1E040056C111 /* geometry.c in Sources */,
+				8AD459DA1C7DFC4D005D51BC /* drawing.c in Sources */,
 				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
 				8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */,
 				8A748DCA1C7CC6D5007AA850 /* morpho.c in Sources */,
+				8AD459E01C7DFE6F005D51BC /* filter.c in Sources */,
+				8AD459D51C7DFC30005D51BC /* interests.c in Sources */,
 				8A4537381C6208EA00B9B19F /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,13 +556,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */,
 				8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */,
 				8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */,
 				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
 				8AC5A4201C6A1E040056C111 /* geometry.c in Sources */,
+				8AD459D81C7DFC4D005D51BC /* drawing.c in Sources */,
 				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
 				8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */,
 				8A748DC71C7CC6D5007AA850 /* morpho.c in Sources */,
+				8AD459DE1C7DFE6F005D51BC /* filter.c in Sources */,
+				8AD459D31C7DFC30005D51BC /* interests.c in Sources */,
 				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,13 +576,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
+				8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
 				7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
 				8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */,
+				8AD459D71C7DFC4D005D51BC /* drawing.c in Sources */,
 				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
 				8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */,
 				8A748DC61C7CC6D5007AA850 /* morpho.c in Sources */,
+				8AD459DD1C7DFE6F005D51BC /* filter.c in Sources */,
+				8AD459D21C7DFC30005D51BC /* interests.c in Sources */,
 				8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +595,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349B1C99829E00A3C419 /* opticalflow.c in Sources */,
+				8AD4349C1C99829E00A3C419 /* opticalflow_tests.c in Sources */,
 				8A71D13B1C6902F70009F5A8 /* debug.c in Sources */,
 				8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */,
 				8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */,
@@ -482,6 +613,26 @@
 				8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */,
 				8AC5A41A1C6A1BD80056C111 /* characterization.c in Sources */,
 				8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB1FA2E1C822E450014FC3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD4348D1C99805B00A3C419 /* core.c in Sources */,
+				8AD4348E1C99805B00A3C419 /* arithmetic.c in Sources */,
+				8AD4348F1C99805B00A3C419 /* labelling.c in Sources */,
+				8AD434901C99805B00A3C419 /* io.c in Sources */,
+				8AD434911C99805B00A3C419 /* edge.c in Sources */,
+				8AD434921C99805B00A3C419 /* debug.c in Sources */,
+				8AD434931C99805B00A3C419 /* characterization.c in Sources */,
+				8AD434941C99805B00A3C419 /* geometry.c in Sources */,
+				8AD434951C99805B00A3C419 /* morpho.c in Sources */,
+				8AD434961C99805B00A3C419 /* drawing.c in Sources */,
+				8AD4348C1C997C2600A3C419 /* io_integration_tests.c in Sources */,
+				8AB1FA391C822E540014FC3A /* integration_tests.c in Sources */,
+				8AB1FA3B1C8231360014FC3A /* core_integration_tests.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +830,20 @@
 			};
 			name = Release;
 		};
+		8AB1FA371C822E450014FC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AB1FA381C822E450014FC3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -732,6 +897,15 @@
 			buildConfigurations = (
 				8AB0E95E1C600EF800D325BA /* Debug */,
 				8AB0E95F1C600EF800D325BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB1FA361C822E450014FC3A /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB1FA371C822E450014FC3A /* Debug */,
+				8AB1FA381C822E450014FC3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
