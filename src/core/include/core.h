@@ -21,6 +21,8 @@
 
 #define PXL_IDX(width, x, y) (((y) * width) + (x))
 
+#define PXL(img, x, y) img->data[PXL_IDX(img->width, x, y)]
+
 /*!
  *  Data type that stores a 8-bit RGB pixel
  *

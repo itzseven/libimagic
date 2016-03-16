@@ -10,10 +10,10 @@
 
 pt2darray_t *itrtharris(gray8i_t *src, float lambda, uint32_t count)
 {
-    
+    return NULL;
 }
 
 pt2darray_t *itrtgrad(gray8i_t *src, uint32_t count)
 {
-    
+    return NULL;
 }

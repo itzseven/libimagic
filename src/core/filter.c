@@ -20,8 +20,8 @@ gray8i_t *lowpassflt(gray8i_t *src)
         for (j = 1; j < src->width - 1; j++)
         {
             tmp = (float)LP_FLT(src, j, i);
-            k = PXL_IDX(src, j, i);
-            dst->data[k] = (byte)(tmp / 9.0);
+            k = PXL_IDX(src->width, j, i);
+            dst->data[k] = (uint8_t)(tmp / 9.0);
         }
     }
     
@@ -40,8 +40,8 @@ gray8i_t *highpassflt(gray8i_t *src)
         for (j = 1; j < src->width - 1; j++)
         {
             tmp = (float)HP_FLT(src, j, i);
-            k = PXL_IDX(src, j, i);
-            dst->data[k] = (byte)(tmp);
+            k = PXL_IDX(src->width, j, i);
+            dst->data[k] = (uint8_t)(tmp);
         }
     }
     

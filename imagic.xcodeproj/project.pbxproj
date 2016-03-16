@@ -74,6 +74,20 @@
 		8AD434941C99805B00A3C419 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
 		8AD434951C99805B00A3C419 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
 		8AD434961C99805B00A3C419 /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D61C7DFC4D005D51BC /* drawing.c */; };
+		8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD434991C99825700A3C419 /* opticalflow_tests.c */; };
+		8AD4349B1C99829E00A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349C1C99829E00A3C419 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD434991C99825700A3C419 /* opticalflow_tests.c */; };
+		8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
+		8AD434A01C9983C400A3C419 /* opticalflow.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD434971C99822C00A3C419 /* opticalflow.h */; };
+		8AD434A11C9983C400A3C419 /* debug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AB4A9F51C665DEC003E11A1 /* debug.h */; };
+		8AD434A21C9983C400A3C419 /* characterization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AC5A4161C6A1B9A0056C111 /* characterization.h */; };
+		8AD434A31C9983C400A3C419 /* geometry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AC5A41D1C6A1D5E0056C111 /* geometry.h */; };
+		8AD434A41C9983C400A3C419 /* morpho.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A748DC41C7CC6B4007AA850 /* morpho.h */; };
+		8AD434A51C9983C400A3C419 /* interests.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459CF1C7DFC0C005D51BC /* interests.h */; };
+		8AD434A61C9983C400A3C419 /* drawing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459D01C7DFC1A005D51BC /* drawing.h */; };
+		8AD434A71C9983C400A3C419 /* filter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AD459DB1C7DFE61005D51BC /* filter.h */; };
 		8AD459D21C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
 		8AD459D31C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
 		8AD459D41C7DFC30005D51BC /* interests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD459D11C7DFC30005D51BC /* interests.c */; };
@@ -96,6 +110,14 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				8AD434A01C9983C400A3C419 /* opticalflow.h in CopyFiles */,
+				8AD434A11C9983C400A3C419 /* debug.h in CopyFiles */,
+				8AD434A21C9983C400A3C419 /* characterization.h in CopyFiles */,
+				8AD434A31C9983C400A3C419 /* geometry.h in CopyFiles */,
+				8AD434A41C9983C400A3C419 /* morpho.h in CopyFiles */,
+				8AD434A51C9983C400A3C419 /* interests.h in CopyFiles */,
+				8AD434A61C9983C400A3C419 /* drawing.h in CopyFiles */,
+				8AD434A71C9983C400A3C419 /* filter.h in CopyFiles */,
 				8A71D1421C690DA60009F5A8 /* arithmetic.h in CopyFiles */,
 				8A71D1431C690DA60009F5A8 /* labelling.h in CopyFiles */,
 				8A45373A1C62090E00B9B19F /* core.h in CopyFiles */,
@@ -127,7 +149,6 @@
 
 /* Begin PBXFileReference section */
 		7A6E13861C7CC77A0023FEDC /* opticalflow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow.c; sourceTree = "<group>"; };
-		7A6E13871C7CC77A0023FEDC /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opticalflow.h; path = ../opticalflow.h; sourceTree = "<group>"; };
 		8A4537211C62085F00B9B19F /* libiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A71D1331C68E9CA0009F5A8 /* arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
@@ -170,6 +191,9 @@
 		8AC5A41E1C6A1E040056C111 /* geometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geometry.c; sourceTree = "<group>"; };
 		8AD434891C997B5100A3C419 /* io_integration_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_integration_tests.h; sourceTree = "<group>"; };
 		8AD4348A1C997BE700A3C419 /* io_integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_integration_tests.c; sourceTree = "<group>"; };
+		8AD434971C99822C00A3C419 /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow.h; sourceTree = "<group>"; };
+		8AD434981C99824F00A3C419 /* opticalflow_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow_tests.h; sourceTree = "<group>"; };
+		8AD434991C99825700A3C419 /* opticalflow_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow_tests.c; sourceTree = "<group>"; };
 		8AD459CF1C7DFC0C005D51BC /* interests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interests.h; sourceTree = "<group>"; };
 		8AD459D01C7DFC1A005D51BC /* drawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
 		8AD459D11C7DFC30005D51BC /* interests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interests.c; sourceTree = "<group>"; };
@@ -274,6 +298,7 @@
 				8AD459D11C7DFC30005D51BC /* interests.c */,
 				8AD459D61C7DFC4D005D51BC /* drawing.c */,
 				8AD459DC1C7DFE6F005D51BC /* filter.c */,
+				7A6E13861C7CC77A0023FEDC /* opticalflow.c */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -281,7 +306,7 @@
 		8AB0E9481C5FF78600D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
-				7A6E13871C7CC77A0023FEDC /* opticalflow.h */,
+				8AD434971C99822C00A3C419 /* opticalflow.h */,
 				8A71D1331C68E9CA0009F5A8 /* arithmetic.h */,
 				8A71D1341C68E9CA0009F5A8 /* labelling.h */,
 				8AB0E94A1C5FF79500D325BA /* core.h */,
@@ -303,6 +328,7 @@
 			children = (
 				8AB0E94D1C6008B700D325BA /* include */,
 				8AB0E94F1C6008D100D325BA /* core_tests.c */,
+				8AD434991C99825700A3C419 /* opticalflow_tests.c */,
 				8AB0E9511C6008E000D325BA /* unit_tests.c */,
 				8A7C37531C6132840027C832 /* io_tests.c */,
 				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
@@ -319,6 +345,7 @@
 		8AB0E94D1C6008B700D325BA /* include */ = {
 			isa = PBXGroup;
 			children = (
+				8AD434981C99824F00A3C419 /* opticalflow_tests.h */,
 				8AB0E94E1C6008C300D325BA /* core_tests.h */,
 				8A7C37521C6132730027C832 /* io_tests.h */,
 				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
@@ -491,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */,
 				8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */,
 				8A71D13F1C690D960009F5A8 /* labelling.c in Sources */,
 				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
@@ -509,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */,
 				8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */,
 				8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */,
 				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
@@ -527,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */,
 				8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */,
 				8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */,
 				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
@@ -546,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
+				8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */,
 				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
 				7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */,
 				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
@@ -564,6 +595,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4349B1C99829E00A3C419 /* opticalflow.c in Sources */,
+				8AD4349C1C99829E00A3C419 /* opticalflow_tests.c in Sources */,
 				8A71D13B1C6902F70009F5A8 /* debug.c in Sources */,
 				8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */,
 				8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */,
