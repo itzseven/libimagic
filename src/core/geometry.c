@@ -38,3 +38,8 @@ vect2darray_t *vect2arralloc(uint32_t count) {
     
     return arr;
 }
+
+void vect2darrfree(vect2darray_t* vect2darray) {
+    free(vect2darray->data);
+    free(vect2darray);
+}

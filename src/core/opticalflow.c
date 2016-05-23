@@ -197,7 +197,7 @@ vect2darray_t *opticalflow(gray8i_t *image1, gray8i_t *image2) {
     free(pdX);
     free(pdY);
     free(pdT);
-    free(tmp_result);
+    vect2darrfree(tmp_result);
     
     return result;
 }
