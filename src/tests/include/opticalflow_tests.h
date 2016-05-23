@@ -25,5 +25,6 @@ void test_to_left();
 void test_to_right();
 void test_to_up();
 void test_to_bottom();
+void test_memory();
 
 #endif /* opticalflow_tests_h */
