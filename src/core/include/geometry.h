@@ -67,4 +67,11 @@ pt2darray_t *pt2arralloc(uint32_t count);
  */
 vect2darray_t *vect2arralloc(uint32_t count);
 
+/*!
+ * Releases vect2darr.
+ *
+ * vect2darray : the vect2darray_t to release
+ */
+void vect2darrfree(vect2darray_t* vect2darray);
+
 #endif /* geometry_h */

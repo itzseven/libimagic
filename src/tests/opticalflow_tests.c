@@ -20,6 +20,7 @@ void opticalflow_testsuite() {
     test_to_right();
     test_to_up();
     test_to_bottom();
+    //test_memory();
 }
 
 // **************************
@@ -53,6 +54,7 @@ int retrieves_best_angle(vect2darray_t *speed_vectors, uint16_t width, uint16_t 
         }
     }
     
+    free(histogram);
     return best_angle;
 }
 
@@ -60,7 +62,8 @@ void run_opticalflow(uint8_t *image1_data, uint8_t *image2_data, uint16_t width,
     gray8i_t *image1 = gray8iallocwd(width, height, image1_data);
     gray8i_t *image2 = gray8iallocwd(width, height, image2_data);
     
-    int best_angle = retrieves_best_angle(opticalflow(image1, image2), width, height);
+    vect2darray_t* result = opticalflow(image1, image2);
+    int best_angle = retrieves_best_angle(result, width, height);
     
     if (best_angle == expected_value) {
         opticalflow_tests_passed++;
@@ -68,6 +71,10 @@ void run_opticalflow(uint8_t *image1_data, uint8_t *image2_data, uint16_t width,
         printf("test failed : expected was %d, result was %d.\n", expected_value, best_angle);
         opticalflow_tests_failed++;
     }
+    
+    gray8ifree(image1);
+    gray8ifree(image2);
+    vect2darrfree(result);
 }
 
 // **************************
@@ -192,5 +199,37 @@ void test_to_bottom() {
     
     run_opticalflow(image1_data, image2_data, 10, 10, 270);
     
+}
+
+void test_memory() {
+    
+    puts("Starts test_memory\n");
+    
+    uint8_t image1_data[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 255, 255, 255, 255, 0, 0, 0,
+        0, 0, 0, 255, 255, 255, 255, 0, 0, 0,
+        0, 0, 0, 255, 255, 255, 255, 0, 0, 0,
+        0, 0, 0, 255, 255, 255, 255, 0, 0, 0,
+        0, 0, 0, 255, 255, 255, 255, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,};
+    
+    uint8_t image2_data[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 255, 255, 255, 255, 0, 0, 0, 0, 0,
+        0, 255, 255, 255, 255, 0, 0, 0, 0, 0,
+        0, 255, 255, 255, 255, 0, 0, 0, 0, 0,
+        0, 255, 255, 255, 255, 0, 0, 0, 0, 0,
+        0, 255, 255, 255, 255, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    
+    int i;
+    for (i = 0; i < 1000000; i++) {
+        run_opticalflow(image1_data, image2_data, 10, 10, 180);
+    }
 }
 
