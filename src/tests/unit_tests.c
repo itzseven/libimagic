@@ -22,6 +22,8 @@ int main(int argc, const char * argv[])
     (void)argc;
     (void)argv;
     
+    srand((unsigned long)time(NULL));
+    
     puts("Starting libimagic unit tests\n");
     
     puts("Starting core component tests\n");

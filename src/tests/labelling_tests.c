@@ -50,6 +50,37 @@ void test_labels_alloc()
     labfree(labels);
 }
 
+void test_labels_cpy()
+{
+    puts("Starts test_labels_cpy\n");
+    
+    labels_t *labels = laballoc(10, 10);
+    
+    int i = 0, j = 0;
+    
+    for (i = 0; i < labels->len; i++)
+        labels->data[i] = rand();
+    
+    labels_t *labelscpy = labcpy(labels);
+    
+    for (j = 0; j < labels->len; j++)
+    {
+        if (labelscpy->data[j] != labels->data[j])
+        {
+            printf("test_labels_cpy failed : expected : %d but got %d\n", labels->data[j], labelscpy->data[j]);
+            labelling_tests_failed++;
+            labfree(labels);
+            labfree(labelscpy);
+            return;
+        }
+    }
+    
+    puts("test_labels_cpy passed\n");
+    labelling_tests_passed++;
+    labfree(labels);
+    labfree(labelscpy);
+}
+
 void test_labelling_one_label()
 {
     puts("Starts test_labelling_one_label\n");
@@ -245,6 +276,7 @@ void test_labelling_chessboard()
 void labelling_test_suite()
 {
     test_labels_alloc();
+    test_labels_cpy();
     test_labelling_one_label();
     test_labelling_n_labels();
     test_labelling_complex_labels();

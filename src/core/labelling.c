@@ -28,7 +28,7 @@ labels_t *labcpy(labels_t *src)
     dst->len = src->len;
     dst->count = src->count;
     dst->data = (uint32_t *)calloc(src->len, sizeof(uint32_t));
-    memcpy(dst->data, src->data, src->len);
+    memcpy(dst->data, src->data, sizeof(uint32_t) * src->len);
     
     return dst;
 }

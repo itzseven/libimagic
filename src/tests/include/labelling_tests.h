@@ -14,12 +14,13 @@
 #include "labelling.h"
 #include "arithmetic.h"
 
-#define LABELLING_TEST_CASES_COUNT 5
+#define LABELLING_TEST_CASES_COUNT 6
 
 extern int labelling_tests_passed;
 extern int labelling_tests_failed;
 
 void test_labels_alloc();
+void test_labels_cpy();
 
 void test_labelling_one_label();
 void test_labelling_n_labels();
