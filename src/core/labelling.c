@@ -110,7 +110,7 @@ labels_t *label(bini_t *src)
         T[l] = Tl_eq_l ? m++ : T[Tl];
     }
     
-    unsigned int maxLabel = 1;
+    unsigned int maxLabel = 0;
     uint32_t lab = 0;
     
     for (i = 1; i < src->height; i++)
