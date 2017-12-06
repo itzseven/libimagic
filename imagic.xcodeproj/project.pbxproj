@@ -6,220 +6,80 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BD85EDED1FD6CCAB00CE339F /* Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BD85EDEE1FD6CCAB00CE339F /* Build configuration list for PBXAggregateTarget "Universal" */;
+			buildPhases = (
+				BD85EDF71FD6CDB700CE339F /* ShellScript */,
+			);
+			dependencies = (
+				04BA982B1FD73DAA00442681 /* PBXTargetDependency */,
+				04BA981C1FD733EA00442681 /* PBXTargetDependency */,
+				04A549BC1FD7305D00747CCE /* PBXTargetDependency */,
+			);
+			name = Universal;
+			productName = Universal;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		7A1B30A61C997E750014C1E3 /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B30A51C997E750014C1E3 /* drawing.c */; };
-		7A4D6F501C99719400B7B250 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
-		7A4D6F511C99719400B7B250 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6E7D91C986ECD00526231 /* opticalflow_tests.c */; };
-		7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
-		8A4537371C6208E400B9B19F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8A4537381C6208EA00B9B19F /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8A45373A1C62090E00B9B19F /* core.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8AB0E94A1C5FF79500D325BA /* core.h */; };
-		8A45373B1C62090E00B9B19F /* io.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8A7C374B1C60D7D30027C832 /* io.h */; };
-		8A45373D1C62090E00B9B19F /* edge.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8AF1BE971C61F22D009621BB /* edge.h */; };
-		8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8A71D13B1C6902F70009F5A8 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
-		8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8A71D13F1C690D960009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8A71D1421C690DA60009F5A8 /* arithmetic.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8A71D1331C68E9CA0009F5A8 /* arithmetic.h */; };
-		8A71D1431C690DA60009F5A8 /* labelling.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 8A71D1341C68E9CA0009F5A8 /* labelling.h */; };
-		8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1451C6926640009F5A8 /* labelling_tests.c */; };
-		8A748DC61C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8A748DC71C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8A748DC81C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8A748DC91C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8A748DCA1C7CC6D5007AA850 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8A748DCD1C7CCC37007AA850 /* morpho_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DCC1C7CCC37007AA850 /* morpho_tests.c */; };
-		8A7C374D1C60D7FC0027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7C374E1C60E3A10027C832 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7C37561C6155C20027C832 /* resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8A7C37551C6155A90027C832 /* resources */; };
-		8A7C37571C61576D0027C832 /* io_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C37531C6132840027C832 /* io_tests.c */; };
-		8A7CBC6E1C622948006FD3A1 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8A7CBC731C622F84006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC751C622F84006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8A7CBC771C622F93006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8A7CBC781C622F9A006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8AA436C71C7BB5D800000C4F /* characterization_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AA436C61C7BB5D800000C4F /* characterization_tests.c */; };
-		8AAF9B471CF3088A00EEFDCF /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B30A51C997E750014C1E3 /* drawing.c */; };
-		8AAF9B481CF3089A00EEFDCF /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B30A51C997E750014C1E3 /* drawing.c */; };
-		8AAF9B491CF308A300EEFDCF /* drawing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B30A51C997E750014C1E3 /* drawing.c */; };
-		8AAF9B531CF308FF00EEFDCF /* core_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B501CF308FF00EEFDCF /* core_integration_tests.c */; };
-		8AAF9B541CF308FF00EEFDCF /* integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B511CF308FF00EEFDCF /* integration_tests.c */; };
-		8AAF9B551CF308FF00EEFDCF /* io_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B521CF308FF00EEFDCF /* io_integration_tests.c */; };
-		8AAF9B561CF3090C00EEFDCF /* core_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B501CF308FF00EEFDCF /* core_integration_tests.c */; };
-		8AAF9B571CF3090C00EEFDCF /* integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B511CF308FF00EEFDCF /* integration_tests.c */; };
-		8AAF9B581CF3090C00EEFDCF /* io_integration_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF9B521CF308FF00EEFDCF /* io_integration_tests.c */; };
-		8AB0E94C1C5FF85000D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8AB0E9601C600F0D00D325BA /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94F1C6008D100D325BA /* core_tests.c */; };
-		8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E9511C6008E000D325BA /* unit_tests.c */; };
-		8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F91C6662EC003E11A1 /* edge_tests.c */; };
-		8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AC5A41A1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AC5A4201C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AC5A4211C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AC5A4221C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AC5A4231C6A1E040056C111 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AD4348D1C99805B00A3C419 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB0E94B1C5FF85000D325BA /* core.c */; };
-		8AD4348E1C99805B00A3C419 /* arithmetic.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1351C68E9D70009F5A8 /* arithmetic.c */; };
-		8AD4348F1C99805B00A3C419 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A71D1361C68E9D70009F5A8 /* labelling.c */; };
-		8AD434901C99805B00A3C419 /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A7C374C1C60D7FC0027C832 /* io.c */; };
-		8AD434911C99805B00A3C419 /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
-		8AD434921C99805B00A3C419 /* debug.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AB4A9F61C665DFF003E11A1 /* debug.c */; };
-		8AD434931C99805B00A3C419 /* characterization.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A4171C6A1BD80056C111 /* characterization.c */; };
-		8AD434941C99805B00A3C419 /* geometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AC5A41E1C6A1E040056C111 /* geometry.c */; };
-		8AD434951C99805B00A3C419 /* morpho.c in Sources */ = {isa = PBXBuildFile; fileRef = 8A748DC51C7CC6D5007AA850 /* morpho.c */; };
-		8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AD434991C99825700A3C419 /* opticalflow_tests.c */; };
-		8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
-		8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
-		8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E13861C7CC77A0023FEDC /* opticalflow.c */; };
-		8AF1BE991C61F24E009621BB /* edge.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1BE981C61F24E009621BB /* edge.c */; };
+		046394C91FD7472C00926C51 /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDEB1FD6CC9100CE339F /* imagic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		046394CA1FD7472C00926C51 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDF11FD6CCCE00CE339F /* matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04BA98111FD7338700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+		04BA981A1FD733D700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+		04BA982C1FD73DF400442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8A4537391C6208FB00B9B19F /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = include;
-			dstSubfolderSpec = 16;
-			files = (
-				8A71D1421C690DA60009F5A8 /* arithmetic.h in Copy Files */,
-				8A71D1431C690DA60009F5A8 /* labelling.h in Copy Files */,
-				8A45373A1C62090E00B9B19F /* core.h in Copy Files */,
-				8A45373B1C62090E00B9B19F /* io.h in Copy Files */,
-				8A45373D1C62090E00B9B19F /* edge.h in Copy Files */,
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		04A549BB1FD7305D00747CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A549B61FD72F2400747CCE;
+			remoteInfo = imagic;
 		};
-		8AB0E9571C600EF800D325BA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				8A7C37561C6155C20027C832 /* resources in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+		04BA981B1FD733EA00442681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BA98151FD733CF00442681;
+			remoteInfo = imagic_shared;
 		};
-		8AB1FA301C822E450014FC3A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+		04BA982A1FD73DAA00442681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BA98201FD73D8E00442681;
+			remoteInfo = imagic_iOS;
 		};
-/* End PBXCopyFilesBuildPhase section */
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7A1B30A31C997E6C0014C1E3 /* drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
-		7A1B30A41C997E6C0014C1E3 /* opticalflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow.h; sourceTree = "<group>"; };
-		7A1B30A51C997E750014C1E3 /* drawing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawing.c; sourceTree = "<group>"; };
-		7A6E13861C7CC77A0023FEDC /* opticalflow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow.c; sourceTree = "<group>"; };
-		7AD6E7D91C986ECD00526231 /* opticalflow_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow_tests.c; sourceTree = "<group>"; };
-		7AD6E7DC1C98E33900526231 /* opticalflow_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opticalflow_tests.h; sourceTree = "<group>"; };
-		8A4537211C62085F00B9B19F /* libiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-Simulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A71D1331C68E9CA0009F5A8 /* arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arithmetic.h; sourceTree = "<group>"; };
-		8A71D1341C68E9CA0009F5A8 /* labelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = labelling.h; sourceTree = "<group>"; };
-		8A71D1351C68E9D70009F5A8 /* arithmetic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arithmetic.c; sourceTree = "<group>"; };
-		8A71D1361C68E9D70009F5A8 /* labelling.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = labelling.c; sourceTree = "<group>"; };
-		8A71D1441C6926520009F5A8 /* labelling_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelling_tests.h; sourceTree = "<group>"; };
-		8A71D1451C6926640009F5A8 /* labelling_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = labelling_tests.c; sourceTree = "<group>"; };
-		8A748DC41C7CC6B4007AA850 /* morpho.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = morpho.h; sourceTree = "<group>"; };
-		8A748DC51C7CC6D5007AA850 /* morpho.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = morpho.c; sourceTree = "<group>"; };
-		8A748DCB1C7CCC12007AA850 /* morpho_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = morpho_tests.h; sourceTree = "<group>"; };
-		8A748DCC1C7CCC37007AA850 /* morpho_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = morpho_tests.c; sourceTree = "<group>"; };
-		8A7C374B1C60D7D30027C832 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
-		8A7C374C1C60D7FC0027C832 /* io.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io.c; sourceTree = "<group>"; };
-		8A7C37521C6132730027C832 /* io_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_tests.h; sourceTree = "<group>"; };
-		8A7C37531C6132840027C832 /* io_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_tests.c; sourceTree = "<group>"; };
-		8A7C37551C6155A90027C832 /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
-		8A7CBC6A1C62277B006FD3A1 /* libOSX-dynamic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libOSX-dynamic.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A7CBC7E1C6295C3006FD3A1 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		8AA436C51C7BB4BB00000C4F /* characterization_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = characterization_tests.h; sourceTree = "<group>"; };
-		8AA436C61C7BB5D800000C4F /* characterization_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = characterization_tests.c; sourceTree = "<group>"; };
-		8AAF9B501CF308FF00EEFDCF /* core_integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core_integration_tests.c; sourceTree = "<group>"; };
-		8AAF9B511CF308FF00EEFDCF /* integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = integration_tests.c; sourceTree = "<group>"; };
-		8AAF9B521CF308FF00EEFDCF /* io_integration_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_integration_tests.c; sourceTree = "<group>"; };
-		8AB0E93F1C5FF74F00D325BA /* libOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AB0E94A1C5FF79500D325BA /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
-		8AB0E94B1C5FF85000D325BA /* core.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
-		8AB0E94E1C6008C300D325BA /* core_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core_tests.h; sourceTree = "<group>"; };
-		8AB0E94F1C6008D100D325BA /* core_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = core_tests.c; sourceTree = "<group>"; };
-		8AB0E9511C6008E000D325BA /* unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unit_tests.c; sourceTree = "<group>"; };
-		8AB0E9591C600EF800D325BA /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AB1FA2C1C822DFE0014FC3A /* core_integration_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core_integration_tests.h; sourceTree = "<group>"; };
-		8AB1FA321C822E450014FC3A /* IntegrationTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IntegrationTests; sourceTree = BUILT_PRODUCTS_DIR; };
-		8AB4A9F51C665DEC003E11A1 /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		8AB4A9F61C665DFF003E11A1 /* debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = debug.c; sourceTree = "<group>"; };
-		8AB4A9F81C6662DA003E11A1 /* edge_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = edge_tests.h; sourceTree = "<group>"; };
-		8AB4A9F91C6662EC003E11A1 /* edge_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge_tests.c; sourceTree = "<group>"; };
-		8AC5A4161C6A1B9A0056C111 /* characterization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = characterization.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
-		8AC5A4171C6A1BD80056C111 /* characterization.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = characterization.c; sourceTree = "<group>"; };
-		8AC5A41D1C6A1D5E0056C111 /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
-		8AC5A41E1C6A1E040056C111 /* geometry.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geometry.c; sourceTree = "<group>"; };
-		8AD434891C997B5100A3C419 /* io_integration_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io_integration_tests.h; sourceTree = "<group>"; };
-		8AD434991C99825700A3C419 /* opticalflow_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opticalflow_tests.c; sourceTree = "<group>"; };
-		8AD459CF1C7DFC0C005D51BC /* interests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = interests.h; sourceTree = "<group>"; };
-		8AD459D01C7DFC1A005D51BC /* drawing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
-		8AD459DB1C7DFE61005D51BC /* filter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = filter.h; sourceTree = "<group>"; };
-		8AF1BE971C61F22D009621BB /* edge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = edge.h; sourceTree = "<group>"; };
-		8AF1BE981C61F24E009621BB /* edge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = edge.c; sourceTree = "<group>"; };
+		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD85EDEB1FD6CC9100CE339F /* imagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imagic.h; sourceTree = "<group>"; };
+		BD85EDF11FD6CCCE00CE339F /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		BD85EDF21FD6CCCE00CE339F /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8A45371E1C62085F00B9B19F /* Frameworks */ = {
+		04A549B41FD72F2400747CCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A45372B1C62086A00B9B19F /* Frameworks */ = {
+		04BA98131FD733CF00442681 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A7CBC671C62277B006FD3A1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB0E93C1C5FF74F00D325BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB0E9561C600EF800D325BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB1FA2F1C822E450014FC3A /* Frameworks */ = {
+		04BA981E1FD73D8E00442681 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,215 +89,121 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		046394C61FD7407D00926C51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AB0E9361C5FF74F00D325BA = {
 			isa = PBXGroup;
 			children = (
-				8A7CBC7E1C6295C3006FD3A1 /* Makefile */,
-				8A7C37551C6155A90027C832 /* resources */,
-				8AB0E9461C5FF78600D325BA /* src */,
+				BD85EDE91FD6CC7A00CE339F /* imagic */,
 				8AB0E9401C5FF74F00D325BA /* Products */,
+				046394C61FD7407D00926C51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8AB0E9401C5FF74F00D325BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8AB0E93F1C5FF74F00D325BA /* libOSX.a */,
-				8AB0E9591C600EF800D325BA /* UnitTests */,
-				8A4537211C62085F00B9B19F /* libiOS.a */,
-				8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */,
-				8A7CBC6A1C62277B006FD3A1 /* libOSX-dynamic.dylib */,
-				8AB1FA321C822E450014FC3A /* IntegrationTests */,
+				04A549B71FD72F2400747CCE /* libimagic.a */,
+				04BA98161FD733CF00442681 /* libimagic.dylib */,
+				04BA98211FD73D8E00442681 /* libimagic.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8AB0E9461C5FF78600D325BA /* src */ = {
+		BD85EDE91FD6CC7A00CE339F /* imagic */ = {
 			isa = PBXGroup;
 			children = (
-				8AB0E9471C5FF78600D325BA /* core */,
-				8AB0E9491C5FF78600D325BA /* tests */,
+				BD85EDEA1FD6CC7F00CE339F /* include */,
+				BD85EDF21FD6CCCE00CE339F /* matrix.c */,
 			);
-			path = src;
+			path = imagic;
 			sourceTree = "<group>";
 		};
-		8AB0E9471C5FF78600D325BA /* core */ = {
+		BD85EDEA1FD6CC7F00CE339F /* include */ = {
 			isa = PBXGroup;
 			children = (
-				8AB0E9481C5FF78600D325BA /* include */,
-				8AB0E94B1C5FF85000D325BA /* core.c */,
-				7A1B30A51C997E750014C1E3 /* drawing.c */,
-				8A71D1351C68E9D70009F5A8 /* arithmetic.c */,
-				8A71D1361C68E9D70009F5A8 /* labelling.c */,
-				8A7C374C1C60D7FC0027C832 /* io.c */,
-				8AF1BE981C61F24E009621BB /* edge.c */,
-				8AB4A9F61C665DFF003E11A1 /* debug.c */,
-				8AC5A4171C6A1BD80056C111 /* characterization.c */,
-				8AC5A41E1C6A1E040056C111 /* geometry.c */,
-				8A748DC51C7CC6D5007AA850 /* morpho.c */,
-				7A6E13861C7CC77A0023FEDC /* opticalflow.c */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		8AB0E9481C5FF78600D325BA /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7A1B30A31C997E6C0014C1E3 /* drawing.h */,
-				7A1B30A41C997E6C0014C1E3 /* opticalflow.h */,
-				8A71D1331C68E9CA0009F5A8 /* arithmetic.h */,
-				8A71D1341C68E9CA0009F5A8 /* labelling.h */,
-				8AB0E94A1C5FF79500D325BA /* core.h */,
-				8A7C374B1C60D7D30027C832 /* io.h */,
-				8AF1BE971C61F22D009621BB /* edge.h */,
-				8AB4A9F51C665DEC003E11A1 /* debug.h */,
-				8AC5A4161C6A1B9A0056C111 /* characterization.h */,
-				8AC5A41D1C6A1D5E0056C111 /* geometry.h */,
-				8A748DC41C7CC6B4007AA850 /* morpho.h */,
-				8AD459CF1C7DFC0C005D51BC /* interests.h */,
-				8AD459D01C7DFC1A005D51BC /* drawing.h */,
-				8AD459DB1C7DFE61005D51BC /* filter.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		8AB0E9491C5FF78600D325BA /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				8AAF9B501CF308FF00EEFDCF /* core_integration_tests.c */,
-				8AAF9B511CF308FF00EEFDCF /* integration_tests.c */,
-				8AAF9B521CF308FF00EEFDCF /* io_integration_tests.c */,
-				8AB0E94D1C6008B700D325BA /* include */,
-				8AB0E94F1C6008D100D325BA /* core_tests.c */,
-				8AD434991C99825700A3C419 /* opticalflow_tests.c */,
-				8AB0E9511C6008E000D325BA /* unit_tests.c */,
-				8A7C37531C6132840027C832 /* io_tests.c */,
-				8AB4A9F91C6662EC003E11A1 /* edge_tests.c */,
-				8A71D1451C6926640009F5A8 /* labelling_tests.c */,
-				8AA436C61C7BB5D800000C4F /* characterization_tests.c */,
-				8A748DCC1C7CCC37007AA850 /* morpho_tests.c */,
-				7AD6E7D91C986ECD00526231 /* opticalflow_tests.c */,
-			);
-			path = tests;
-			sourceTree = "<group>";
-		};
-		8AB0E94D1C6008B700D325BA /* include */ = {
-			isa = PBXGroup;
-			children = (
-				7AD6E7DC1C98E33900526231 /* opticalflow_tests.h */,
-				8AB0E94E1C6008C300D325BA /* core_tests.h */,
-				8A7C37521C6132730027C832 /* io_tests.h */,
-				8AB4A9F81C6662DA003E11A1 /* edge_tests.h */,
-				8A71D1441C6926520009F5A8 /* labelling_tests.h */,
-				8AA436C51C7BB4BB00000C4F /* characterization_tests.h */,
-				8A748DCB1C7CCC12007AA850 /* morpho_tests.h */,
-				8AB1FA2C1C822DFE0014FC3A /* core_integration_tests.h */,
-				8AD434891C997B5100A3C419 /* io_integration_tests.h */,
+				BD85EDEB1FD6CC9100CE339F /* imagic.h */,
+				BD85EDF11FD6CCCE00CE339F /* matrix.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		04A549B51FD72F2400747CCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046394C91FD7472C00926C51 /* imagic.h in Headers */,
+				046394CA1FD7472C00926C51 /* matrix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA98141FD733CF00442681 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		8A4537201C62085F00B9B19F /* iOS */ = {
+		04A549B61FD72F2400747CCE /* imagic_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A4537291C62085F00B9B19F /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = 04A549B81FD72F2400747CCE /* Build configuration list for PBXNativeTarget "imagic_macOS" */;
 			buildPhases = (
-				8A45371D1C62085F00B9B19F /* Sources */,
-				8A45371E1C62085F00B9B19F /* Frameworks */,
+				04A549B31FD72F2400747CCE /* Sources */,
+				04A549B41FD72F2400747CCE /* Frameworks */,
+				04A549B51FD72F2400747CCE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iOS;
-			productName = iOS;
-			productReference = 8A4537211C62085F00B9B19F /* libiOS.a */;
+			name = imagic_macOS;
+			productName = imagic_static;
+			productReference = 04A549B71FD72F2400747CCE /* libimagic.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8A45372D1C62086A00B9B19F /* iOS-Simulator */ = {
+		04BA98151FD733CF00442681 /* imagic_macOS_shared */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8A4537341C62086A00B9B19F /* Build configuration list for PBXNativeTarget "iOS-Simulator" */;
+			buildConfigurationList = 04BA98171FD733CF00442681 /* Build configuration list for PBXNativeTarget "imagic_macOS_shared" */;
 			buildPhases = (
-				8A45372A1C62086A00B9B19F /* Sources */,
-				8A45372B1C62086A00B9B19F /* Frameworks */,
+				04BA98121FD733CF00442681 /* Sources */,
+				04BA98131FD733CF00442681 /* Frameworks */,
+				04BA98141FD733CF00442681 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "iOS-Simulator";
-			productName = "iOS-Simulator";
-			productReference = 8A45372E1C62086A00B9B19F /* libiOS-Simulator.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8A7CBC691C62277B006FD3A1 /* OSX-dynamic */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8A7CBC6D1C62277B006FD3A1 /* Build configuration list for PBXNativeTarget "OSX-dynamic" */;
-			buildPhases = (
-				8A7CBC661C62277B006FD3A1 /* Sources */,
-				8A7CBC671C62277B006FD3A1 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OSX-dynamic";
-			productName = "OSX-dynamic";
-			productReference = 8A7CBC6A1C62277B006FD3A1 /* libOSX-dynamic.dylib */;
+			name = imagic_macOS_shared;
+			productName = imagic_shared;
+			productReference = 04BA98161FD733CF00442681 /* libimagic.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		8AB0E93E1C5FF74F00D325BA /* OSX */ = {
+		04BA98201FD73D8E00442681 /* imagic_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AB0E9431C5FF74F00D325BA /* Build configuration list for PBXNativeTarget "OSX" */;
+			buildConfigurationList = 04BA98271FD73D8E00442681 /* Build configuration list for PBXNativeTarget "imagic_iOS" */;
 			buildPhases = (
-				8AB0E93B1C5FF74F00D325BA /* Sources */,
-				8AB0E93C1C5FF74F00D325BA /* Frameworks */,
-				8A4537391C6208FB00B9B19F /* Copy Files */,
+				04BA981D1FD73D8E00442681 /* Sources */,
+				04BA981E1FD73D8E00442681 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OSX;
-			productName = imagic;
-			productReference = 8AB0E93F1C5FF74F00D325BA /* libOSX.a */;
+			name = imagic_iOS;
+			productName = imagic_iOS;
+			productReference = 04BA98211FD73D8E00442681 /* libimagic.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		8AB0E9581C600EF800D325BA /* UnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AB0E95D1C600EF800D325BA /* Build configuration list for PBXNativeTarget "UnitTests" */;
-			buildPhases = (
-				8AB0E9551C600EF800D325BA /* Sources */,
-				8AB0E9561C600EF800D325BA /* Frameworks */,
-				8AB0E9571C600EF800D325BA /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UnitTests;
-			productName = UnitTests;
-			productReference = 8AB0E9591C600EF800D325BA /* UnitTests */;
-			productType = "com.apple.product-type.tool";
-		};
-		8AB1FA311C822E450014FC3A /* IntegrationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AB1FA361C822E450014FC3A /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
-			buildPhases = (
-				8AB1FA2E1C822E450014FC3A /* Sources */,
-				8AB1FA2F1C822E450014FC3A /* Frameworks */,
-				8AB1FA301C822E450014FC3A /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = IntegrationTests;
-			productName = IntegrationTests;
-			productReference = 8AB1FA321C822E450014FC3A /* IntegrationTests */;
-			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -445,28 +211,28 @@
 		8AB0E9371C5FF74F00D325BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Romain Dubreucq";
 				TargetAttributes = {
-					8A4537201C62085F00B9B19F = {
-						CreatedOnToolsVersion = 7.2;
+					04A549B61FD72F2400747CCE = {
+						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
 					};
-					8A45372D1C62086A00B9B19F = {
-						CreatedOnToolsVersion = 7.2;
+					04BA98151FD733CF00442681 = {
+						CreatedOnToolsVersion = 9.1;
 						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
 					};
-					8A7CBC691C62277B006FD3A1 = {
-						CreatedOnToolsVersion = 7.2;
+					04BA98201FD73D8E00442681 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
 					};
-					8AB0E93E1C5FF74F00D325BA = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					8AB0E9581C600EF800D325BA = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					8AB1FA311C822E450014FC3A = {
-						CreatedOnToolsVersion = 7.2.1;
+					BD85EDED1FD6CCAB00CE339F = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -482,217 +248,206 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8AB0E93E1C5FF74F00D325BA /* OSX */,
-				8A7CBC691C62277B006FD3A1 /* OSX-dynamic */,
-				8AB0E9581C600EF800D325BA /* UnitTests */,
-				8A4537201C62085F00B9B19F /* iOS */,
-				8A45372D1C62086A00B9B19F /* iOS-Simulator */,
-				8AB1FA311C822E450014FC3A /* IntegrationTests */,
+				04A549B61FD72F2400747CCE /* imagic_macOS */,
+				04BA98151FD733CF00442681 /* imagic_macOS_shared */,
+				04BA98201FD73D8E00442681 /* imagic_iOS */,
+				BD85EDED1FD6CCAB00CE339F /* Universal */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD85EDF71FD6CDB700CE339F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build macOS versions (static and shared)\nxcodebuild -target imagic_macOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk macosx -arch x86_64 -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}/macOS\"\ncp \"${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}.a\" \"${UNIVERSAL_OUTPUTFOLDER}/macOS/lib${PROJECT_NAME}.a\"\ncp \"${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}.dylib\" \"${UNIVERSAL_OUTPUTFOLDER}/macOS/lib${PROJECT_NAME}.dylib\"\n\n# Step 2. Build iOS versions (static, iphoneos + iphonesimulator)\n\nxcodebuild -target imagic_iOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos -arch arm64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target imagic_iOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}/iOS\"\n\n# Step 3. Create universal static binary for iOS file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/iOS/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		8A45371D1C62085F00B9B19F /* Sources */ = {
+		04A549B31FD72F2400747CCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AAF9B481CF3089A00EEFDCF /* drawing.c in Sources */,
-				8AD4349E1C99832100A3C419 /* opticalflow.c in Sources */,
-				8A71D13E1C690D960009F5A8 /* arithmetic.c in Sources */,
-				8A71D13F1C690D960009F5A8 /* labelling.c in Sources */,
-				8A7CBC781C622F9A006FD3A1 /* io.c in Sources */,
-				8AC5A4221C6A1E040056C111 /* geometry.c in Sources */,
-				8A7CBC7A1C622F9A006FD3A1 /* edge.c in Sources */,
-				8AC5A41B1C6A1BD80056C111 /* characterization.c in Sources */,
-				8A748DC91C7CC6D5007AA850 /* morpho.c in Sources */,
-				8A4537371C6208E400B9B19F /* core.c in Sources */,
+				04BA98111FD7338700442681 /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A45372A1C62086A00B9B19F /* Sources */ = {
+		04BA98121FD733CF00442681 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AAF9B491CF308A300EEFDCF /* drawing.c in Sources */,
-				8AD4349F1C99832800A3C419 /* opticalflow.c in Sources */,
-				8A71D1401C690D9B0009F5A8 /* arithmetic.c in Sources */,
-				8A71D1411C690D9B0009F5A8 /* labelling.c in Sources */,
-				8A7CBC7B1C622FA0006FD3A1 /* io.c in Sources */,
-				8AC5A4231C6A1E040056C111 /* geometry.c in Sources */,
-				8A7CBC7D1C622FA0006FD3A1 /* edge.c in Sources */,
-				8AC5A41C1C6A1BD80056C111 /* characterization.c in Sources */,
-				8A748DCA1C7CC6D5007AA850 /* morpho.c in Sources */,
-				8A4537381C6208EA00B9B19F /* core.c in Sources */,
+				04BA981A1FD733D700442681 /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8A7CBC661C62277B006FD3A1 /* Sources */ = {
+		04BA981D1FD73D8E00442681 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AAF9B471CF3088A00EEFDCF /* drawing.c in Sources */,
-				8AD4349D1C99831B00A3C419 /* opticalflow.c in Sources */,
-				8A71D13C1C690D8F0009F5A8 /* arithmetic.c in Sources */,
-				8A71D13D1C690D8F0009F5A8 /* labelling.c in Sources */,
-				8A7CBC731C622F84006FD3A1 /* io.c in Sources */,
-				8AC5A4201C6A1E040056C111 /* geometry.c in Sources */,
-				8A7CBC751C622F84006FD3A1 /* edge.c in Sources */,
-				8AC5A4191C6A1BD80056C111 /* characterization.c in Sources */,
-				8A748DC71C7CC6D5007AA850 /* morpho.c in Sources */,
-				8A7CBC6E1C622948006FD3A1 /* core.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB0E93B1C5FF74F00D325BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AAF9B541CF308FF00EEFDCF /* integration_tests.c in Sources */,
-				8AF1BE991C61F24E009621BB /* edge.c in Sources */,
-				8AD4349A1C99825700A3C419 /* opticalflow_tests.c in Sources */,
-				8A7C374D1C60D7FC0027C832 /* io.c in Sources */,
-				7A6E13881C7CC77A0023FEDC /* opticalflow.c in Sources */,
-				8AB0E94C1C5FF85000D325BA /* core.c in Sources */,
-				8AAF9B551CF308FF00EEFDCF /* io_integration_tests.c in Sources */,
-				7A1B30A61C997E750014C1E3 /* drawing.c in Sources */,
-				8AC5A41F1C6A1E040056C111 /* geometry.c in Sources */,
-				8AAF9B531CF308FF00EEFDCF /* core_integration_tests.c in Sources */,
-				8A71D1381C68E9D70009F5A8 /* labelling.c in Sources */,
-				8AC5A4181C6A1BD80056C111 /* characterization.c in Sources */,
-				8A748DC61C7CC6D5007AA850 /* morpho.c in Sources */,
-				8A71D1371C68E9D70009F5A8 /* arithmetic.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB0E9551C600EF800D325BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A4D6F501C99719400B7B250 /* opticalflow.c in Sources */,
-				7A4D6F511C99719400B7B250 /* opticalflow_tests.c in Sources */,
-				8A71D13B1C6902F70009F5A8 /* debug.c in Sources */,
-				8A71D1391C6902F20009F5A8 /* arithmetic.c in Sources */,
-				8A71D13A1C6902F20009F5A8 /* labelling.c in Sources */,
-				8AC5A4211C6A1E040056C111 /* geometry.c in Sources */,
-				8A7CBC771C622F93006FD3A1 /* edge.c in Sources */,
-				8A7C37571C61576D0027C832 /* io_tests.c in Sources */,
-				8A748DCD1C7CCC37007AA850 /* morpho_tests.c in Sources */,
-				8A7C374E1C60E3A10027C832 /* io.c in Sources */,
-				8A748DC81C7CC6D5007AA850 /* morpho.c in Sources */,
-				8AB4A9FA1C6662EC003E11A1 /* edge_tests.c in Sources */,
-				8AA436C71C7BB5D800000C4F /* characterization_tests.c in Sources */,
-				8A71D1461C6926640009F5A8 /* labelling_tests.c in Sources */,
-				8AB0E9601C600F0D00D325BA /* core.c in Sources */,
-				8AB0E9611C600F0D00D325BA /* core_tests.c in Sources */,
-				8AC5A41A1C6A1BD80056C111 /* characterization.c in Sources */,
-				8AB0E9621C600F0D00D325BA /* unit_tests.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AB1FA2E1C822E450014FC3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8AAF9B561CF3090C00EEFDCF /* core_integration_tests.c in Sources */,
-				8AAF9B571CF3090C00EEFDCF /* integration_tests.c in Sources */,
-				8AAF9B581CF3090C00EEFDCF /* io_integration_tests.c in Sources */,
-				8AD4348D1C99805B00A3C419 /* core.c in Sources */,
-				8AD4348E1C99805B00A3C419 /* arithmetic.c in Sources */,
-				8AD4348F1C99805B00A3C419 /* labelling.c in Sources */,
-				8AD434901C99805B00A3C419 /* io.c in Sources */,
-				8AD434911C99805B00A3C419 /* edge.c in Sources */,
-				8AD434921C99805B00A3C419 /* debug.c in Sources */,
-				8AD434931C99805B00A3C419 /* characterization.c in Sources */,
-				8AD434941C99805B00A3C419 /* geometry.c in Sources */,
-				8AD434951C99805B00A3C419 /* morpho.c in Sources */,
+				04BA982C1FD73DF400442681 /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		04A549BC1FD7305D00747CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A549B61FD72F2400747CCE /* imagic_macOS */;
+			targetProxy = 04A549BB1FD7305D00747CCE /* PBXContainerItemProxy */;
+		};
+		04BA981C1FD733EA00442681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BA98151FD733CF00442681 /* imagic_macOS_shared */;
+			targetProxy = 04BA981B1FD733EA00442681 /* PBXContainerItemProxy */;
+		};
+		04BA982B1FD73DAA00442681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BA98201FD73D8E00442681 /* imagic_iOS */;
+			targetProxy = 04BA982A1FD73DAA00442681 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		8A4537271C62085F00B9B19F /* Debug */ = {
+		04A549B91FD72F2400747CCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = include;
+				PRODUCT_NAME = imagic;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
-		8A4537281C62085F00B9B19F /* Release */ = {
+		04A549BA1FD72F2400747CCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = include;
+				PRODUCT_NAME = imagic;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
-		8A4537351C62086A00B9B19F /* Debug */ = {
+		04BA98181FD733CF00442681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = "x86_64 i386";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = imagic;
 			};
 			name = Debug;
 		};
-		8A4537361C62086A00B9B19F /* Release */ = {
+		04BA98191FD733CF00442681 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphonesimulator;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "x86_64 i386";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = imagic;
 			};
 			name = Release;
 		};
-		8A7CBC6B1C62277B006FD3A1 /* Debug */ = {
+		04BA98281FD73D8E00442681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = imagic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8A7CBC6C1C62277B006FD3A1 /* Release */ = {
+		04BA98291FD73D8E00442681 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = imagic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -704,13 +459,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -747,13 +510,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -775,48 +546,20 @@
 			};
 			name = Release;
 		};
-		8AB0E9441C5FF74F00D325BA /* Debug */ = {
+		BD85EDEF1FD6CCAB00CE339F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8AB0E9451C5FF74F00D325BA /* Release */ = {
+		BD85EDF01FD6CCAB00CE339F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8AB0E95E1C600EF800D325BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8AB0E95F1C600EF800D325BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8AB1FA371C822E450014FC3A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		8AB1FA381C822E450014FC3A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -824,29 +567,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8A4537291C62085F00B9B19F /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		04A549B81FD72F2400747CCE /* Build configuration list for PBXNativeTarget "imagic_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A4537271C62085F00B9B19F /* Debug */,
-				8A4537281C62085F00B9B19F /* Release */,
+				04A549B91FD72F2400747CCE /* Debug */,
+				04A549BA1FD72F2400747CCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A4537341C62086A00B9B19F /* Build configuration list for PBXNativeTarget "iOS-Simulator" */ = {
+		04BA98171FD733CF00442681 /* Build configuration list for PBXNativeTarget "imagic_macOS_shared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A4537351C62086A00B9B19F /* Debug */,
-				8A4537361C62086A00B9B19F /* Release */,
+				04BA98181FD733CF00442681 /* Debug */,
+				04BA98191FD733CF00442681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8A7CBC6D1C62277B006FD3A1 /* Build configuration list for PBXNativeTarget "OSX-dynamic" */ = {
+		04BA98271FD73D8E00442681 /* Build configuration list for PBXNativeTarget "imagic_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A7CBC6B1C62277B006FD3A1 /* Debug */,
-				8A7CBC6C1C62277B006FD3A1 /* Release */,
+				04BA98281FD73D8E00442681 /* Debug */,
+				04BA98291FD73D8E00442681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -860,29 +603,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AB0E9431C5FF74F00D325BA /* Build configuration list for PBXNativeTarget "OSX" */ = {
+		BD85EDEE1FD6CCAB00CE339F /* Build configuration list for PBXAggregateTarget "Universal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8AB0E9441C5FF74F00D325BA /* Debug */,
-				8AB0E9451C5FF74F00D325BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AB0E95D1C600EF800D325BA /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AB0E95E1C600EF800D325BA /* Debug */,
-				8AB0E95F1C600EF800D325BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8AB1FA361C822E450014FC3A /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AB1FA371C822E450014FC3A /* Debug */,
-				8AB1FA381C822E450014FC3A /* Release */,
+				BD85EDEF1FD6CCAB00CE339F /* Debug */,
+				BD85EDF01FD6CCAB00CE339F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
