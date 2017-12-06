@@ -24,11 +24,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		046394C91FD7472C00926C51 /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDEB1FD6CC9100CE339F /* imagic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		046394CA1FD7472C00926C51 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDF11FD6CCCE00CE339F /* matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04BA98111FD7338700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
-		04BA981A1FD733D700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
-		04BA982C1FD73DF400442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
+		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +52,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BDC433AD1FD82576005C4D0D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD85EDEB1FD6CC9100CE339F /* imagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imagic.h; sourceTree = "<group>"; };
-		BD85EDF11FD6CCCE00CE339F /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
-		BD85EDF21FD6CCCE00CE339F /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		BDC433AF1FD82576005C4D0D /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC433B11FD82576005C4D0D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		BDC433B91FD8278A005C4D0D /* cassert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cassert.h; sourceTree = "<group>"; };
+		BDC433BA1FD8278A005C4D0D /* ctcase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctcase.h; sourceTree = "<group>"; };
+		BDC433BB1FD8278A005C4D0D /* ctperf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctperf.h; sourceTree = "<group>"; };
+		BDC433BC1FD8278A005C4D0D /* cunit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cunit.h; sourceTree = "<group>"; };
+		BDC433BD1FD8278A005C4D0D /* ctypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctypes.h; sourceTree = "<group>"; };
+		BDC433BE1FD8278A005C4D0D /* ctsuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctsuite.h; sourceTree = "<group>"; };
+		BDC433BF1FD8278A005C4D0D /* libcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcunit.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC433AC1FD82576005C4D0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,7 +122,9 @@
 		8AB0E9361C5FF74F00D325BA = {
 			isa = PBXGroup;
 			children = (
+				BDC433B61FD8278A005C4D0D /* Libraries */,
 				BD85EDE91FD6CC7A00CE339F /* imagic */,
+				BDC433B01FD82576005C4D0D /* UnitTests */,
 				8AB0E9401C5FF74F00D325BA /* Products */,
 				046394C61FD7407D00926C51 /* Frameworks */,
 			);
@@ -111,6 +136,7 @@
 				04A549B71FD72F2400747CCE /* libimagic.a */,
 				04BA98161FD733CF00442681 /* libimagic.dylib */,
 				04BA98211FD73D8E00442681 /* libimagic.a */,
+				BDC433AF1FD82576005C4D0D /* UnitTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,17 +144,44 @@
 		BD85EDE91FD6CC7A00CE339F /* imagic */ = {
 			isa = PBXGroup;
 			children = (
-				BD85EDEA1FD6CC7F00CE339F /* include */,
-				BD85EDF21FD6CCCE00CE339F /* matrix.c */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
 		};
-		BD85EDEA1FD6CC7F00CE339F /* include */ = {
+		BDC433B01FD82576005C4D0D /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD85EDEB1FD6CC9100CE339F /* imagic.h */,
-				BD85EDF11FD6CCCE00CE339F /* matrix.h */,
+				BDC433B11FD82576005C4D0D /* main.c */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		BDC433B61FD8278A005C4D0D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BDC433B71FD8278A005C4D0D /* cunit */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		BDC433B71FD8278A005C4D0D /* cunit */ = {
+			isa = PBXGroup;
+			children = (
+				BDC433B81FD8278A005C4D0D /* include */,
+				BDC433BF1FD8278A005C4D0D /* libcunit.a */,
+			);
+			path = cunit;
+			sourceTree = "<group>";
+		};
+		BDC433B81FD8278A005C4D0D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BDC433B91FD8278A005C4D0D /* cassert.h */,
+				BDC433BA1FD8278A005C4D0D /* ctcase.h */,
+				BDC433BB1FD8278A005C4D0D /* ctperf.h */,
+				BDC433BC1FD8278A005C4D0D /* cunit.h */,
+				BDC433BD1FD8278A005C4D0D /* ctypes.h */,
+				BDC433BE1FD8278A005C4D0D /* ctsuite.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -140,8 +193,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				046394C91FD7472C00926C51 /* imagic.h in Headers */,
-				046394CA1FD7472C00926C51 /* matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +256,23 @@
 			productReference = 04BA98211FD73D8E00442681 /* libimagic.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BDC433AE1FD82576005C4D0D /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC433B31FD82576005C4D0D /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				BDC433AB1FD82576005C4D0D /* Sources */,
+				BDC433AC1FD82576005C4D0D /* Frameworks */,
+				BDC433AD1FD82576005C4D0D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = BDC433AF1FD82576005C4D0D /* UnitTests */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +302,11 @@
 						DevelopmentTeam = QQ64R4PS8Q;
 						ProvisioningStyle = Automatic;
 					};
+					BDC433AE1FD82576005C4D0D = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8AB0E93A1C5FF74F00D325BA /* Build configuration list for PBXProject "imagic" */;
@@ -252,6 +325,7 @@
 				04BA98151FD733CF00442681 /* imagic_macOS_shared */,
 				04BA98201FD73D8E00442681 /* imagic_iOS */,
 				BD85EDED1FD6CCAB00CE339F /* Universal */,
+				BDC433AE1FD82576005C4D0D /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BA98111FD7338700442681 /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BA981A1FD733D700442681 /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +365,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BA982C1FD73DF400442681 /* matrix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDC433AB1FD82576005C4D0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC433B21FD82576005C4D0D /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +643,50 @@
 			};
 			name = Release;
 		};
+		BDC433B41FD82576005C4D0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/cunit/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/cunit",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDC433B51FD82576005C4D0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Libraries/cunit/include";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/cunit",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -608,6 +731,15 @@
 			buildConfigurations = (
 				BD85EDEF1FD6CCAB00CE339F /* Debug */,
 				BD85EDF01FD6CCAB00CE339F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDC433B31FD82576005C4D0D /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC433B41FD82576005C4D0D /* Debug */,
+				BDC433B51FD82576005C4D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
