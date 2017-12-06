@@ -26,6 +26,8 @@
 /* Begin PBXBuildFile section */
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
+		BDC433C21FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
+		BDC433C31FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,7 @@
 		BDC433BD1FD8278A005C4D0D /* ctypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctypes.h; sourceTree = "<group>"; };
 		BDC433BE1FD8278A005C4D0D /* ctsuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctsuite.h; sourceTree = "<group>"; };
 		BDC433BF1FD8278A005C4D0D /* libcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcunit.a; sourceTree = "<group>"; };
+		BDC433C11FD82986005C4D0D /* imagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imagic.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,7 @@
 		BD85EDE91FD6CC7A00CE339F /* imagic */ = {
 			isa = PBXGroup;
 			children = (
+				BDC433C51FD82994005C4D0D /* include */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
@@ -186,6 +190,14 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		BDC433C51FD82994005C4D0D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BDC433C11FD82986005C4D0D /* imagic.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -193,6 +205,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433C21FD82986005C4D0D /* imagic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +213,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433C31FD82986005C4D0D /* imagic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
