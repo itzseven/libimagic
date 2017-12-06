@@ -6,29 +6,235 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BD85EDED1FD6CCAB00CE339F /* Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BD85EDEE1FD6CCAB00CE339F /* Build configuration list for PBXAggregateTarget "Universal" */;
+			buildPhases = (
+				BD85EDF71FD6CDB700CE339F /* ShellScript */,
+			);
+			dependencies = (
+				04BA982B1FD73DAA00442681 /* PBXTargetDependency */,
+				04BA981C1FD733EA00442681 /* PBXTargetDependency */,
+				04A549BC1FD7305D00747CCE /* PBXTargetDependency */,
+			);
+			name = Universal;
+			productName = Universal;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		046394C91FD7472C00926C51 /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDEB1FD6CC9100CE339F /* imagic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		046394CA1FD7472C00926C51 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BD85EDF11FD6CCCE00CE339F /* matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04BA98111FD7338700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+		04BA981A1FD733D700442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+		04BA982C1FD73DF400442681 /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BD85EDF21FD6CCCE00CE339F /* matrix.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04A549BB1FD7305D00747CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04A549B61FD72F2400747CCE;
+			remoteInfo = imagic;
+		};
+		04BA981B1FD733EA00442681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BA98151FD733CF00442681;
+			remoteInfo = imagic_shared;
+		};
+		04BA982A1FD73DAA00442681 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB0E9371C5FF74F00D325BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BA98201FD73D8E00442681;
+			remoteInfo = imagic_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD85EDEB1FD6CC9100CE339F /* imagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imagic.h; sourceTree = "<group>"; };
+		BD85EDF11FD6CCCE00CE339F /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		BD85EDF21FD6CCCE00CE339F /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A549B41FD72F2400747CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA98131FD733CF00442681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA981E1FD73D8E00442681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		046394C61FD7407D00926C51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AB0E9361C5FF74F00D325BA = {
 			isa = PBXGroup;
 			children = (
+				BD85EDE91FD6CC7A00CE339F /* imagic */,
 				8AB0E9401C5FF74F00D325BA /* Products */,
+				046394C61FD7407D00926C51 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8AB0E9401C5FF74F00D325BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				04A549B71FD72F2400747CCE /* libimagic.a */,
+				04BA98161FD733CF00442681 /* libimagic.dylib */,
+				04BA98211FD73D8E00442681 /* libimagic.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		BD85EDE91FD6CC7A00CE339F /* imagic */ = {
+			isa = PBXGroup;
+			children = (
+				BD85EDEA1FD6CC7F00CE339F /* include */,
+				BD85EDF21FD6CCCE00CE339F /* matrix.c */,
+			);
+			path = imagic;
+			sourceTree = "<group>";
+		};
+		BD85EDEA1FD6CC7F00CE339F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BD85EDEB1FD6CC9100CE339F /* imagic.h */,
+				BD85EDF11FD6CCCE00CE339F /* matrix.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04A549B51FD72F2400747CCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046394C91FD7472C00926C51 /* imagic.h in Headers */,
+				046394CA1FD7472C00926C51 /* matrix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA98141FD733CF00442681 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04A549B61FD72F2400747CCE /* imagic_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A549B81FD72F2400747CCE /* Build configuration list for PBXNativeTarget "imagic_macOS" */;
+			buildPhases = (
+				04A549B31FD72F2400747CCE /* Sources */,
+				04A549B41FD72F2400747CCE /* Frameworks */,
+				04A549B51FD72F2400747CCE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imagic_macOS;
+			productName = imagic_static;
+			productReference = 04A549B71FD72F2400747CCE /* libimagic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		04BA98151FD733CF00442681 /* imagic_macOS_shared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BA98171FD733CF00442681 /* Build configuration list for PBXNativeTarget "imagic_macOS_shared" */;
+			buildPhases = (
+				04BA98121FD733CF00442681 /* Sources */,
+				04BA98131FD733CF00442681 /* Frameworks */,
+				04BA98141FD733CF00442681 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imagic_macOS_shared;
+			productName = imagic_shared;
+			productReference = 04BA98161FD733CF00442681 /* libimagic.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		04BA98201FD73D8E00442681 /* imagic_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BA98271FD73D8E00442681 /* Build configuration list for PBXNativeTarget "imagic_iOS" */;
+			buildPhases = (
+				04BA981D1FD73D8E00442681 /* Sources */,
+				04BA981E1FD73D8E00442681 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imagic_iOS;
+			productName = imagic_iOS;
+			productReference = 04BA98211FD73D8E00442681 /* libimagic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8AB0E9371C5FF74F00D325BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Romain Dubreucq";
+				TargetAttributes = {
+					04A549B61FD72F2400747CCE = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
+					};
+					04BA98151FD733CF00442681 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
+					};
+					04BA98201FD73D8E00442681 = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
+					};
+					BD85EDED1FD6CCAB00CE339F = {
+						CreatedOnToolsVersion = 9.1;
+						DevelopmentTeam = QQ64R4PS8Q;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 8AB0E93A1C5FF74F00D325BA /* Build configuration list for PBXProject "imagic" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -42,11 +248,209 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				04A549B61FD72F2400747CCE /* imagic_macOS */,
+				04BA98151FD733CF00442681 /* imagic_macOS_shared */,
+				04BA98201FD73D8E00442681 /* imagic_iOS */,
+				BD85EDED1FD6CCAB00CE339F /* Universal */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD85EDF71FD6CDB700CE339F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build macOS versions (static and shared)\nxcodebuild -target imagic_macOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk macosx -arch x86_64 -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}/macOS\"\ncp \"${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}.a\" \"${UNIVERSAL_OUTPUTFOLDER}/macOS/lib${PROJECT_NAME}.a\"\ncp \"${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}.dylib\" \"${UNIVERSAL_OUTPUTFOLDER}/macOS/lib${PROJECT_NAME}.dylib\"\n\n# Step 2. Build iOS versions (static, iphoneos + iphonesimulator)\n\nxcodebuild -target imagic_iOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos -arch arm64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target imagic_iOS ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}/iOS\"\n\n# Step 3. Create universal static binary for iOS file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/iOS/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A549B31FD72F2400747CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BA98111FD7338700442681 /* matrix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA98121FD733CF00442681 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BA981A1FD733D700442681 /* matrix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BA981D1FD73D8E00442681 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BA982C1FD73DF400442681 /* matrix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04A549BC1FD7305D00747CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04A549B61FD72F2400747CCE /* imagic_macOS */;
+			targetProxy = 04A549BB1FD7305D00747CCE /* PBXContainerItemProxy */;
+		};
+		04BA981C1FD733EA00442681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BA98151FD733CF00442681 /* imagic_macOS_shared */;
+			targetProxy = 04BA981B1FD733EA00442681 /* PBXContainerItemProxy */;
+		};
+		04BA982B1FD73DAA00442681 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BA98201FD73D8E00442681 /* imagic_iOS */;
+			targetProxy = 04BA982A1FD73DAA00442681 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		04A549B91FD72F2400747CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = include;
+				PRODUCT_NAME = imagic;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		04A549BA1FD72F2400747CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRIVATE_HEADERS_FOLDER_PATH = include;
+				PRODUCT_NAME = imagic;
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		04BA98181FD733CF00442681 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = imagic;
+			};
+			name = Debug;
+		};
+		04BA98191FD733CF00442681 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = imagic;
+			};
+			name = Release;
+		};
+		04BA98281FD73D8E00442681 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = imagic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04BA98291FD73D8E00442681 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = imagic;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8AB0E9411C5FF74F00D325BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -55,13 +459,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -98,13 +510,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -126,14 +546,68 @@
 			};
 			name = Release;
 		};
+		BD85EDEF1FD6CCAB00CE339F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD85EDF01FD6CCAB00CE339F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQ64R4PS8Q;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		04A549B81FD72F2400747CCE /* Build configuration list for PBXNativeTarget "imagic_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A549B91FD72F2400747CCE /* Debug */,
+				04A549BA1FD72F2400747CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BA98171FD733CF00442681 /* Build configuration list for PBXNativeTarget "imagic_macOS_shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BA98181FD733CF00442681 /* Debug */,
+				04BA98191FD733CF00442681 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BA98271FD73D8E00442681 /* Build configuration list for PBXNativeTarget "imagic_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BA98281FD73D8E00442681 /* Debug */,
+				04BA98291FD73D8E00442681 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8AB0E93A1C5FF74F00D325BA /* Build configuration list for PBXProject "imagic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8AB0E9411C5FF74F00D325BA /* Debug */,
 				8AB0E9421C5FF74F00D325BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD85EDEE1FD6CCAB00CE339F /* Build configuration list for PBXAggregateTarget "Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD85EDEF1FD6CCAB00CE339F /* Debug */,
+				BD85EDF01FD6CCAB00CE339F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
