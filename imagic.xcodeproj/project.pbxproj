@@ -28,6 +28,13 @@
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
 		BDC433C21FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
 		BDC433C31FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
+		BDC433C81FD82B82005C4D0D /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C61FD82B82005C4D0D /* matrix.h */; };
+		BDC433C91FD82B82005C4D0D /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C61FD82B82005C4D0D /* matrix.h */; };
+		BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
+		BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
+		BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
+		BDC433CF1FD82DD7005C4D0D /* matrix_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */; };
+		BDC433D11FD833D5005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +87,10 @@
 		BDC433BE1FD8278A005C4D0D /* ctsuite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ctsuite.h; sourceTree = "<group>"; };
 		BDC433BF1FD8278A005C4D0D /* libcunit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcunit.a; sourceTree = "<group>"; };
 		BDC433C11FD82986005C4D0D /* imagic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = imagic.h; sourceTree = "<group>"; };
+		BDC433C61FD82B82005C4D0D /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		BDC433C71FD82B82005C4D0D /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix_unit_tests.h; sourceTree = "<group>"; };
+		BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix_unit_tests.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC433C51FD82994005C4D0D /* include */,
+				BDC433C71FD82B82005C4D0D /* matrix.c */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
@@ -155,7 +167,9 @@
 		BDC433B01FD82576005C4D0D /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				BDC433D01FD82DDB005C4D0D /* include */,
 				BDC433B11FD82576005C4D0D /* main.c */,
+				BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -193,7 +207,16 @@
 		BDC433C51FD82994005C4D0D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				BDC433C61FD82B82005C4D0D /* matrix.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		BDC433D01FD82DDB005C4D0D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -206,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433C21FD82986005C4D0D /* imagic.h in Headers */,
+				BDC433C81FD82B82005C4D0D /* matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433C31FD82986005C4D0D /* imagic.h in Headers */,
+				BDC433C91FD82B82005C4D0D /* matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +414,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433D11FD833D5005C4D0D /* matrix.c in Sources */,
+				BDC433CF1FD82DD7005C4D0D /* matrix_unit_tests.c in Sources */,
 				BDC433B21FD82576005C4D0D /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
