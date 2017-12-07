@@ -2,15 +2,17 @@
 //  main.c
 //  UnitTests
 //
-//  Created by Romain DUBREUCQ on 06/12/2017.
-//  Copyright © 2017 Romain Dubreucq. All rights reserved.
+//  Created by itzseven on 06/12/2017.
+//  Copyright © 2017 itzseven. All rights reserved.
 //
 
 #include <stdio.h>
 #include "cunit.h"
+#include "matrix_unit_tests.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    
+    ctsrun(matrix_test_suite());
+    
     return 0;
 }

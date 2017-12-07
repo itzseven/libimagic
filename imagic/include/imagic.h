@@ -9,5 +9,6 @@
 #ifndef imagic_h
 #define imagic_h
 
+#include "matrix.h"
 
 #endif /* imagic_h */
