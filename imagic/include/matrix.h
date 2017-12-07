@@ -11,8 +11,8 @@
 
 #include <stdlib.h>
 
-#define ELT_IDX(width, x, y) (((y) * width) + (x))
-#define ELT(mat, x, y) mat->data[PXL_IDX(mat->width, x, y)]
+#define ELT_IDX(mat, x, y) (((y) * mat->width) + (x))
+#define ELT(mat, datatype, x, y) ((datatype *)mat->data)[ELT_IDX(mat, x, y)]
 
 #pragma
 #pragma mark - Matrix datatype
