@@ -10,5 +10,6 @@
 #define imagic_h
 
 #include "matrix.h"
+#include "image.h"
 
 #endif /* imagic_h */

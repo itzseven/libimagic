@@ -9,10 +9,12 @@
 #include <stdio.h>
 #include "cunit.h"
 #include "matrix_unit_tests.h"
+#include "image_unit_tests.h"
 
 int main(int argc, const char * argv[]) {
     
     ctsrun(matrix_test_suite());
+    ctsrun(image_test_suite());
     
     return 0;
 }

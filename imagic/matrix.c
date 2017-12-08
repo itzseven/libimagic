@@ -28,11 +28,11 @@ void *mat(unsigned int width, unsigned int height, size_t dsize) {
     return mat;
 }
 
-mat_t *matcpy(mat_t *mat) {
+mat_t *matcpy(const mat_t *mat) {
     if ((mat == NULL) || (mat->data == NULL)) {
         return NULL;
     }
-    
+
     mat_t *dst = malloc(sizeof(mat_t));
     
     dst->width = mat->width;
