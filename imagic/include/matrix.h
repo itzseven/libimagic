@@ -27,7 +27,7 @@ typedef struct mat_t {
 #pragma mark - Allocation copy deallocation
 
 void *mat(unsigned int width, unsigned int height, size_t dsize);
-mat_t *matcpy(mat_t *mat);
+mat_t *matcpy(const mat_t *mat);
 void matdcpy(mat_t *mat, const void *data);
 void matfree(mat_t *mat);
 

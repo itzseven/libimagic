@@ -24,17 +24,21 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
-		BDC433C21FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
-		BDC433C31FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; };
-		BDC433C81FD82B82005C4D0D /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C61FD82B82005C4D0D /* matrix.h */; };
-		BDC433C91FD82B82005C4D0D /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C61FD82B82005C4D0D /* matrix.h */; };
+		BDC433C21FD82986005C4D0D /* imagic.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C11FD82986005C4D0D /* imagic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC433C81FD82B82005C4D0D /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433C61FD82B82005C4D0D /* matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
 		BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
 		BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
 		BDC433CF1FD82DD7005C4D0D /* matrix_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */; };
 		BDC433D11FD833D5005C4D0D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433C71FD82B82005C4D0D /* matrix.c */; };
+		BDC433D41FD97D26005C4D0D /* image.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC433D21FD97D26005C4D0D /* image.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC433D61FD97D26005C4D0D /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433D31FD97D26005C4D0D /* image.c */; };
+		BDC433D71FD97D26005C4D0D /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433D31FD97D26005C4D0D /* image.c */; };
+		BDC433D81FD97D26005C4D0D /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433D31FD97D26005C4D0D /* image.c */; };
+		BDC433D91FD97D26005C4D0D /* image.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433D31FD97D26005C4D0D /* image.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,8 @@
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8A36501FD993E300A4024F /* image_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image_unit_tests.h; sourceTree = "<group>"; };
+		BD8A36511FD993E300A4024F /* image_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image_unit_tests.c; sourceTree = "<group>"; };
 		BDC433AF1FD82576005C4D0D /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC433B11FD82576005C4D0D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		BDC433B91FD8278A005C4D0D /* cassert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cassert.h; sourceTree = "<group>"; };
@@ -91,6 +97,8 @@
 		BDC433C71FD82B82005C4D0D /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
 		BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix_unit_tests.h; sourceTree = "<group>"; };
 		BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix_unit_tests.c; sourceTree = "<group>"; };
+		BDC433D21FD97D26005C4D0D /* image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image.h; sourceTree = "<group>"; };
+		BDC433D31FD97D26005C4D0D /* image.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 			children = (
 				BDC433C51FD82994005C4D0D /* include */,
 				BDC433C71FD82B82005C4D0D /* matrix.c */,
+				BDC433D31FD97D26005C4D0D /* image.c */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 				BDC433D01FD82DDB005C4D0D /* include */,
 				BDC433B11FD82576005C4D0D /* main.c */,
 				BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */,
+				BD8A36511FD993E300A4024F /* image_unit_tests.c */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -207,6 +217,7 @@
 		BDC433C51FD82994005C4D0D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				BDC433D21FD97D26005C4D0D /* image.h */,
 				BDC433C61FD82B82005C4D0D /* matrix.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
 			);
@@ -217,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */,
+				BD8A36501FD993E300A4024F /* image_unit_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -228,17 +240,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC433D41FD97D26005C4D0D /* image.h in Headers */,
 				BDC433C21FD82986005C4D0D /* imagic.h in Headers */,
 				BDC433C81FD82B82005C4D0D /* matrix.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04BA98141FD733CF00442681 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC433C31FD82986005C4D0D /* imagic.h in Headers */,
-				BDC433C91FD82B82005C4D0D /* matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +272,6 @@
 			buildPhases = (
 				04BA98121FD733CF00442681 /* Sources */,
 				04BA98131FD733CF00442681 /* Frameworks */,
-				04BA98141FD733CF00442681 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -391,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */,
+				BDC433D61FD97D26005C4D0D /* image.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */,
+				BDC433D71FD97D26005C4D0D /* image.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */,
+				BDC433D81FD97D26005C4D0D /* image.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +421,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC433D11FD833D5005C4D0D /* matrix.c in Sources */,
+				BDC433D91FD97D26005C4D0D /* image.c in Sources */,
+				BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */,
 				BDC433CF1FD82DD7005C4D0D /* matrix_unit_tests.c in Sources */,
 				BDC433B21FD82576005C4D0D /* main.c in Sources */,
 			);
