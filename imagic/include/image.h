@@ -27,6 +27,8 @@ typedef struct {
     uint8_t *data;
 }gray8i_t;
 
+typedef gray8i_t bin8i_t;
+
 #pragma
 #pragma mark - Allocation copy deallocation
 
