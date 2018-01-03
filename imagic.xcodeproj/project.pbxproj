@@ -24,6 +24,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0458375F1FFD436A0078827F /* _image.h in Headers */ = {isa = PBXBuildFile; fileRef = 0458375E1FFD436A0078827F /* _image.h */; };
 		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0458375E1FFD436A0078827F /* _image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _image.h; sourceTree = "<group>"; };
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045837601FFD43C00078827F /* private */ = {
+			isa = PBXGroup;
+			children = (
+				0458375E1FFD436A0078827F /* _image.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
 		046394C61FD7407D00926C51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +227,7 @@
 		BDC433C51FD82994005C4D0D /* include */ = {
 			isa = PBXGroup;
 			children = (
+				045837601FFD43C00078827F /* private */,
 				BDC433D21FD97D26005C4D0D /* image.h */,
 				BDC433C61FD82B82005C4D0D /* matrix.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
@@ -240,6 +251,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0458375F1FFD436A0078827F /* _image.h in Headers */,
 				BDC433D41FD97D26005C4D0D /* image.h in Headers */,
 				BDC433C21FD82986005C4D0D /* imagic.h in Headers */,
 				BDC433C81FD82B82005C4D0D /* matrix.h in Headers */,
