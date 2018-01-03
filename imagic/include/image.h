@@ -10,42 +10,47 @@
 #define image_h
 
 #include <stdlib.h>
+#include "matrix.h"
 
-typedef struct {
-    uint8_t r, g, b;
-}rgb8;
+#define BIN(img, x, y) ELT(img, uint8_t, x, y, 0)
 
-typedef struct {
-    unsigned int width, height;
-    size_t dsize;
-    rgb8 *data;
-}rgb8i_t;
+#define GRAY(img, dtype, x, y) ELT(img, dtype, x, y, 0)
 
-typedef struct {
-    unsigned int width, height;
-    size_t dsize;
-    uint8_t *data;
-}gray8i_t;
+#define GRAY8(img, x, y) GRAY(img, uint8_t, x, y, 0)
+#define GRAY16(img, x, y) GRAY(img, uint16_t, x, y, 0)
 
-typedef gray8i_t bin8i_t;
+#define RGB_R(img, dtype, x, y) ELT(img, dtype, x, y, 0)
+#define RGB_G(img, dtype, x, y) ELT(img, dtype, x, y, 1)
+#define RGB_B(img, dtype, x, y) ELT(img, dtype, x, y, 2)
+
+#define RGBA_A(img, dtype, x, y) ELT(img, dtype, x, y, 3)
+
+#define RGB8_R(img, x, y) RGB_R(img, uint8_t, x, y)
+#define RGB8_G(img, x, y) RGB_G(img, uint8_t, x, y)
+#define RGB8_B(img, x, y) RGB_B(img, uint8_t, x, y)
+
+#define RGB16_R(img, x, y) RGB_R(img, uint16_t, x, y)
+#define RGB16_G(img, x, y) RGB_G(img, uint16_t, x, y)
+#define RGB16_B(img, x, y) RGB_B(img, uint16_t, x, y)
+
+#define RGB32_R(img, x, y) RGB_R(img, uint32_t, x, y)
+#define RGB32_G(img, x, y) RGB_G(img, uint32_t, x, y)
+#define RGB32_B(img, x, y) RGB_B(img, uint32_t, x, y)
+
+typedef mat_t img_t;
 
 #pragma
 #pragma mark - Allocation copy deallocation
 
-rgb8i_t *rgb8i(unsigned int width, unsigned int height);
-rgb8i_t *rgb8icpy(const rgb8i_t *src);
-void rgb8idcpy(rgb8i_t *dst, const rgb8 *data);
-void rgb8ifree(rgb8i_t *img);
-
-gray8i_t *gray8i(unsigned int width, unsigned int height);
-gray8i_t *gray8icpy(const gray8i_t *src);
-void gray8idcpy(gray8i_t *dst, const uint8_t *data);
-void gray8ifree(gray8i_t *img);
+img_t *img(unsigned int width, unsigned int height, unsigned int depth, size_t dsize);
+img_t *imgcpy(const img_t *img);
+void imgdcpy(const img_t *dst, const void *data);
+void imgfree(img_t *img);
 
 #pragma
 #pragma mark - Comparison
 
-unsigned int rgb8icmp(const rgb8i_t *img1, const rgb8i_t *img2);
-unsigned int gray8icmp(const gray8i_t *img1, const gray8i_t *img2);
+unsigned int imgcmp(const img_t *img1, const img_t *img2);
 
 #endif /* image_h */
+
