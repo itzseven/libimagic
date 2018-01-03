@@ -14,7 +14,7 @@
 #pragma mark - Allocation copy deallocation
 
 rgb8i_t *rgb8i(unsigned int width, unsigned int height) {
-    return mat(width, height, sizeof(rgb8i_t));
+    return mat(width, height, 1, sizeof(rgb8i_t));
 }
 
 rgb8i_t *rgb8icpy(const rgb8i_t *src) {
@@ -30,7 +30,7 @@ void rgb8ifree(rgb8i_t *img) {
 }
 
 gray8i_t *gray8i(unsigned int width, unsigned int height) {
-    return mat(width, height, sizeof(uint8_t));
+    return mat(width, height, 1, sizeof(uint8_t));
 }
 
 gray8i_t *gray8icpy(const gray8i_t *src) {
