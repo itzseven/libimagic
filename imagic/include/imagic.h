@@ -11,5 +11,6 @@
 
 #include "matrix.h"
 #include "image.h"
+#include "io.h"
 
 #endif /* imagic_h */
