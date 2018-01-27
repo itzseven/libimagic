@@ -7,9 +7,11 @@
 //
 
 #include "convert.h"
+#include <math.h>
 
 #define IS_RGB(img) (img->depth == 3)
 #define IS_RGBA(img) (img->depth == 4)
+#define IS_ARGB(img) (img->depth == 4)
 #define IS_GRAYSCALE(img) (img->depth == 1)
 #define IS_MONO(img) (img->depth == 1)
 
@@ -140,9 +142,139 @@ void mono2gray(img_t *src, img_t *dst) {
 }
 
 void rgb82rgba8(img_t *src, img_t *dst, float alpha) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
     
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint8_t, j) = (uint8_t)(alpha * UINT8_MAX);
+        ELT_DATA(dst, uint8_t, j - 1) = ELT_DATA(src, uint8_t, i);
+        ELT_DATA(dst, uint8_t, j - 2) = ELT_DATA(src, uint8_t, i - 1);
+        ELT_DATA(dst, uint8_t, j - 3) = ELT_DATA(src, uint8_t, i - 2);
+        
+        i -= 2;
+        j -= 4;
+    }
 }
 
 void rgb162rgba16(img_t *src, img_t *dst, float alpha) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
     
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint16_t, j) = (uint16_t)(alpha * UINT16_MAX);
+        ELT_DATA(dst, uint16_t, j - 1) = ELT_DATA(src, uint16_t, i);
+        ELT_DATA(dst, uint16_t, j - 2) = ELT_DATA(src, uint16_t, i - 1);
+        ELT_DATA(dst, uint16_t, j - 3) = ELT_DATA(src, uint16_t, i - 2);
+        
+        i -= 2;
+        j -= 4;
+    }
+}
+
+void rgb2rgba(img_t *src, img_t *dst, float alpha) {
+    if (!IS_RGB(src) || !IS_RGBA(dst)) {
+        return;
+    }
+    
+    int t = alpha * 100;
+    
+    if ((t < 0) || (t > 100)) {
+        return;
+    }
+    
+    void (*_rgb2rgba[2]) (img_t *src, img_t *dst, float alpha) = {rgb82rgba8, rgb162rgba16};
+    _rgb2rgba[src->dsize >> 1](src, dst, alpha);
+}
+
+void rgba82rgb8(img_t *src, img_t *dst) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint8_t, j) = ELT_DATA(src, uint8_t, i - 1);
+        ELT_DATA(dst, uint8_t, j - 1) = ELT_DATA(src, uint8_t, i - 2);
+        ELT_DATA(dst, uint8_t, j - 2) = ELT_DATA(src, uint8_t, i - 3);
+        
+        i -= 3;
+        j -= 3;
+    }
+}
+
+void rgba162rgb16(img_t *src, img_t *dst) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint16_t, j) = ELT_DATA(src, uint16_t, i - 1);
+        ELT_DATA(dst, uint16_t, j - 1) = ELT_DATA(src, uint16_t, i - 2);
+        ELT_DATA(dst, uint16_t, j - 2) = ELT_DATA(src, uint16_t, i - 3);
+        
+        i -= 3;
+        j -= 3;
+    }
+}
+
+void rgba2rgb(img_t *src, img_t *dst) {
+    if (!IS_RGBA(src) || !IS_RGB(dst)) {
+        return;
+    }
+    
+    void (*_rgba2rgb[2]) (img_t *src, img_t *dst) = {rgba82rgb8, rgba162rgb16};
+    _rgba2rgb[src->dsize >> 1](src, dst);
+}
+
+void rgb82argb8(img_t *src, img_t *dst, float alpha) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint8_t, j) = ELT_DATA(src, uint8_t, i);
+        ELT_DATA(dst, uint8_t, j - 1) = ELT_DATA(src, uint8_t, i - 1);
+        ELT_DATA(dst, uint8_t, j - 2) = ELT_DATA(src, uint8_t, i - 2);
+        ELT_DATA(dst, uint8_t, j - 3) = (uint8_t)(alpha * UINT8_MAX);
+        
+        i -= 2;
+        j -= 4;
+    }
+}
+
+void rgb162argb16(img_t *src, img_t *dst, float alpha) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint16_t, j) = ELT_DATA(src, uint16_t, i);
+        ELT_DATA(dst, uint16_t, j - 1) = ELT_DATA(src, uint16_t, i - 1);
+        ELT_DATA(dst, uint16_t, j - 2) = ELT_DATA(src, uint16_t, i - 2);
+        ELT_DATA(dst, uint16_t, j - 3) = (uint16_t)(alpha * UINT16_MAX);
+        
+        i -= 2;
+        j -= 4;
+    }
+}
+
+void rgb2argb(img_t *src, img_t *dst, float alpha) {
+    if (!IS_RGB(src) || !IS_ARGB(dst)) {
+        return;
+    }
+    
+    int t = alpha * 100;
+    
+    if ((t < 0) || (t > 100)) {
+        return;
+    }
+    
+    void (*_rgb2argb[2]) (img_t *src, img_t *dst, float alpha) = {rgb82argb8, rgb162argb16};
+    _rgb2argb[src->dsize >> 1](src, dst, alpha);
+}
+
+void argb2rgb(img_t *src, img_t *dst) {
+    if (!IS_ARGB(src) || !IS_RGB(dst)) {
+        return;
+    }
+    
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint8_t, j) = ELT_DATA(src, uint8_t, i);
+        ELT_DATA(dst, uint8_t, j - 1) = ELT_DATA(src, uint8_t, i - 1);
+        ELT_DATA(dst, uint8_t, j - 2) = ELT_DATA(src, uint8_t, i - 2);
+        
+        i -= 3;
+        j -= 3;
+    }
 }
