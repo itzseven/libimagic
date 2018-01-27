@@ -147,25 +147,26 @@ void rgb162rgba16(img_t *src, img_t *dst, float alpha) {
     
 }
 
-void rgb2rgba(img_t *src, img_t *dst, float alpha) {
-    if (!IS_RGB(src) || !IS_RGBA(dst)) {
-        return;
-    }
-    
-    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
-    
-    for (i = len; i--; ) {
-        uint8_t r = ELT_DATA(src, uint8_t, i - 2);
-        uint8_t g = ELT_DATA(src, uint8_t, i - 1);
-        uint8_t b = ELT_DATA(src, uint8_t, i - 0);
-        
-        float p = (float)(r + g + b) / 3;
-        ELT_DATA(dst, uint8_t, j) = (uint8_t)p;
-        i -= 2;
-        j--;
-    }
-}
+//void rgb2rgba(img_t *src, img_t *dst, float alpha) {
+//    if (!IS_RGB(src) || !IS_RGBA(dst)) {
+//        return;
+//    }
+//    
+//    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+//    
+//    for (i = len; i--; ) {
+//        uint8_t r = ELT_DATA(src, uint8_t, i - 2);
+//        uint8_t g = ELT_DATA(src, uint8_t, i - 1);
+//        uint8_t b = ELT_DATA(src, uint8_t, i - 0);
+//        
+//        float p = (float)(r + g + b) / 3;
+//        ELT_DATA(dst, uint8_t, j) = (uint8_t)p;
+//        i -= 2;
+//        j--;
+//    }
+//}
+//
+//void rgba2rgb(img_t *src, img_t *dst) {
+//    
+//}
 
-void rgba2rgb(img_t *src, img_t *dst) {
-    
-}
