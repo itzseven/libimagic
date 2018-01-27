@@ -262,11 +262,7 @@ void rgb2argb(img_t *src, img_t *dst, float alpha) {
     _rgb2argb[src->dsize >> 1](src, dst, alpha);
 }
 
-void argb2rgb(img_t *src, img_t *dst) {
-    if (!IS_ARGB(src) || !IS_RGB(dst)) {
-        return;
-    }
-    
+void argb82rgb8(img_t *src, img_t *dst) {
     unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
     
     for (i = len; i--; ) {
@@ -277,4 +273,26 @@ void argb2rgb(img_t *src, img_t *dst) {
         i -= 3;
         j -= 3;
     }
+}
+
+void argb162rgb16(img_t *src, img_t *dst) {
+    unsigned int len = src->width * src->height * src->depth, i = 0, j = dst->width * dst->height * dst->depth - 1;
+    
+    for (i = len; i--; ) {
+        ELT_DATA(dst, uint16_t, j) = ELT_DATA(src, uint16_t, i);
+        ELT_DATA(dst, uint16_t, j - 1) = ELT_DATA(src, uint16_t, i - 1);
+        ELT_DATA(dst, uint16_t, j - 2) = ELT_DATA(src, uint16_t, i - 2);
+        
+        i -= 3;
+        j -= 3;
+    }
+}
+
+void argb2rgb(img_t *src, img_t *dst) {
+    if (!IS_ARGB(src) || !IS_RGB(dst)) {
+        return;
+    }
+    
+    void (*_argb2rgb[2]) (img_t *src, img_t *dst) = {argb82rgb8, argb162rgb16};
+    _argb2rgb[src->dsize >> 1](src, dst);
 }
