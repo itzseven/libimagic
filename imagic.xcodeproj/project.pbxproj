@@ -42,12 +42,6 @@
 		0458377A1FFD47980078827F /* io.c in Sources */ = {isa = PBXBuildFile; fileRef = 045837681FFD456C0078827F /* io.c */; };
 		0458377B1FFD47980078827F /* pnm.c in Sources */ = {isa = PBXBuildFile; fileRef = 045837691FFD456D0078827F /* pnm.c */; };
 		0458377C1FFD47980078827F /* tools.c in Sources */ = {isa = PBXBuildFile; fileRef = 045837671FFD456C0078827F /* tools.c */; };
-		04A6E6E92000F1A00076C2FA /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A6E6E72000F1A00076C2FA /* convert.h */; };
-		04A6E6EA2000F1A00076C2FA /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E6E82000F1A00076C2FA /* convert.c */; };
-		04A6E6EB2000F1A00076C2FA /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E6E82000F1A00076C2FA /* convert.c */; };
-		04A6E6EC2000F1A00076C2FA /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E6E82000F1A00076C2FA /* convert.c */; };
-		04A6E6ED2000F1A00076C2FA /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E6E82000F1A00076C2FA /* convert.c */; };
-		04A6E6F02000F2630076C2FA /* convert_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A6E6EF2000F2630076C2FA /* convert_unit_tests.c */; };
 		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
@@ -114,10 +108,6 @@
 		0458376E1FFD45A00078827F /* io_unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_unit_tests.c; sourceTree = "<group>"; };
 		045837751FFD46C80078827F /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		04A6E6E72000F1A00076C2FA /* convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
-		04A6E6E82000F1A00076C2FA /* convert.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = convert.c; sourceTree = "<group>"; };
-		04A6E6EE2000F2630076C2FA /* convert_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = convert_unit_tests.h; sourceTree = "<group>"; };
-		04A6E6EF2000F2630076C2FA /* convert_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = convert_unit_tests.c; sourceTree = "<group>"; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8A36501FD993E300A4024F /* image_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image_unit_tests.h; sourceTree = "<group>"; };
@@ -220,7 +210,6 @@
 				045837671FFD456C0078827F /* tools.c */,
 				BDC433C71FD82B82005C4D0D /* matrix.c */,
 				BDC433D31FD97D26005C4D0D /* image.c */,
-				04A6E6E82000F1A00076C2FA /* convert.c */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
@@ -233,7 +222,6 @@
 				0458376E1FFD45A00078827F /* io_unit_tests.c */,
 				BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */,
 				BD8A36511FD993E300A4024F /* image_unit_tests.c */,
-				04A6E6EF2000F2630076C2FA /* convert_unit_tests.c */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -277,7 +265,6 @@
 				045837611FFD45530078827F /* tools.h */,
 				BDC433D21FD97D26005C4D0D /* image.h */,
 				BDC433C61FD82B82005C4D0D /* matrix.h */,
-				04A6E6E72000F1A00076C2FA /* convert.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
 			);
 			path = include;
@@ -289,7 +276,6 @@
 				0458376D1FFD458C0078827F /* io_unit_tests.h */,
 				BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */,
 				BD8A36501FD993E300A4024F /* image_unit_tests.h */,
-				04A6E6EE2000F2630076C2FA /* convert_unit_tests.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -301,7 +287,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A6E6E92000F1A00076C2FA /* convert.h in Headers */,
 				045837661FFD45540078827F /* io.h in Headers */,
 				045837651FFD45540078827F /* pnm.h in Headers */,
 				0458375F1FFD436A0078827F /* _image.h in Headers */,
@@ -462,7 +447,6 @@
 				0458376A1FFD456D0078827F /* tools.c in Sources */,
 				0458376B1FFD456D0078827F /* io.c in Sources */,
 				0458376C1FFD456D0078827F /* pnm.c in Sources */,
-				04A6E6EA2000F1A00076C2FA /* convert.c in Sources */,
 				BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D61FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -475,7 +459,6 @@
 				045837771FFD47910078827F /* io.c in Sources */,
 				045837781FFD47910078827F /* pnm.c in Sources */,
 				045837791FFD47910078827F /* tools.c in Sources */,
-				04A6E6EB2000F1A00076C2FA /* convert.c in Sources */,
 				BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D71FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -488,7 +471,6 @@
 				0458377A1FFD47980078827F /* io.c in Sources */,
 				0458377B1FFD47980078827F /* pnm.c in Sources */,
 				0458377C1FFD47980078827F /* tools.c in Sources */,
-				04A6E6EC2000F1A00076C2FA /* convert.c in Sources */,
 				BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D81FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -501,12 +483,10 @@
 				045837711FFD45E60078827F /* pnm.c in Sources */,
 				045837721FFD45E60078827F /* tools.c in Sources */,
 				045837701FFD45DB0078827F /* io.c in Sources */,
-				04A6E6F02000F2630076C2FA /* convert_unit_tests.c in Sources */,
 				BDC433D11FD833D5005C4D0D /* matrix.c in Sources */,
 				0458376F1FFD45A00078827F /* io_unit_tests.c in Sources */,
 				BDC433D91FD97D26005C4D0D /* image.c in Sources */,
 				BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */,
-				04A6E6ED2000F1A00076C2FA /* convert.c in Sources */,
 				BDC433CF1FD82DD7005C4D0D /* matrix_unit_tests.c in Sources */,
 				BDC433B21FD82576005C4D0D /* main.c in Sources */,
 			);
