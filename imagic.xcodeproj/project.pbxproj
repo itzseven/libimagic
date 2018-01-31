@@ -24,6 +24,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		044517A620225DE800067C10 /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 044517A520225DE700067C10 /* convert.h */; };
 		0458375F1FFD436A0078827F /* _image.h in Headers */ = {isa = PBXBuildFile; fileRef = 0458375E1FFD436A0078827F /* _image.h */; };
 		045837641FFD45540078827F /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 045837611FFD45530078827F /* tools.h */; };
 		045837651FFD45540078827F /* pnm.h in Headers */ = {isa = PBXBuildFile; fileRef = 045837621FFD45540078827F /* pnm.h */; };
@@ -45,7 +46,6 @@
 		04A27EF6201D20F300A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
 		04A27EF7201D20F300A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
 		04A27EF8201D20F300A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
-		04A27EF9201D20F300A92706 /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A27EF5201D20F300A92706 /* convert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A27EFC201D210A00A92706 /* convert_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EFA201D210A00A92706 /* convert_unit_tests.c */; };
 		04A27EFD201D213700A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
 		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
@@ -103,6 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		044517A520225DE700067C10 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
 		0458375E1FFD436A0078827F /* _image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _image.h; sourceTree = "<group>"; };
 		045837611FFD45530078827F /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		045837621FFD45540078827F /* pnm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnm.h; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		0458376E1FFD45A00078827F /* io_unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = io_unit_tests.c; sourceTree = "<group>"; };
 		045837751FFD46C80078827F /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		04A27EF4201D20F300A92706 /* convert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = convert.c; sourceTree = "<group>"; };
-		04A27EF5201D20F300A92706 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert.h; path = ../convert.h; sourceTree = "<group>"; };
 		04A27EFA201D210A00A92706 /* convert_unit_tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = convert_unit_tests.c; sourceTree = "<group>"; };
 		04A27EFB201D210A00A92706 /* convert_unit_tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = convert_unit_tests.h; path = ../convert_unit_tests.h; sourceTree = "<group>"; };
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,7 +277,7 @@
 				045837611FFD45530078827F /* tools.h */,
 				BDC433D21FD97D26005C4D0D /* image.h */,
 				BDC433C61FD82B82005C4D0D /* matrix.h */,
-				04A27EF5201D20F300A92706 /* convert.h */,
+				044517A520225DE700067C10 /* convert.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
 			);
 			path = include;
@@ -301,7 +301,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A27EF9201D20F300A92706 /* convert.h in Headers */,
+				044517A620225DE800067C10 /* convert.h in Headers */,
 				045837661FFD45540078827F /* io.h in Headers */,
 				045837651FFD45540078827F /* pnm.h in Headers */,
 				0458375F1FFD436A0078827F /* _image.h in Headers */,
