@@ -53,6 +53,7 @@
 		04A27EF8201D20F300A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
 		04A27EFC201D210A00A92706 /* convert_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EFA201D210A00A92706 /* convert_unit_tests.c */; };
 		04A27EFD201D213700A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
+		04CEFBCF20277D52001138F3 /* labelling_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */; };
 		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
@@ -127,6 +128,8 @@
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CEFBCD20277D52001138F3 /* labelling_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelling_unit_tests.h; sourceTree = "<group>"; };
+		04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = labelling_unit_tests.c; sourceTree = "<group>"; };
 		BD8A36501FD993E300A4024F /* image_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image_unit_tests.h; sourceTree = "<group>"; };
 		BD8A36511FD993E300A4024F /* image_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image_unit_tests.c; sourceTree = "<group>"; };
 		BDC433AF1FD82576005C4D0D /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +245,7 @@
 				BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */,
 				BD8A36511FD993E300A4024F /* image_unit_tests.c */,
 				04A27EFA201D210A00A92706 /* convert_unit_tests.c */,
+				04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -298,6 +302,7 @@
 				0458376D1FFD458C0078827F /* io_unit_tests.h */,
 				BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */,
 				BD8A36501FD993E300A4024F /* image_unit_tests.h */,
+				04CEFBCD20277D52001138F3 /* labelling_unit_tests.h */,
 				04A27EFB201D210A00A92706 /* convert_unit_tests.h */,
 			);
 			path = include;
@@ -512,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A27EFD201D213700A92706 /* convert.c in Sources */,
+				04CEFBCF20277D52001138F3 /* labelling_unit_tests.c in Sources */,
 				045837711FFD45E60078827F /* pnm.c in Sources */,
 				045837721FFD45E60078827F /* tools.c in Sources */,
 				045837701FFD45DB0078827F /* io.c in Sources */,

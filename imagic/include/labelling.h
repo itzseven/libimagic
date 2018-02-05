@@ -19,7 +19,6 @@ typedef struct labels_t {
 labels_t *labels(unsigned int width, unsigned int height);
 labels_t *labelscpy(const labels_t *labels);
 labels_t * label(const img_t *img);
-labels_t * label2(const img_t *img);
 void labelsfree(labels_t *labels);
 
 #endif /* labelling_h */
