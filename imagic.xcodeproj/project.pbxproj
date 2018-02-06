@@ -25,6 +25,11 @@
 
 /* Begin PBXBuildFile section */
 		044517A620225DE800067C10 /* convert.h in Headers */ = {isa = PBXBuildFile; fileRef = 044517A520225DE700067C10 /* convert.h */; };
+		044517A920225F4400067C10 /* labelling.h in Headers */ = {isa = PBXBuildFile; fileRef = 044517A720225F4400067C10 /* labelling.h */; };
+		044517AA20225F4400067C10 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 044517A820225F4400067C10 /* labelling.c */; };
+		044517AB20225F4400067C10 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 044517A820225F4400067C10 /* labelling.c */; };
+		044517AC20225F4400067C10 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 044517A820225F4400067C10 /* labelling.c */; };
+		044517AD20225F4400067C10 /* labelling.c in Sources */ = {isa = PBXBuildFile; fileRef = 044517A820225F4400067C10 /* labelling.c */; };
 		0458375F1FFD436A0078827F /* _image.h in Headers */ = {isa = PBXBuildFile; fileRef = 0458375E1FFD436A0078827F /* _image.h */; };
 		045837641FFD45540078827F /* tools.h in Headers */ = {isa = PBXBuildFile; fileRef = 045837611FFD45530078827F /* tools.h */; };
 		045837651FFD45540078827F /* pnm.h in Headers */ = {isa = PBXBuildFile; fileRef = 045837621FFD45540078827F /* pnm.h */; };
@@ -48,6 +53,7 @@
 		04A27EF8201D20F300A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
 		04A27EFC201D210A00A92706 /* convert_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EFA201D210A00A92706 /* convert_unit_tests.c */; };
 		04A27EFD201D213700A92706 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A27EF4201D20F300A92706 /* convert.c */; };
+		04CEFBCF20277D52001138F3 /* labelling_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = 04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */; };
 		BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8A36511FD993E300A4024F /* image_unit_tests.c */; };
 		BDC433B21FD82576005C4D0D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = BDC433B11FD82576005C4D0D /* main.c */; };
 		BDC433C01FD82797005C4D0D /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC433BF1FD8278A005C4D0D /* libcunit.a */; };
@@ -104,6 +110,8 @@
 
 /* Begin PBXFileReference section */
 		044517A520225DE700067C10 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		044517A720225F4400067C10 /* labelling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelling.h; sourceTree = "<group>"; };
+		044517A820225F4400067C10 /* labelling.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = labelling.c; sourceTree = "<group>"; };
 		0458375E1FFD436A0078827F /* _image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _image.h; sourceTree = "<group>"; };
 		045837611FFD45530078827F /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
 		045837621FFD45540078827F /* pnm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnm.h; sourceTree = "<group>"; };
@@ -120,6 +128,8 @@
 		04A549B71FD72F2400747CCE /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98161FD733CF00442681 /* libimagic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libimagic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA98211FD73D8E00442681 /* libimagic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimagic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CEFBCD20277D52001138F3 /* labelling_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = labelling_unit_tests.h; sourceTree = "<group>"; };
+		04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = labelling_unit_tests.c; sourceTree = "<group>"; };
 		BD8A36501FD993E300A4024F /* image_unit_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image_unit_tests.h; sourceTree = "<group>"; };
 		BD8A36511FD993E300A4024F /* image_unit_tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image_unit_tests.c; sourceTree = "<group>"; };
 		BDC433AF1FD82576005C4D0D /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +231,7 @@
 				BDC433C71FD82B82005C4D0D /* matrix.c */,
 				BDC433D31FD97D26005C4D0D /* image.c */,
 				04A27EF4201D20F300A92706 /* convert.c */,
+				044517A820225F4400067C10 /* labelling.c */,
 			);
 			path = imagic;
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 				BDC433CE1FD82DD7005C4D0D /* matrix_unit_tests.c */,
 				BD8A36511FD993E300A4024F /* image_unit_tests.c */,
 				04A27EFA201D210A00A92706 /* convert_unit_tests.c */,
+				04CEFBCE20277D52001138F3 /* labelling_unit_tests.c */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -278,6 +290,7 @@
 				BDC433D21FD97D26005C4D0D /* image.h */,
 				BDC433C61FD82B82005C4D0D /* matrix.h */,
 				044517A520225DE700067C10 /* convert.h */,
+				044517A720225F4400067C10 /* labelling.h */,
 				BDC433C11FD82986005C4D0D /* imagic.h */,
 			);
 			path = include;
@@ -289,6 +302,7 @@
 				0458376D1FFD458C0078827F /* io_unit_tests.h */,
 				BDC433CD1FD82DD7005C4D0D /* matrix_unit_tests.h */,
 				BD8A36501FD993E300A4024F /* image_unit_tests.h */,
+				04CEFBCD20277D52001138F3 /* labelling_unit_tests.h */,
 				04A27EFB201D210A00A92706 /* convert_unit_tests.h */,
 			);
 			path = include;
@@ -304,6 +318,7 @@
 				044517A620225DE800067C10 /* convert.h in Headers */,
 				045837661FFD45540078827F /* io.h in Headers */,
 				045837651FFD45540078827F /* pnm.h in Headers */,
+				044517A920225F4400067C10 /* labelling.h in Headers */,
 				0458375F1FFD436A0078827F /* _image.h in Headers */,
 				BDC433D41FD97D26005C4D0D /* image.h in Headers */,
 				BDC433C21FD82986005C4D0D /* imagic.h in Headers */,
@@ -463,6 +478,7 @@
 				0458376B1FFD456D0078827F /* io.c in Sources */,
 				0458376C1FFD456D0078827F /* pnm.c in Sources */,
 				04A27EF6201D20F300A92706 /* convert.c in Sources */,
+				044517AA20225F4400067C10 /* labelling.c in Sources */,
 				BDC433CA1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D61FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -476,6 +492,7 @@
 				045837781FFD47910078827F /* pnm.c in Sources */,
 				045837791FFD47910078827F /* tools.c in Sources */,
 				04A27EF7201D20F300A92706 /* convert.c in Sources */,
+				044517AB20225F4400067C10 /* labelling.c in Sources */,
 				BDC433CB1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D71FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -489,6 +506,7 @@
 				0458377B1FFD47980078827F /* pnm.c in Sources */,
 				0458377C1FFD47980078827F /* tools.c in Sources */,
 				04A27EF8201D20F300A92706 /* convert.c in Sources */,
+				044517AC20225F4400067C10 /* labelling.c in Sources */,
 				BDC433CC1FD82B82005C4D0D /* matrix.c in Sources */,
 				BDC433D81FD97D26005C4D0D /* image.c in Sources */,
 			);
@@ -499,11 +517,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A27EFD201D213700A92706 /* convert.c in Sources */,
+				04CEFBCF20277D52001138F3 /* labelling_unit_tests.c in Sources */,
 				045837711FFD45E60078827F /* pnm.c in Sources */,
 				045837721FFD45E60078827F /* tools.c in Sources */,
 				045837701FFD45DB0078827F /* io.c in Sources */,
 				BDC433D11FD833D5005C4D0D /* matrix.c in Sources */,
 				0458376F1FFD45A00078827F /* io_unit_tests.c in Sources */,
+				044517AD20225F4400067C10 /* labelling.c in Sources */,
 				BDC433D91FD97D26005C4D0D /* image.c in Sources */,
 				BD8A36521FD993E300A4024F /* image_unit_tests.c in Sources */,
 				04A27EFC201D210A00A92706 /* convert_unit_tests.c in Sources */,

@@ -15,6 +15,15 @@
 #define ELT_IDX(mat, x, y, d) (((y) * mat->width) + (x) + d)
 #define ELT(mat, dtype, x, y, d) ELT_DATA(mat, dtype, ELT_IDX(mat, x, y, d))
 
+#define MAT_2D_ELT_DISPLAY(mat, dtype, i, j) \
+unsigned int i = 0, j = 0; \
+for (i = 0; i < mat->height; i++) { \
+    for (j = 0; j < mat->width; j++) { \
+        printf("%d ", ((dtype *)mat->data)[ELT_IDX(mat, j, i, 0)]); \
+    } \
+    puts("\n"); \
+} \
+
 #pragma
 #pragma mark - Matrix datatype
 
