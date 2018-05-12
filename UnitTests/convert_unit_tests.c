@@ -24,6 +24,9 @@ ctest_return_t test_rgb_to_gray(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(gray, uint8_t, 1), 74);
     CTAssertEqual(test, ELT_DATA(gray, uint8_t, 2), 70);
     CTAssertEqual(test, ELT_DATA(gray, uint8_t, 3), 96);
+    
+    imgfree(rgb8);
+    imgfree(gray);
 }
 
 ctest_return_t test_gray_to_rgb(ctest_t *test, void *arg) {
@@ -48,6 +51,9 @@ ctest_return_t test_gray_to_rgb(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 9), 182);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 10), 182);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 11), 182);
+    
+    imgfree(gray);
+    imgfree(rgb);
 }
 
 ctest_return_t test_gray_to_mono(ctest_t *test, void *arg) {
@@ -65,6 +71,9 @@ ctest_return_t test_gray_to_mono(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(mono, uint8_t, 1), 0);
     CTAssertEqual(test, ELT_DATA(mono, uint8_t, 2), 1);
     CTAssertEqual(test, ELT_DATA(mono, uint8_t, 3), 1);
+    
+    imgfree(gray);
+    imgfree(mono);
 }
 
 ctest_return_t test_mono_to_gray(ctest_t *test, void *arg) {
@@ -82,6 +91,9 @@ ctest_return_t test_mono_to_gray(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(gray8, uint8_t, 1), UINT8_MAX);
     CTAssertEqual(test, ELT_DATA(gray8, uint8_t, 2), UINT8_MAX);
     CTAssertEqual(test, ELT_DATA(gray8, uint8_t, 3), 0);
+    
+    imgfree(mono);
+    imgfree(gray8);
 }
 
 ctest_return_t test_rgb_to_rgba(ctest_t *test, void *arg) {
@@ -113,6 +125,9 @@ ctest_return_t test_rgb_to_rgba(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(rgba, uint8_t, 13), 45);
     CTAssertEqual(test, ELT_DATA(rgba, uint8_t, 14), 233);
     CTAssertEqual(test, ELT_DATA(rgba, uint8_t, 15), 127);
+    
+    imgfree(rgb8);
+    imgfree(rgba);
 }
 
 ctest_return_t test_rgba_to_rgb(ctest_t *test, void *arg) {
@@ -140,6 +155,9 @@ ctest_return_t test_rgba_to_rgb(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 9), 10);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 10), 45);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 11), 233);
+    
+    imgfree(rgba);
+    imgfree(rgb);
 }
 
 ctest_return_t test_rgb_to_argb(ctest_t *test, void *arg) {
@@ -171,6 +189,9 @@ ctest_return_t test_rgb_to_argb(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(argb, uint8_t, 13), 10);
     CTAssertEqual(test, ELT_DATA(argb, uint8_t, 14), 45);
     CTAssertEqual(test, ELT_DATA(argb, uint8_t, 15), 233);
+    
+    imgfree(rgb8);
+    imgfree(argb);
 }
 
 ctest_return_t test_argb_to_rgb(ctest_t *test, void *arg) {
@@ -198,6 +219,9 @@ ctest_return_t test_argb_to_rgb(ctest_t *test, void *arg) {
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 9), 10);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 10), 45);
     CTAssertEqual(test, ELT_DATA(rgb, uint8_t, 11), 233);
+    
+    imgfree(argb);
+    imgfree(rgb);
 }
 
 ctsuite_t *convert_test_suite(void) {

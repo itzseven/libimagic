@@ -171,6 +171,8 @@ ctest_return_t test_pbm_raw_write(ctest_t *test, void *arg) {
     CTAssertEqual(test, feof(export), 0);
     
     fclose(export);
+    
+    imgfree(img8);
 }
 
 ctest_return_t test_pbm_plain_write(ctest_t *test, void *arg) {
@@ -202,6 +204,8 @@ ctest_return_t test_pbm_plain_write(ctest_t *test, void *arg) {
     CTAssertEqual(test, feof(export), 0);
     
     fclose(export);
+    
+    imgfree(img8);
 }
 
 ctest_return_t test_pgm_raw_write(ctest_t *test, void *arg) {
@@ -233,6 +237,8 @@ ctest_return_t test_pgm_raw_write(ctest_t *test, void *arg) {
     CTAssertEqual(test, feof(export), 0);
     
     fclose(export);
+    
+    imgfree(img8);
 }
 
 ctest_return_t test_pgm_plain_write(ctest_t *test, void *arg) {
@@ -262,6 +268,10 @@ ctest_return_t test_pgm_plain_write(ctest_t *test, void *arg) {
     CTAssertNotNull(test, fgets(line, 512, export));
     CTAssertEqual(test, strcmp(line, "18 152 40\n"), 0);
     CTAssertEqual(test, feof(export), 0);
+    
+    fclose(export);
+    
+    imgfree(img8);
 }
 
 ctest_return_t test_ppm_raw_write(ctest_t *test, void *arg) {
@@ -293,6 +303,8 @@ ctest_return_t test_ppm_raw_write(ctest_t *test, void *arg) {
     CTAssertEqual(test, feof(export), 0);
     
     fclose(export);
+    
+    imgfree(img8);
 }
 
 ctest_return_t test_ppm_plain_write(ctest_t *test, void *arg) {
@@ -322,6 +334,10 @@ ctest_return_t test_ppm_plain_write(ctest_t *test, void *arg) {
     CTAssertNotNull(test, fgets(line, 512, export));
     CTAssertEqual(test, strcmp(line, "0 0 255 191 150 61 61 25 121\n"), 0);
     CTAssertEqual(test, feof(export), 0);
+    
+    fclose(export);
+    
+    imgfree(img8);
 }
 
 ctsuite_t *io_test_suite(void) {

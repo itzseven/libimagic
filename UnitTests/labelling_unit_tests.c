@@ -17,6 +17,8 @@ ctest_return_t test_labels_creation(ctest_t *test, void *arg) {
     CTAssertEqual(test, newLabels->height, 20);
     CTAssertEqual(test, newLabels->count, 0);
     CTAssertNotNull(test, newLabels->data);
+    
+    labelsfree(newLabels);
 }
 
 ctest_return_t test_labels_copy(ctest_t *test, void *arg) {
@@ -43,6 +45,9 @@ ctest_return_t test_labels_copy(ctest_t *test, void *arg) {
     for (i = newLabels->width * newLabels->height; i--; ) {
         CTAssertEqual(test, newLabelsCopy->data[i], newLabels->data[i]);
     }
+    
+    labelsfree(newLabels);
+    labelsfree(newLabelsCopy);
 }
 
 ctest_return_t test_labels_labelling(ctest_t *test, void *arg) {
@@ -75,6 +80,11 @@ ctest_return_t test_labels_labelling(ctest_t *test, void *arg) {
     for (i = secondLabels->width * secondLabels->height; i--; ) {
         CTAssertEqual(test, secondLabels->data[i], secondReferenceLabelsData[i], "Label %d at index %d is not equal to %d\n", secondLabels->data[i], i, secondReferenceLabelsData[i]);
     }
+    
+    imgfree(firstReferenceImage);
+    labelsfree(firstLabels);
+    imgfree(secondReferenceImage);
+    labelsfree(secondLabels);
 }
 
 ctsuite_t *labelling_test_suite(void) {
