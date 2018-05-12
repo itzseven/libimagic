@@ -128,3 +128,8 @@ labels_t * label(const img_t *src)
     
     return newLabels;
 }
+
+void labelsfree(labels_t *labels) {
+    free(labels->data);
+    free(labels);
+}

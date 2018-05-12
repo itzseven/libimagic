@@ -10,18 +10,18 @@
 #include "labelling.h"
 #include "cunit.h"
 
-ctcase_return_t test_labels_creation() {
+ctest_return_t test_labels_creation(ctest_t *test, void *arg) {
     labels_t *newLabels = labels(20, 20);
     
-    CTAssertEqual(newLabels->width, 20);
-    CTAssertEqual(newLabels->height, 20);
-    CTAssertEqual(newLabels->count, 0);
-    CTAssertNotNull(newLabels->data);
+    CTAssertEqual(test, newLabels->width, 20);
+    CTAssertEqual(test, newLabels->height, 20);
+    CTAssertEqual(test, newLabels->count, 0);
+    CTAssertNotNull(test, newLabels->data);
     
-    return CTPassed;
+    labelsfree(newLabels);
 }
 
-ctcase_return_t test_labels_copy() {
+ctest_return_t test_labels_copy(ctest_t *test, void *arg) {
     labels_t *newLabels = labels(3, 3);
     newLabels->count = 5;
     newLabels->data[0] = 2;
@@ -36,20 +36,21 @@ ctcase_return_t test_labels_copy() {
     
     labels_t *newLabelsCopy = labelscpy(newLabels);
     
-    CTAssertEqual(newLabelsCopy->width, newLabels->width);
-    CTAssertEqual(newLabelsCopy->height, newLabels->height);
-    CTAssertEqual(newLabelsCopy->count, newLabels->count);
+    CTAssertEqual(test, newLabelsCopy->width, newLabels->width);
+    CTAssertEqual(test, newLabelsCopy->height, newLabels->height);
+    CTAssertEqual(test, newLabelsCopy->count, newLabels->count);
     
     unsigned int i = 0;
     
     for (i = newLabels->width * newLabels->height; i--; ) {
-        CTAssertEqual(newLabelsCopy->data[i], newLabels->data[i]);
+        CTAssertEqual(test, newLabelsCopy->data[i], newLabels->data[i]);
     }
     
-    return CTPassed;
+    labelsfree(newLabels);
+    labelsfree(newLabelsCopy);
 }
 
-ctcase_return_t test_labels_labelling() {
+ctest_return_t test_labels_labelling(ctest_t *test, void *arg) {
     uint8_t firstReferenceImageData[25] = {1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1};
     unsigned int firstReferenceLabelsData[25] = {0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 1, 1, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0, 0};
     
@@ -58,12 +59,12 @@ ctcase_return_t test_labels_labelling() {
     
     labels_t *firstLabels = label(firstReferenceImage);
     
-    CTAssertEqual(firstLabels->count, 3);
+    CTAssertEqual(test, firstLabels->count, 3);
     
     unsigned int i = 0;
     
     for (i = firstLabels->width * firstLabels->height; i--; ) {
-        CTAssertEqual(firstLabels->data[i], firstReferenceLabelsData[i], "Label %d at index %d is not equal to %d\n", firstLabels->data[i], i, firstReferenceLabelsData[i]);
+        CTAssertEqual(test, firstLabels->data[i], firstReferenceLabelsData[i], "Label %d at index %d is not equal to %d\n", firstLabels->data[i], i, firstReferenceLabelsData[i]);
     }
     
     uint8_t secondReferenceImageData[49] = {1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1};
@@ -74,21 +75,36 @@ ctcase_return_t test_labels_labelling() {
     
     labels_t *secondLabels = label(secondReferenceImage);
     
-    CTAssertEqual(secondLabels->count, 5);
+    CTAssertEqual(test, secondLabels->count, 5);
     
     for (i = secondLabels->width * secondLabels->height; i--; ) {
-        CTAssertEqual(secondLabels->data[i], secondReferenceLabelsData[i], "Label %d at index %d is not equal to %d\n", secondLabels->data[i], i, secondReferenceLabelsData[i]);
+        CTAssertEqual(test, secondLabels->data[i], secondReferenceLabelsData[i], "Label %d at index %d is not equal to %d\n", secondLabels->data[i], i, secondReferenceLabelsData[i]);
     }
     
-    return CTPassed;
+    imgfree(firstReferenceImage);
+    labelsfree(firstLabels);
+    imgfree(secondReferenceImage);
+    labelsfree(secondLabels);
 }
 
-ctsuite_t *labelling_test_suite() {
+ctsuite_t *labelling_test_suite(void) {
     ctsuite_t *suite = ctsuite("labelling component");
     
-    ctsaddtc(ctcase("test_labels_creation", test_labels_creation), suite);
-    ctsaddtc(ctcase("test_labels_copy", test_labels_copy), suite);
-    ctsaddtc(ctcase("test_labels_labelling", test_labels_labelling), suite);
+    ctcase_t *labelsCreationTestCase = ctcase("labels creation");
+    
+    ctctestadd(labelsCreationTestCase, ctest("test_labels_creation", test_labels_creation, NULL));
+    
+    ctcase_t *labelsCopyTestCase = ctcase("labels copy");
+    
+    ctctestadd(labelsCopyTestCase, ctest("test_labels_copy", test_labels_copy, NULL));
+    
+    ctcase_t *labelsLabellingTestCase = ctcase("labels labelling");
+    
+    ctctestadd(labelsLabellingTestCase, ctest("test_labels_labelling", test_labels_labelling, NULL));
+    
+    ctscaseadd(suite, labelsCreationTestCase);
+    ctscaseadd(suite, labelsCopyTestCase);
+    ctscaseadd(suite, labelsLabellingTestCase);
     
     return suite;
 }

@@ -7,7 +7,7 @@
 //
 
 #include <stdio.h>
-#include "cunit.h"
+#include <cunit.h>
 #include "matrix_unit_tests.h"
 #include "image_unit_tests.h"
 #include "io_unit_tests.h"
@@ -16,11 +16,23 @@
 
 int main(int argc, const char * argv[]) {
     
-    ctsrun(matrix_test_suite());
-    ctsrun(image_test_suite());
-    ctsrun(io_test_suite());
-    ctsrun(convert_test_suite());
-    ctsrun(labelling_test_suite());
+    ctsuite_t *matrixSuite = matrix_test_suite();
+    ctsuite_t *imageSuite = image_test_suite();
+    ctsuite_t *ioSuite = io_test_suite();
+    ctsuite_t *convertSuite = convert_test_suite();
+    ctsuite_t *labellingSuite = labelling_test_suite();
+    
+    ctsrun(matrixSuite);
+    ctsrun(imageSuite);
+    ctsrun(ioSuite);
+    ctsrun(convertSuite);
+    ctsrun(labellingSuite);
+    
+    ctsfree(matrixSuite);
+    ctsfree(imageSuite);
+    ctsfree(ioSuite);
+    ctsfree(convertSuite);
+    ctsfree(labellingSuite);
     
     return 0;
 }
